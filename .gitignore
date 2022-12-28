@@ -6,5 +6,6 @@ lib/Random_files/
 lib/.DS_Store
 .*
 src/__pycache__
+src/find_objects/__pycache__
 src/parsing/__pycache__
 src/tasks/__pycache__
