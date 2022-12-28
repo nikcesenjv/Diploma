@@ -1,0 +1,86 @@
+Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
+Nik Česenj Vodovnik, 04080450 - Upravna informatika
+Študijsko leto 2021/2022
+Datoteka poimenovanje.txt
+
+LEGENDA:
+id   - identifikator po poimenovanju
+št   - zaporedna številka datoteke
+nad  - nadaljevanje sestanka
+ar.  - arabska številka
+rim. - rimska številka
+
+vrsta sestanka - [seja, predhodni, redni]
+ustvarjalec    - [ZNPSHS, NSSHS, NPKJ, SKJ, NSKJ]
+
+USTVARJALCI ZBIRKE:
+- Začasno narodno predstavništvo Kraljevine SHS (1919) --> [ZNPSHS]
+- Zakonodajni odbor narodne skupščine Kraljevine SHS (1921-1922) ---> [NSSHS]
+- Narodno predstavništvo Kraljevine Jugoslavije (1929-1941) ---> [NPKJ]
+    - Senat --> [SKJ]
+    - Narodna skupščina --> [NSKJ]
+
+Ime glavne mape:    id [ar.]_leto_ustvarjalec
+Ime mape sestankov: vrsta sestanka_št1-št2 [ar.]
+Ime datoteke:       id [rim.]_vrsta sestanka_datum
+Ime datoteke/stran: id [rim.]_vrsta sestanka_datum_št strani  ???
+
+VZOREC ORGANIZACIJE DATOTEK (JSON):
+{
+    "id": id,
+    "official": uradno poimenovanje/id,
+    "old signature": stara signatura,
+    "assembly": ustvarjalec,
+    "book": št knjige,
+    "year": leto,
+    "folder name": ime glavne mape,
+    "folders": [
+        {
+            mapa sestankov: [
+                ime datoteke
+            ]
+        }
+    ]
+}
+
+IMENA GLAVNIH MAP (staro ime --> novo ime):
+1919_SHS_5-40 --------------> 1_1919_ZNPSHS
+
+1921_SHS_1-30 --------------> 2_1921_NSSHS
+1922-1921_SHS_31-79 --------> 3_1921-1922_NSSHS
+
+1932_SHS_1-5 ---------------> 4_1932_NPKJ
+
+1932_SHS_1-15 --------------> 5_1932_SKJ
+1933_SHS_16-27 -------------> 6_1933_SKJ
+1933_SHS_28-34 -------------> 7_1933_SKJ
+1933_SHS_35-43 -------------> 8_1933_SKJ
+1934-1933_SHS_1-13 ---------> 9_1933-1934_SKJ
+1934_SHS_14-20 -------------> 10_1934_SKJ
+1934_SHS_21-29 -------------> 11_1934_SKJ
+1934_SHS_1-5_1935_SHS_1-5 --> 12_1934-1935_SKJ
+1935_1936_SHS_1-13 ---------> 13_1935-1936_SKJ
+1937_SHS_14 ----------------> 14_1937_SKJ
+1937_1936_SHS_1-15 ---------> 15_1936-1937_SKJ
+1937_SHS_16-27 -------------> 16_1937_SKJ
+1938-1937_SHS_1-15 ---------> 17_1937-1938_SKJ
+1932_SHS_1-17 --------------> 18_1932_SKJ
+1932_SHS_18-40 -------------> 19_1932_SKJ
+1939_SHS_1-6 ---------------> 20_1939_SKJ
+
+1933_1932_SHS_1-40 ---------> 21_1932-1933_NSKJ
+1933_SHS_38-58 -------------> 22_1933_NSKJ
+1933,1934_SHS_1-34 ---------> 23_1933-1934_NSKJ
+1934_SHS_35-49 -------------> 24_1934_NSKJ
+1934,1935_SHS_50_1-4 -------> 25_1934-1935_NSKJ
+1935_SHS_1-7 ---------------> 26_1935_NSKJ
+1936_SHS_4-15_1-16 ---------> 27_1936_NSKJ
+1936,1937_SHS_1-19 ---------> 28_1936-1937_NSKJ
+1938_SHS_20-37 -------------> 29_1938_NSKJ
+1937_39-63 -----------------> 30_1937_NSKJ
+1938_1937_SHS_1-6 ----------> 31_1937-1938_NSKJ
+1938_SHS_7-19 --------------> 32_1938_NSKJ
+1938_SHS_20-37 -------------> 33_1938_NSKJ
+1931,1932_SHS_1-22 ---------> 34_1933_NSKJ
+1932_SHS_23-56 -------------> 35_1932_NSKJ
+1939_SHS_1-15 --------------> 36_1939_NSKJ

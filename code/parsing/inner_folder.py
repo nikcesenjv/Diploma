@@ -1,0 +1,52 @@
+# Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
+# Nik Česenj Vodovnik, 04180450 - Upravna informatika
+# Študijsko leto 2022/2023
+# Datoteka inner_folder.py
+
+from .structure import Structure
+
+
+class InnerFolder(Structure):
+    def __init__(self, name, path=None):
+        super().__init__(name, path)
+
+        self.num, self.meeting = self.parse_name()
+
+        self.files = []
+        self.outter_folder = None
+
+    def __str__(self):
+        return f"Ime mape:         {self.name}\n" \
+               f"Vrsta sestanka:   {self.meeting}\n" \
+               f"Razpon sestankov: {self.num}\n"
+
+    def parse_name(self):
+        parsed = self.name.split("_")
+        return parsed[0], parsed[1]
+
+    def get_num(self):
+        return self.num
+
+    def set_num(self, num):
+        self.num = num
+
+    def get_meeting(self):
+        return self.meeting
+
+    def set_meeting(self, meeting):
+        self.meeting = meeting
+
+    def get_files(self):
+        return self.files
+
+    def add_file(self, file):
+        self.files.append(file)
+
+    def add_files(self, files):
+        self.files += files
+
+    def get_outter_folder(self):
+        return self.outter_folder
+
+    def set_outter_folder(self, outter_folder):
+        self.outter_folder = outter_folder

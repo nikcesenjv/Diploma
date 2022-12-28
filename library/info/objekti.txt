@@ -1,0 +1,35 @@
+Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
+Nik Česenj Vodovnik, 04080450 - Upravna informatika
+Študijsko leto 2021/2022
+Datoteka objekti.txt
+
+Sistem poimenovanja je podan v datoteki "poimenovanje.txt"
+
+MAPA Documents
+- 36 glavnih map
+  - notranje mape (mapa sestankov)
+    - .pdf datoteke
+
+Structure (STRUKTURA)
+- name (string)
+- path (string)
+
+MainFolder (GLAVNA MAPA) --> id [ar.]_leto_ustvarjalec
+- index   (int)
+- year    (int)
+- org     (string)
+- folders (list)
+
+InnerFolder (MAPA SESTANKOV) --> št1-št2 [ar.]_vrsta sestanka
+- num           (string)
+- meeting       (string)
+- files         (list)
+- outter_folder (MainFolder)
+
+File (DATOTEKA) --> id [ar.]_num [rim.]_vrsta sestanka_datum
+- index         (int)
+- num           (string)
+- meeting       (string)
+- date          (string)
+- pages         (string)
+- outter_folder (InnerFolder)
