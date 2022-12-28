@@ -14,7 +14,7 @@ class FileParsingTask:
 
         self.num_main_folders, self.num_inner_folders, self.num_files = 0, 0, 0
 
-        self.directory, self.files = self.parse_json()
+        self.mains, self.inners, self.files = self.parse_json()
 
     def __str__(self):
         return f"Število glavnih map:   {self.num_main_folders}\n" \
@@ -27,11 +27,17 @@ class FileParsingTask:
     def set_path(self, path):
         self.path = path
 
-    def get_directory(self):
-        return self.directory
+    def get_mains(self):
+        return self.mains
 
-    def set_directory(self, directory):
-        self.directory = directory
+    def set_mains(self, mains):
+        self.mains = mains
+
+    def get_inners(self):
+        return self.inners
+
+    def set_inners(self, inners):
+        self.inners = inners
 
     def get_files(self):
         return self.files
@@ -62,15 +68,14 @@ class FileParsingTask:
 
     def parse_json(self):
         try:
-            directory, files_only = [], []
-            num_main, num_inner, num_files = 0, 0, 0
+            mains, inners, files_only = [], [], []
 
             data = json.load(open(self.path))
-            directory_path = self.get_path().replace("lib/datoteke.json", "documents/")
+            mains_path = self.get_path().replace("lib/datoteke.json", "documents")
 
             for obj in data["documents"]:
                 m_folder = MainFolder(obj["folder name"])
-                m_folder.set_path(directory_path)
+                m_folder.set_path(mains_path)
 
                 for folder in obj["folders"]:
                     for inner, files in folder.items():
@@ -88,17 +93,16 @@ class FileParsingTask:
                             files_only.append(pdf)
 
                         i_folder.set_outter_folder(m_folder)
+                        inners.append(i_folder)
                         m_folder.add_folder(i_folder)
-                        num_inner += 1
 
-                directory.append(m_folder)
-                num_main += 1
+                mains.append(m_folder)
 
-            self.set_num_main_folders(num_main)
-            self.set_num_inner_folders(num_inner)
+            self.set_num_main_folders(len(mains))
+            self.set_num_inner_folders(len(inners))
             self.set_num_files(len(files_only))
 
-            return directory, files_only
+            return mains, inners, files_only
 
         except IsADirectoryError:
             print("Podana je bila napačna pot direktorija.")

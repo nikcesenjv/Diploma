@@ -20,7 +20,8 @@ class File(Structure):
                f"Indeks:             {self.index}\n" \
                f"Št sestanka [rim.]: {self.num}\n" \
                f"Vrsta sestanka:     {self.meeting}\n" \
-               f"Datum:              {self.date}\n"
+               f"Datum:              {self.date}\n" \
+               f"Direktorij:         {self.path}\n"
 
         if self.pages == 0:
             return info + "Št strani:          ni znano\n"
