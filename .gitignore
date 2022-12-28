@@ -1,0 +1,7 @@
+# Default ignored files
+/shelf/
+.DS_Store
+documents/
+library/Random_files/
+library/.DS_Store
+.*
