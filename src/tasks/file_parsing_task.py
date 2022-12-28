@@ -5,7 +5,7 @@
 
 import json
 
-from code.parsing import *
+from src.parsing import *
 
 class FileParsingTask:
 
@@ -66,7 +66,7 @@ class FileParsingTask:
             num_main, num_inner, num_files = 0, 0, 0
 
             data = json.load(open(self.path))
-            directory_path = self.get_path().replace("library/datoteke.json", "documents/")
+            directory_path = self.get_path().replace("lib/datoteke.json", "documents/")
 
             for obj in data["documents"]:
                 m_folder = MainFolder(obj["folder name"])

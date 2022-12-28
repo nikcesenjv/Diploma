@@ -2,6 +2,9 @@
 /shelf/
 .DS_Store
 documents/
-library/Random_files/
-library/.DS_Store
+lib/Random_files/
+lib/.DS_Store
 .*
+src/__pycache__
+src/parsing/__pycache__
+src/tasks/__pycache__

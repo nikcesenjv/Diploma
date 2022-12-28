@@ -11,6 +11,9 @@ class ConvertNumeralsTask:
         self.num = num
 
     def rim_to_arab(self):
+        if self.num == "N":
+            return 0
+
         num_ar = 0
         for i in range(len(self.num)):
             if i > 0 and self.NUMERALS[self.num[i]] > self.NUMERALS[self.num[i - 1]]:

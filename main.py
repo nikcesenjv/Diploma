@@ -5,14 +5,35 @@
 
 import argparse
 
-from code import FileParsingTask
+from src import ConvertNumeralsTask, FileParsingTask
+
+
+def execute_find(obj):
+    match obj:
+        case "main":
+            print("main")
+        case "inner":
+            print("inner")
+        case "file":
+            print("file")
+        case _:
+            print("type of object not found")
+    print(data)
 
 
 def main():
-    data = FileParsingTask("/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/library/datoteke.json")
 
-    for file in data.get_files():
-        print(file)
+
+    parser = argparse.ArgumentParser()
+    # parser.add_argument("--parse", metavar="file_or_dir", type=str, help="parse .json file to get object")
+
+    parser.add_argument("-f", "--find", help="search for parsed object")
+    args = parser.parse_args()
+
+    if args.find is not None:
+        execute_find(args.find)
 
 if __name__ == "__main__":
+    data = FileParsingTask("/lib/datoteke.json")
+
     main()
