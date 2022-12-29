@@ -5,6 +5,9 @@
 
 import argparse
 
+import locale
+import ResourceBundle
+
 from src import FileParsingTask, FindObjectsTask
 
 INFO_DATOTEKE = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/datoteke.json"
@@ -30,5 +33,10 @@ def main():
 
 if __name__ == "__main__":
     data = FileParsingTask(INFO_DATOTEKE)
-    execute_find("file")
+    # execute_find("file")
     # main()
+    bundle = ResourceBundle.get_bundle("program_messages", locale.getlocale())
+    everything = dict(bundle)
+    while bundle.parent is not None:
+        bundle = bundle.parent
+        everything.update(dict(bundle))
