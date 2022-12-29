@@ -6,8 +6,15 @@
 import json
 
 from src.parsing import *
+from .logging_task import LoggingTask as Log
 
 class FileParsingTask:
+
+    PARSING_SUCCESS = "file_parsing.success"
+
+    DIRECTORY_ERROR = "file_parsing.directory_error"
+    DECODER_ERROR = "file_parsing.file_type_error"
+    KEY_ERROR = "file_parsing.key_error"
 
     def __init__(self, path):
         self.path = path
@@ -102,11 +109,16 @@ class FileParsingTask:
             self.set_num_inner_folders(len(inners))
             self.set_num_files(len(files_only))
 
+            Log("INFO", self.PARSING_SUCCESS)
+
             return mains, inners, files_only
 
         except IsADirectoryError:
+            Log("ERROR", self.DIRECTORY_ERROR)
             print("Podana je bila napačna pot direktorija.")
         except json.decoder.JSONDecodeError:
+            Log("ERROR", self.DECODER_ERROR)
             print("Podana je bila napačna vrsta datoteke.")
         except KeyError:
+            Log("ERROR", self.KEY_ERROR)
             print("Podana je bila napačna .json datoteka.")

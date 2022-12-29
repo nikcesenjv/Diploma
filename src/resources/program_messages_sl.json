@@ -1,9 +1,11 @@
 {
     "INFO": {
-
+        "file_parsing.success": "JSON datoteka je bila uspešno urejena"
     },
     "ERROR": {
-        
+        "file_parsing.directory_error": "[PARSING ERROR]: Napačna pot direktorija",
+        "file_parsing.file_type_error": "[PARSING ERROR]: Napačna vrsta datoteke",
+        "file_parsing.key_error": "[PARSING ERROR]: Napačna JSON datoteka"
     },
     "WARNING": {
 

@@ -8,4 +8,6 @@ lib/.DS_Store
 src/__pycache__
 src/find_objects/__pycache__
 src/parsing/__pycache__
+src/resources/__pycache__
+src/retreive_messages/__pycache__
 src/tasks/__pycache__

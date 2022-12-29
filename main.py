@@ -30,4 +30,3 @@ def main():
 
 if __name__ == "__main__":
     data = FileParsingTask(INFO_DATOTEKE)
-    execute_find("main")
