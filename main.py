@@ -12,7 +12,7 @@ PARSING_JSON = "lib/datoteke.json"
 
 MAIN_PROGRAM_END = "main_program.end"
 
-# TODO: RAZLIČNI JEZIKI???
+# TODO: RAZLIČNI JEZIKI?
 
 def execute_find(obj):
     params = input("Parametri: ")
@@ -28,7 +28,7 @@ def main():
 
     parser.add_argument("-f", "--find", help="search for parsed object")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
-    parser.add_argument("-t", "text", nargs="+", help="convert pdf file to text")
+    parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
     args = parser.parse_args()
 
     if args.find is not None:
