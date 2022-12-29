@@ -1,6 +1,10 @@
 # Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
 # Nik Česenj Vodovnik, 04180450 - Upravna informatika
 # Študijsko leto 2022/2023
-# Datoteka main.py
+# Datoteka find_byfile.py
 
-parsed_objects.full_path=/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/datoteke.json
+import logging
+
+class Log:
+    def __init__(self, priority):
+        self.priority = priority

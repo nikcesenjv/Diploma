@@ -5,21 +5,22 @@
 
 from .find_by_structure import *
 
+METHOD_BASE = "find_by_"
+
 def find_by_main_folder(main_folders, params):
-    candidates = []
+    candidates = main_folders
+    for k, v in params.items():
+        func = globals()[METHOD_BASE + k]
+
+        candidates = func(candidates, v)
+
     return candidates
 
-def find_by_name():
-    pass
+def find_by_index(main_folders, index):
+    return [main_folder for main_folder in main_folders if main_folder.get_index() == index]
 
-def find_by_path():
-    pass
+def find_by_year(main_folders, year):
+    return [main_folder for main_folder in main_folders if main_folder.get_year() == year]
 
-def find_by_index():
-    pass
-
-def find_by_year():
-    pass
-
-def find_by_org():
-    pass
+def find_by_org(main_folders, org):
+    return [main_folder for main_folder in main_folders if main_folder.get_org() == org]
