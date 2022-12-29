@@ -10,6 +10,7 @@ from .logging_task import LoggingTask as Log
 
 class FileParsingTask:
 
+    PARSING_START = "file_parsing.start"
     PARSING_SUCCESS = "file_parsing.success"
 
     DIRECTORY_ERROR = "file_parsing.directory_error"
@@ -74,6 +75,8 @@ class FileParsingTask:
         self.num_files = num
 
     def parse_json(self):
+        Log("INFO", self.PARSING_START)
+
         try:
             mains, inners, files_only = [], [], []
 

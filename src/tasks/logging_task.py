@@ -5,7 +5,7 @@
 
 import logging
 
-from src.retreive_messages import retreive_message
+from src.retrieve_messages import retreive_message
 
 LOGGING_PATH = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/updates.log"
 
@@ -13,9 +13,10 @@ logging.basicConfig(filename=LOGGING_PATH, level=logging.INFO,
                     format="%(asctime)s [%(levelname)s] %(message)s", datefmt="%d.%m.%Y %H:%M:%S")
 
 class LoggingTask:
-    def __init__(self, level, message_name):
+    def __init__(self, level, message_name, lang="sl"):
         self.level = level
         self.message_name = message_name
+        self.lang = lang
 
         self.message_content = self.retreive_message_content()
 

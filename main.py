@@ -6,8 +6,13 @@
 import argparse
 
 from src import FileParsingTask, FindObjectsTask
+from src import LoggingTask as Log
 
-INFO_DATOTEKE = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/datoteke.json"
+PARSING_JSON = "lib/datoteke.json"
+
+MAIN_PROGRAM_END = "main_program.end"
+
+# TODO: RAZLIČNI JEZIKI???
 
 def execute_find(obj):
     params = input("Parametri: ")
@@ -18,15 +23,19 @@ def execute_find(obj):
 
 
 def main():
-
     parser = argparse.ArgumentParser()
     # parser.add_argument("--parse", metavar="file_or_dir", type=str, help="parse .json file to get object")
 
     parser.add_argument("-f", "--find", help="search for parsed object")
+    parser.add_argument("-l", "--lang", type=str, help="change language of logs")
+    parser.add_argument("-t", "text", nargs="+", help="convert pdf file to text")
     args = parser.parse_args()
 
     if args.find is not None:
         execute_find(args.find)
 
 if __name__ == "__main__":
-    data = FileParsingTask(INFO_DATOTEKE)
+    data = FileParsingTask(PARSING_JSON)
+    main()
+
+    Log("INFO", MAIN_PROGRAM_END)

@@ -1,0 +1,13 @@
+{
+    "INFO": {
+        "file_parsing.success": "JSON file was successfully parsed"
+    },
+    "ERROR": {
+        "file_parsing.directory_error": "Wrong directory",
+        "file_parsing.file_type_error": "Wrong type of file",
+        "file_parsing.key_error": "Wrong JSON file"
+    },
+    "WARNING": {
+
+    }
+}
