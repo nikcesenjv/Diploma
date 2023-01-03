@@ -16,14 +16,14 @@ def find_by_inner_folder(inner_folders, params):
 
     return candidates
 
-def find_by_name(inner_folders, name):
+"""def find_by_name(inner_folders, name):
     return [inner_folder for inner_folder in inner_folders if inner_folder.get_name() == name]
 
 def find_by_path(inner_folders, path):
-    return [inner_folder for inner_folder in inner_folders if inner_folder.get_path() == path]
+    return [inner_folder for inner_folder in inner_folders if inner_folder.get_path() == path]"""
 
 def find_by_num(inner_folders, num):
-    return [inner_folder for inner_folder in inner_folders if inner_folder.get_num() == num]
+    return [inner_folder for inner_folder in inner_folders if num in inner_folder.get_num()]
 
 def find_by_meeting(inner_folders, meeting):
-    return [inner_folder for inner_folder in inner_folders if inner_folder.get_meeting() == meeting]
+    return [inner_folder for inner_folder in inner_folders if meeting == inner_folder.get_meeting()]

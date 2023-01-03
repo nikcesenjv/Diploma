@@ -22,7 +22,7 @@ class FileParsingTask:
 
         self.num_main_folders, self.num_inner_folders, self.num_files = 0, 0, 0
 
-        self.mains, self.inners, self.files = self.parse_json()
+        self.mains, self.inners, self.meetings = self.parse_json()
 
     def __str__(self):
         return f"Število glavnih map:   {self.num_main_folders}\n" \
@@ -48,13 +48,13 @@ class FileParsingTask:
         self.inners = inners
 
     def get_files(self):
-        return self.files
+        return self.meetings
 
     def add_file(self, f):
-        self.files.append(f)
+        self.meetings.append(f)
 
     def add_files(self, files):
-        self.files += files
+        self.meetings += files
 
     def get_num_main_folders(self):
         return self.num_main_folders
@@ -78,43 +78,39 @@ class FileParsingTask:
         Log("INFO", self.PARSING_START)
 
         try:
-            mains, inners, files_only = [], [], []
+            mains, inners, meetings = [], [], []
 
             data = json.load(open(self.path))
-            mains_path = self.get_path().replace("lib/datoteke.json", "documents")
 
             for obj in data["documents"]:
-                m_folder = MainFolder(obj["folder name"])
-                m_folder.set_path(mains_path)
+                m_folder = MainFolder(obj["folder name"], obj["folder name"] + "/")
 
                 for folder in obj["folders"]:
                     for inner, files in folder.items():
-                        i_folder = InnerFolder(inner)
-                        i_folder.set_path(m_folder.get_path())
+                        i_folder = InnerFolder(inner, m_folder.get_path() + inner + "/")
 
-                        for f in files:
-                            pdf = File(f)
-                            pdf.set_path(i_folder.get_path())
-                            pdf.add_pdf()
+                        for m in files:
+                            meeting = File(m, i_folder.get_path() + m)
 
-                            pdf.set_outter_folder(i_folder)
-                            i_folder.add_file(pdf)
+                            meeting.set_outter_folder(i_folder)
+                            i_folder.add_file(meeting)
 
-                            files_only.append(pdf)
+                            meetings.append(meeting)
 
                         i_folder.set_outter_folder(m_folder)
-                        inners.append(i_folder)
                         m_folder.add_folder(i_folder)
+
+                        inners.append(i_folder)
 
                 mains.append(m_folder)
 
             self.set_num_main_folders(len(mains))
             self.set_num_inner_folders(len(inners))
-            self.set_num_files(len(files_only))
+            self.set_num_files(len(meetings))
 
             Log("INFO", self.PARSING_SUCCESS)
 
-            return mains, inners, files_only
+            return mains, inners, meetings
 
         except IsADirectoryError:
             Log("ERROR", self.DIRECTORY_ERROR)

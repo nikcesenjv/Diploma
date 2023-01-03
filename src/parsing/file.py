@@ -19,7 +19,7 @@ class File(Structure):
         info = f"Ime datoteke:       {self.name}\n" \
                f"Indeks:             {self.index}\n" \
                f"Št sestanka [rim.]: {self.parse_num()}\n" \
-               f"Organizacija:       {self.assembly}" \
+               f"Organizacija:       {self.assembly}\n" \
                f"Vrsta sestanka:     {self.meeting}\n" \
                f"Datum:              {self.date}\n" \
                f"Direktorij:         {self.path}\n"

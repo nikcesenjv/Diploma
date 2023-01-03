@@ -15,10 +15,10 @@ Structure (STRUKTURA)
 - path (string)
 
 MainFolder (GLAVNA MAPA) --> id [ar.]_leto_ustvarjalec
-- index   (int)
-- year    (int)
-- org     (string)
-- folders (list)
+- index    (int)
+- year     (int)
+- assembly (string)
+- folders  (list)
 
 InnerFolder (MAPA SESTANKOV) --> št1-št2 [ar.]_vrsta sestanka
 - num           (string)

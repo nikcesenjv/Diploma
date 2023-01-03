@@ -18,7 +18,7 @@ class Structure:
         return self.path
 
     def set_path(self, path):
-        self.path = path + f"/{self.name}"
+        self.path = path + f"{self.name}/"
 
     def add_pdf(self):
         return self.path + ".pdf"

@@ -5,8 +5,7 @@ Datoteka poimenovanje.txt
 
 LEGENDA:
 id   - identifikator po poimenovanju
-št   - zaporedna številka datoteke
-nad  - nadaljevanje sestanka
+št   - index mape/datoteka
 ar.  - arabska številka
 rim. - rimska številka
 
@@ -21,9 +20,9 @@ USTVARJALCI ZBIRKE:
     - Narodna skupščina --> [NSKJ]
 
 Ime glavne mape:    id [ar.]_leto_ustvarjalec
-Ime mape sestankov: vrsta sestanka_št1-št2 [ar.]
+Ime mape sestankov: št1-št2 [ar.]_vrsta sestanka
 Ime datoteke:       id [rim.]_vrsta sestanka_datum
-Ime datoteke/stran: id [rim.]_vrsta sestanka_datum_št strani  ???
+Ime datoteke/stran: id [rim.]_vrsta sestanka_ustvarjalec_datum
 
 VZOREC ORGANIZACIJE DATOTEK (JSON):
 {

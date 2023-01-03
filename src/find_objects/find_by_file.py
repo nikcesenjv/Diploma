@@ -18,13 +18,13 @@ def find_by_file(files, params):
     return candidates
 
 def find_by_index(files, index):
-    return [file for file in files if file.get_index() == index]
+    return [file for file in files if index == file.get_index()]
 
 def find_by_num(files, num):
-    return [file for file in files if ConvertNumeralsTask(file.get_num()).rim_to_arab() == num]
+    return [file for file in files if num == ConvertNumeralsTask(file.get_num().split(".")[0]).rim_to_arab()]
 
 def find_by_meeting(files, meeting):
-    return [file for file in files if file.get_meeting() == meeting]
+    return [file for file in files if meeting == file.get_meeting()]
 
 def find_by_date(files, date):
-    return [file for file in files if file.get_date() == date]
+    return [file for file in files if date == file.get_date()]
