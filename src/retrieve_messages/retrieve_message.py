@@ -7,11 +7,10 @@ import json
 
 PROGRAM_MESSAGES = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/src/resources/program_messages_sl.json"
 
-def retreive_message(level, name):
+def retrieve_message(level, name):
     for message_name, message_content in parse_json()[level].items():
         if message_name == name:
             return message_content
-
 
 def parse_json():
     return json.load(open(PROGRAM_MESSAGES))
