@@ -5,7 +5,7 @@
 
 import logging
 
-from src.retrieve_messages import retreive_message
+from src.retrieve_messages import retrieve_message
 
 LOGGING_PATH = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/updates.log"
 
@@ -18,12 +18,12 @@ class LoggingTask:
         self.message_name = message_name
         self.lang = lang
 
-        self.message_content = self.retreive_message_content()
+        self.message_content = self.retrieve_message_content()
 
         self.generate_log()
 
-    def retreive_message_content(self):
-        return retreive_message(self.level, self.message_name)
+    def retrieve_message_content(self):
+        return retrieve_message(self.level, self.message_name)
         
     def generate_log(self):
         match self.level:

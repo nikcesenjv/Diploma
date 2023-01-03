@@ -18,7 +18,7 @@ class File(Structure):
     def __str__(self):
         info = f"Ime datoteke:       {self.name}\n" \
                f"Indeks:             {self.index}\n" \
-               f"Št sestanka [rim.]: {self.num}\n" \
+               f"Št sestanka [rim.]: {self.parse_num()}\n" \
                f"Organizacija:       {self.assembly}" \
                f"Vrsta sestanka:     {self.meeting}\n" \
                f"Datum:              {self.date}\n" \
@@ -40,6 +40,24 @@ class File(Structure):
         self.index = index
 
     def get_num(self):
+        return self.num
+
+    def parse_num(self):
+        parsed_num = self.num.split(".")
+
+        if len(parsed_num) == 2:
+            second_part = None
+
+            match parsed_num[1]:
+                case "I":
+                    second_part = "prvi"
+                case "II":
+                    second_part = "drugi"
+                case "III":
+                    second_part = "tretji"
+
+            return f"{parsed_num[0]}, {second_part} del"
+
         return self.num
 
     def set_num(self, num):
