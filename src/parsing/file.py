@@ -10,7 +10,7 @@ class File(Structure):
     def __init__(self, name, path=None):
         super().__init__(name, path)
 
-        self.index, self.num, self.meeting, self.date = self.parse_name()
+        self.index, self.num, self.assembly, self.meeting, self.date = self.parse_name()
 
         self.pages = 0
         self.outter_folder = None
@@ -19,6 +19,7 @@ class File(Structure):
         info = f"Ime datoteke:       {self.name}\n" \
                f"Indeks:             {self.index}\n" \
                f"Št sestanka [rim.]: {self.num}\n" \
+               f"Organizacija:       {self.assembly}" \
                f"Vrsta sestanka:     {self.meeting}\n" \
                f"Datum:              {self.date}\n" \
                f"Direktorij:         {self.path}\n"
@@ -30,7 +31,7 @@ class File(Structure):
 
     def parse_name(self):
         parsed = self.name.split("_")
-        return parsed[0], parsed[1], parsed[2], parsed[3]
+        return parsed[0], parsed[1], parsed[2], parsed[3], parsed[4]
 
     def get_index(self):
         return self.index

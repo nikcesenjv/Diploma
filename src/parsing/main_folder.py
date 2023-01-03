@@ -5,12 +5,12 @@
 
 from .structure import Structure
 
-
 class MainFolder(Structure):
+    
     def __init__(self, name, path=None):
         super().__init__(name, path)
 
-        self.index, self.year, self.org = self.parse_name()
+        self.index, self.year, self.assembly = self.parse_name()
 
         self.folders = []
 
@@ -18,17 +18,11 @@ class MainFolder(Structure):
         return f"Ime mape:     {self.name}\n" \
                f"Indeks:       {self.index}\n" \
                f"Leto:         {self.year}\n" \
-               f"Organizacija: {self.org}\n"
+               f"Organizacija: {self.assembly}\n"
 
     def parse_name(self):
         parsed = self.name.split("_")
         return parsed[0], parsed[1], parsed[2]
-
-    def get_index(self):
-        return self.index
-
-    def set_index(self, index):
-        self.index = index
 
     def get_year(self):
         return self.year
@@ -36,14 +30,17 @@ class MainFolder(Structure):
     def set_year(self, year):
         self.year = year
 
-    def get_org(self):
-        return self.org
+    def get_assembly(self):
+        return self.assembly
 
-    def set_org(self, org):
-        self.org = org
+    def set_assembly(self, assembly):
+        self.assembly = assembly
 
     def get_folders(self):
         return self.folders
 
     def add_folder(self, folder):
         self.folders.append(folder)
+
+    def add_folders(self, folders):
+        self.folders += folders

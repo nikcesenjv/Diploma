@@ -21,4 +21,7 @@ class Structure:
         self.path = path + f"/{self.name}"
 
     def add_pdf(self):
-        self.path += ".pdf"
+        return self.path + ".pdf"
+
+    def add_txt(self):
+        return self.path + ".txt"
