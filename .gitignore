@@ -10,5 +10,5 @@ src/__pycache__
 src/find_objects/__pycache__
 src/parsing/__pycache__
 src/resources/__pycache__
-src/retrieve_messages/__pycache__
+src/retrieve_resources/__pycache__
 src/tasks/__pycache__

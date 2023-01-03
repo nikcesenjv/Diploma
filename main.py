@@ -15,8 +15,6 @@ MAIN_PROGRAM_END = "main_program.end"
 # TODO: RAZLIČNI JEZIKI?
 
 def execute_find(params):
-    # find_task = FindObjectsTask(data, params).get_candidates()
-
     for obj in FindObjectsTask(data, params).get_candidates():
         print(obj)
 

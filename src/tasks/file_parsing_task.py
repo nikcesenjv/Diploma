@@ -75,7 +75,7 @@ class FileParsingTask:
         self.num_files = num
 
     def parse_json(self):
-        Log("INFO", self.PARSING_START)
+        Log("INFO", self.PARSING_START, self.path.split("/")[-1])
 
         try:
             mains, inners, meetings = [], [], []
@@ -108,7 +108,7 @@ class FileParsingTask:
             self.set_num_inner_folders(len(inners))
             self.set_num_files(len(meetings))
 
-            Log("INFO", self.PARSING_SUCCESS)
+            Log("INFO", self.PARSING_SUCCESS, self.path.split("/")[-1])
 
             return mains, inners, meetings
 

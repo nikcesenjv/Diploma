@@ -4,13 +4,20 @@
 # Datoteka retrieve_message.py
 
 import json
+import string
 
 PROGRAM_MESSAGES = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/src/resources/program_messages_sl.json"
 
-def retrieve_message(level, name):
+def retrieve_message(level, name, args):
     for message_name, message_content in parse_json()[level].items():
         if message_name == name:
-            return message_content
+            return format_message(message_content, args)
 
 def parse_json():
     return json.load(open(PROGRAM_MESSAGES))
+
+def format_message(message, args):
+    if len(args) > 0:
+        return message % args
+
+    return message

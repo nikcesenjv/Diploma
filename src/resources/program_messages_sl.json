@@ -2,16 +2,24 @@
     "INFO": {
         "archive_to_text.start": "Začetek ",
 
-        "file_parsing.start": "Začetek urejanja JSON datoteke",
-        "file_parsing.success": "JSON datoteka je bila uspešno urejena",
+        "file_parsing.start": "Začetek urejanja JSON datoteke '%s'",
+        "file_parsing.success": "JSON datoteka '%s' je bila uspešno urejena",
+
+        "file_parsing.main_folder.success": "Ustvarjena glavna mapa %s",
+        "file_parsing.inner_folder.success": "Ustvarjena notranja mapa %s",
+        "file_parsing.file_success": "Ustvarjena datoteka %s",
+
+        "file_parsing.info": "Število glavnih map:   %s\nŠtevilo notranjih map: %s\nŠtevilo datotek:       %s",
 
         "main_program.end": "----------PROGRAM SE ZAPIRA----------"
     },
+
     "ERROR": {
         "file_parsing.directory_error": "Napačna pot direktorija",
         "file_parsing.file_type_error": "Napačna vrsta datoteke",
         "file_parsing.key_error": "Napačna JSON datoteka"
     },
+
     "WARNING": {
 
     }
