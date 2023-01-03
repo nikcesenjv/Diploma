@@ -3,6 +3,8 @@
 # Študijsko leto 2022/2023
 # Datoteka find_by_structure.py
 
+METHOD_BASE = "find_by_"
+
 def find_by_name(data, name):
     return [d for d in data if d.get_name() == name]
 

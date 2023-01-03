@@ -5,8 +5,6 @@
 
 from .find_by_structure import *
 
-METHOD_BASE = "find_by_"
-
 def find_by_main_folder(main_folders, params):
     candidates = main_folders
     for k, v in params.items():

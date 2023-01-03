@@ -6,8 +6,6 @@
 from .find_by_structure import *
 from src.tasks import ConvertNumeralsTask
 
-METHOD_BASE = "find_by_"
-
 def find_by_file(files, params):
     candidates = files
     for k, v in params.items():
