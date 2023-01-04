@@ -21,6 +21,9 @@ def find_by_index(files, index):
 def find_by_num(files, num):
     return [file for file in files if num == ConvertNumeralsTask(file.get_num().split(".")[0]).rim_to_arab()]
 
+def find_by_assembly(files, assembly):
+    return [file for file in files if assembly == file.get_assembly()]
+
 def find_by_meeting(files, meeting):
     return [file for file in files if meeting == file.get_meeting()]
 
