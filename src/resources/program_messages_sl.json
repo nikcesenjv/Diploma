@@ -12,7 +12,8 @@
         "find_objects.start": "Začetek iskanja map/datotek",
         "find_objects.success": "Najdenih je bilo %s ustreznih map/datotek",
 
-        "main_program.end": "----------PROGRAM SE ZAPIRA----------",
+        "main_program.start": "----------PROGRAM SE ZAGANJA----------",
+        "main_program.end": "----------PROGRAM SE ZAPIRA----------\n",
 
         "pickle.success": "Urejeni objekti so bili uspešno shranjeni v datoteki '%s'"
     },

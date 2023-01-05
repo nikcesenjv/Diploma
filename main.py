@@ -14,6 +14,7 @@ DIPLOMA = "full_path.diploma"
 DOCUMENTS = "path.documents_json"
 
 # MESSAGES
+MAIN_PROGRAM_START = "main_program.start"
 MAIN_PROGRAM_END = "main_program.end"
 PARSE_PICKLE = "pickle.success"
 
@@ -56,8 +57,6 @@ def main():
         execute_arg_parse()
 
 if __name__ == "__main__":
+    Log("INFO", MAIN_PROGRAM_START)
     main()
-
-    execute_arg_text()
-
     Log("INFO", MAIN_PROGRAM_END)
