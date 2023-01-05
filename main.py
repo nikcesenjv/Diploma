@@ -12,7 +12,7 @@ PARSING_JSON = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/dat
 
 MAIN_PROGRAM_END = "main_program.end"
 
-# TODO: RAZLIČNI JEZIKI?
+# TODO: RAZLIČNI JEZIKI, SPLETNA STRAN, XML
 
 def execute_find(params):
     for obj in FindObjectsTask(data, params).get_candidates():

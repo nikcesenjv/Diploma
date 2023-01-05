@@ -7,7 +7,7 @@ from .structure import Structure
 
 class MainFolder(Structure):
     
-    def __init__(self, name, path=None):
+    def __init__(self, name, path):
         super().__init__(name, path)
 
         self.index, self.year, self.assembly = self.parse_name()

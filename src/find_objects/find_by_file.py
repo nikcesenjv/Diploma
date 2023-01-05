@@ -29,3 +29,6 @@ def find_by_meeting(files, meeting):
 
 def find_by_date(files, date):
     return [file for file in files if date == file.get_date()]
+
+def find_by_year(files, year):
+    return [file for file in files if year in file.get_date()]

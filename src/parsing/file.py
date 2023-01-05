@@ -7,7 +7,7 @@ from .structure import Structure
 
 
 class File(Structure):
-    def __init__(self, name, path=None):
+    def __init__(self, name, path):
         super().__init__(name, path)
 
         self.index, self.num, self.assembly, self.meeting, self.date = self.parse_name()
