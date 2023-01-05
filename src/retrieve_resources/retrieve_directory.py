@@ -7,10 +7,10 @@ import json
 
 DIRECTORIES = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/src/resources/directories.json"
 
-def retreive_path(path_title):
-    for path_name, path in parse_json().items():
-        if path_name == path_title:
-            return path
+def retrieve_directory(directory_title):
+    for directory_name, directory in parse_json().items():
+        if directory_name == directory_title:
+            return directory
 
 def parse_json():
     return json.load(open(DIRECTORIES))

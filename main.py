@@ -6,15 +6,16 @@
 import argparse
 import pickle
 
-from src import FileParsingTask, FindObjectsTask
+from src import FileParsingTask, FindObjectsTask, RetrieveDirectoryTask
 from src import LoggingTask as Log
 
-PARSING_JSON = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/datoteke.json"
+# DIRECTORIES
+DIPLOMA = "full_path.diploma"
+DOCUMENTS = "path.documents_json"
 
+# MESSAGES
 MAIN_PROGRAM_END = "main_program.end"
 PARSE_PICKLE = "pickle.success"
-
-# TODO: RAZLIČNI JEZIKI, SPLETNA STRAN, XML
 
 # EXECUTE METHODS
 def execute_arg_find(params):
@@ -26,18 +27,17 @@ def execute_arg_language():
 
 def execute_arg_parse():
     with open("parsed_documents.pickle", "wb") as file:
-        pickle.dump(FileParsingTask(PARSING_JSON), file)
+        pickle.dump(FileParsingTask(RetrieveDirectoryTask(DIPLOMA) + RetrieveDirectoryTask(DOCUMENTS)), file)
 
     Log("INFO", PARSE_PICKLE, "parsed_documents.pickle")
 
 def execute_arg_text():
     pass
 
-
+# PICKLE
 def open_pickle():
     with open("parsed_documents.pickle", "rb") as file:
         return pickle.load(file)
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -57,5 +57,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    execute_arg_text()
 
     Log("INFO", MAIN_PROGRAM_END)

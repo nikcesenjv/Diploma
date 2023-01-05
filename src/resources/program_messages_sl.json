@@ -20,7 +20,9 @@
     "ERROR": {
         "file_parsing.directory_error": "Napačna pot direktorija",
         "file_parsing.file_type_error": "Napačna vrsta datoteke",
-        "file_parsing.key_error": "Napačna JSON datoteka"
+        "file_parsing.key_error": "Napačna JSON datoteka",
+
+        "pickle.error": "Objekti niso bili shranjeni v datoteko '%s'"
     },
 
     "WARNING": {

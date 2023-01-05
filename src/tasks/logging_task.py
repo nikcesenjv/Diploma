@@ -15,7 +15,7 @@ logging.basicConfig(filename=LOGGING_PATH, level=logging.INFO,
 class LoggingTask:
     def __init__(self, level, message_name, *args, lang="sl"):
         self.level = level
-        self.message_name = message_name
+        self.message_title = message_name
         self.args = args
         self.lang = lang
 
@@ -24,7 +24,7 @@ class LoggingTask:
         self.generate_log()
 
     def retrieve_message_content(self):
-        return retrieve_message(self.level, self.message_name, self.args)
+        return retrieve_message(self.level, self.message_title, self.args)
         
     def generate_log(self):
         match self.level:
