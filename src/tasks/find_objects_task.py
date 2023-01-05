@@ -9,8 +9,8 @@ from .logging_task import LoggingTask as Log
 
 class FindObjectsTask:
 
-    FIND_SUCCESS = "find_objects.success"
     FIND_START = "find_objects.starts"
+    FIND_SUCCESS = "find_objects.success"
     FIND_NONE = "find_objects.none"
 
     def __init__(self, data, params):
