@@ -4,6 +4,7 @@
 # Datoteka main.py
 
 import argparse
+import pickle
 
 from src import FileParsingTask, FindObjectsTask
 from src import LoggingTask as Log
@@ -14,9 +15,26 @@ MAIN_PROGRAM_END = "main_program.end"
 
 # TODO: RAZLIČNI JEZIKI, SPLETNA STRAN, XML
 
-def execute_find(params):
-    for obj in FindObjectsTask(data, params).get_candidates():
+# EXECUTE METHODS
+
+def execute_arg_find(params):
+    for obj in FindObjectsTask(open_pickle(), params).get_candidates():
         print(obj)
+
+def execute_arg_language():
+    pass
+
+def execute_arg_parse():
+    with open("parsed_documents.pickle", "wb") as file:
+        pickle.dump(FileParsingTask(PARSING_JSON), file)
+
+def execute_arg_text():
+    pass
+
+
+def open_pickle():
+    with open("parsed_documents.pickle", "rb") as file:
+        return pickle.load(file)
 
 
 def main():
@@ -25,11 +43,15 @@ def main():
 
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
+    parser.add_argument("-p", "--parse", type=str, help="parse files into pickle file")
     parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
     args = parser.parse_args()
 
-    if args.find is not None:
-        execute_find(args.find)
+    if args.find:
+        execute_arg_find(args.find)
+
+    if args.parse:
+        execute_arg_parse()
 
 if __name__ == "__main__":
     data = FileParsingTask(PARSING_JSON)
