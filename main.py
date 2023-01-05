@@ -12,13 +12,13 @@ from src import LoggingTask as Log
 PARSING_JSON = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/datoteke.json"
 
 MAIN_PROGRAM_END = "main_program.end"
+PARSE_PICKLE = "pickle.success"
 
 # TODO: RAZLIČNI JEZIKI, SPLETNA STRAN, XML
 
 # EXECUTE METHODS
-
 def execute_arg_find(params):
-    for obj in FindObjectsTask(open_pickle(), params).get_candidates():
+    for obj in FindObjectsTask(open_pickle(), params.split(" ")).get_candidates():
         print(obj)
 
 def execute_arg_language():
@@ -27,6 +27,8 @@ def execute_arg_language():
 def execute_arg_parse():
     with open("parsed_documents.pickle", "wb") as file:
         pickle.dump(FileParsingTask(PARSING_JSON), file)
+
+    Log("INFO", PARSE_PICKLE, "parsed_documents.pickle")
 
 def execute_arg_text():
     pass
@@ -54,7 +56,6 @@ def main():
         execute_arg_parse()
 
 if __name__ == "__main__":
-    data = FileParsingTask(PARSING_JSON)
     main()
 
     Log("INFO", MAIN_PROGRAM_END)

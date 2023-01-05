@@ -3,9 +3,16 @@
 # Študijsko leto 2022/2023
 # Datoteka find_objects_task.py
 
-from src.find_objects import find
+from src.find_objects import find_object
+
+from .logging_task import LoggingTask as Log
 
 class FindObjectsTask:
+
+    FIND_SUCCESS = "find_objects.success"
+    FIND_START = "find_objects.starts"
+    FIND_NONE = "find_objects.none"
+
     def __init__(self, data, params):
         self.data = data
         self.params = params
@@ -25,4 +32,12 @@ class FindObjectsTask:
         return self.parsed_params
 
     def get_candidates(self):
-        return find(self.data, self.type_of_object, self.parsed_params)
+        Log("INFO", self.FIND_START)
+        candidates = find_object(self.data, self.type_of_object, self.parsed_params)
+
+        if len(candidates) == 0:
+            Log("WARNING", self.FIND_NONE)
+        else:
+            Log("INFO", self.FIND_SUCCESS, len(candidates))
+
+        return candidates

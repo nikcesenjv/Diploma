@@ -4,7 +4,6 @@
 # Datoteka retrieve_message.py
 
 import json
-import string
 
 PROGRAM_MESSAGES = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/src/resources/program_messages_sl.json"
 

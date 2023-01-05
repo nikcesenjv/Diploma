@@ -1007,3 +1007,51 @@
 05.01.2023 21:20:13 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
 05.01.2023 21:20:13 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
 05.01.2023 21:20:13 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 21:34:23 [INFO] Začetek urejanja JSON datoteke datoteke.json
+05.01.2023 21:34:23 [INFO] JSON datoteka datoteke.json je bila uspešno urejena
+05.01.2023 21:34:23 [INFO] Začetek urejanja JSON datoteke datoteke.json
+05.01.2023 21:34:23 [INFO] JSON datoteka datoteke.json je bila uspešno urejena
+05.01.2023 21:34:23 [INFO] Urejeni objekti so bili uspešno shranjeni v datoteki parsed_documents.pickle
+05.01.2023 21:34:23 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 21:44:54 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 21:44:54 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 21:44:54 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 22:39:48 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:39:48 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:39:49 [INFO] Najdenih je bilo 0 ustreznih map/datotek
+05.01.2023 22:39:49 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 22:40:10 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:40:10 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:40:10 [WARNING] Najdena ni bila nobena ustrezna mapa/datoteka
+05.01.2023 22:40:40 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:40:40 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:40:40 [INFO] Najdenih je bilo 0 ustreznih map/datotek
+05.01.2023 22:40:40 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 22:40:56 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:40:56 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:40:56 [INFO] Najdenih je bilo 0 ustreznih map/datotek
+05.01.2023 22:40:56 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 22:41:17 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:41:17 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:41:17 [WARNING] Najdena ni bila nobena ustrezna mapa/datoteka
+05.01.2023 22:42:57 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:43:04 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:43:38 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:43:38 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:44:21 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:44:21 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:45:01 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:45:01 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:47:25 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:47:25 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:47:25 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 22:47:38 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:47:38 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:47:38 [INFO] ----------PROGRAM SE ZAPIRA----------
+05.01.2023 22:47:59 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:47:59 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:48:16 [WARNING] Najdena ni bila nobena ustrezna mapa/datoteka
+05.01.2023 22:48:49 [INFO] Začetek urejanja JSON datoteke 'datoteke.json'
+05.01.2023 22:48:49 [INFO] JSON datoteka 'datoteke.json' je bila uspešno urejena
+05.01.2023 22:48:49 [WARNING] Najdena ni bila nobena ustrezna mapa/datoteka
+05.01.2023 22:48:49 [INFO] ----------PROGRAM SE ZAPIRA----------

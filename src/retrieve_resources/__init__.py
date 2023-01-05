@@ -4,4 +4,4 @@
 # Datoteka retrieve_messages/__init__.py
 
 from .retrieve_message import retrieve_message
-from .retrieve_path import retreive_path
+from .retrieve_directory import retreive_path

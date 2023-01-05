@@ -6,5 +6,6 @@
 from .archive_to_text_task import ArchiveToTextTask
 from .convert_numerals_task import ConvertNumeralsTask
 from .file_parsing_task import FileParsingTask
+# TODO: import find_directory_task
 from .find_objects_task import FindObjectsTask
 from .logging_task import LoggingTask

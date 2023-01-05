@@ -1,17 +1,20 @@
 {
     "INFO": {
-        "archive_to_text.start": "Začetek ",
+        "archive_to_text.start": "",
 
         "file_parsing.start": "Začetek urejanja JSON datoteke '%s'",
         "file_parsing.success": "JSON datoteka '%s' je bila uspešno urejena",
 
-        "file_parsing.main_folder.success": "Ustvarjena glavna mapa %s",
-        "file_parsing.inner_folder.success": "Ustvarjena notranja mapa %s",
-        "file_parsing.file_success": "Ustvarjena datoteka %s",
+        "file_parsing.main_folder.success": "Ustvarjena glavna mapa '%s'",
+        "file_parsing.inner_folder.success": "Ustvarjena notranja mapa '%s'",
+        "file_parsing.file_success": "Ustvarjena datoteka '%s'",
 
-        "file_parsing.info": "Število glavnih map:   %s\nŠtevilo notranjih map: %s\nŠtevilo datotek:       %s",
+        "find_objects.start": "Začetek iskanja map/datotek",
+        "find_objects.success": "Najdenih je bilo %s ustreznih map/datotek",
 
-        "main_program.end": "----------PROGRAM SE ZAPIRA----------"
+        "main_program.end": "----------PROGRAM SE ZAPIRA----------",
+
+        "pickle.success": "Urejeni objekti so bili uspešno shranjeni v datoteki '%s'"
     },
 
     "ERROR": {
@@ -21,6 +24,6 @@
     },
 
     "WARNING": {
-
+        "find_objects.none": "Najdena ni bila nobena ustrezna mapa/datoteka"
     }
 }
