@@ -13,6 +13,9 @@ from .logging_task import LoggingTask as Log
 
 
 class ArchiveToTextTask:
+
+    # TODO: LOGGING VARIABLES
+    
     def __init__(self, file):
         self.file = file
 

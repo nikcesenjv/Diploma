@@ -10,6 +10,7 @@ from .logging_task import LoggingTask as Log
 
 class FileParsingTask:
 
+    # LOGGING VARIABLES
     PARSING_START = "file_parsing.start"
     PARSING_SUCCESS = "file_parsing.success"
 

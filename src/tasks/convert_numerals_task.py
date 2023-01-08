@@ -5,6 +5,7 @@
 
 class ConvertNumeralsTask:
 
+    # NUMERALS CONVERSION RULES
     NUMERALS = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
 
     def __init__(self, num):
