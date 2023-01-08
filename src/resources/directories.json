@@ -3,7 +3,10 @@
     "full_path.program_messages_en": "/src/resources/program_messages_en.json",
     "full_path.program_messages_sl": "/src/resources/program_messages_sl.json",
 
-    "path.documentation": "/lib/dokumentacija",
-    "path.documents_json": "/lib/datoteke.json",
+    "path.documentation": "/lib/documentation",
+    "path.documents.json": "/lib/datoteke.json",
+    "path.documents.pdf": "/lib/pdf",
+    "path.documents.txt": "lib/txt",
+    "path.documents_word": "lib/word",
     "path.info": "/lib/info"
 }

@@ -3,10 +3,15 @@
 # Študijsko leto 2022/2023
 # Datoteka file.py
 
+from PyPDF2 import PdfFileReader
+
 from .structure import Structure
 
-
 class File(Structure):
+
+    FULL_DIRECTORY = "full_path.diploma"
+    PATH_PDF = "path.documents.pdf"
+
     def __init__(self, name, path):
         super().__init__(name, path)
 
@@ -80,6 +85,10 @@ class File(Structure):
 
     def set_pages(self, pages):
         self.pages = pages
+
+    @staticmethod
+    def get_num_of_pages(path):
+        return PdfFileReader(open(path, "rb")).numPages
 
     def get_outter_folder(self):
         return self.outter_folder

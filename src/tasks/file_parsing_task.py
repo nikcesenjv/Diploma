@@ -7,16 +7,21 @@ import json
 
 from src.parsing import *
 from .logging_task import LoggingTask as Log
+from .retrieve_directory_task import RetrieveDirectoryTask
 
 class FileParsingTask:
 
-    # LOGGING VARIABLES
+    # LOGGING MESSAGES
     PARSING_START = "file_parsing.start"
     PARSING_SUCCESS = "file_parsing.success"
 
     DIRECTORY_ERROR = "file_parsing.directory_error"
     DECODER_ERROR = "file_parsing.file_type_error"
     KEY_ERROR = "file_parsing.key_error"
+
+    # RETRIEVING DIRECTORIES
+    FULL_PATH = "full_path.diploma"
+    DOCUMENTS_PDF = "path.documents.pdf"
 
     def __init__(self, path):
         self.path = path
@@ -92,7 +97,9 @@ class FileParsingTask:
 
                         for m in files:
                             meeting = File(m, i_folder.get_path() + m)
-
+                            meeting.set_pages(meeting.get_num_of_pages(RetrieveDirectoryTask(self.FULL_PATH)) +
+                                                                       RetrieveDirectoryTask(self.DOCUMENTS_PDF) +
+                                                                       meeting.get_path() + ".pdf")
                             meeting.set_outter_folder(i_folder)
                             i_folder.add_file(meeting)
 

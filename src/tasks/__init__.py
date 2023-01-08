@@ -8,5 +8,6 @@ from .convert_numerals_task import ConvertNumeralsTask
 from .file_parsing_task import FileParsingTask
 from .find_objects_task import FindObjectsTask
 from .logging_task import LoggingTask
-from .retrieve_cer_task import RetrieveCerTask
+
+from .retrieve_cer_task import RetrieveCERTask
 from .retrieve_directory_task import RetrieveDirectoryTask

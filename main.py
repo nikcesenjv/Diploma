@@ -46,7 +46,7 @@ def main():
 
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
-    parser.add_argument("-p", "--parse", type=str, help="parse files into pickle file")
+    parser.add_argument("-p", "--parse", help="parse files into pickle file")
     parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
     args = parser.parse_args()
 
