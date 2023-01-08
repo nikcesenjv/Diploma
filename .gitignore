@@ -2,8 +2,8 @@
 /shelf/
 .DS_Store
 documents/
-lib/Random_files/
 lib/.DS_Store
+lib/test_files/
 .*
 __pycache__
 src/__pycache__
