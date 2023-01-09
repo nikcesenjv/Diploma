@@ -7,7 +7,7 @@ import json
 
 from src.parsing import *
 from .logging_task import LoggingTask as Log
-from .retrieve_directory_task import RetrieveDirectoryTask
+from .replace_directory_part_task import ReplaceDirectoryPartTask
 
 class FileParsingTask:
 
@@ -17,10 +17,11 @@ class FileParsingTask:
 
     DIRECTORY_ERROR = "file_parsing.directory_error"
     DECODER_ERROR = "file_parsing.file_type_error"
+    NO_FILE_ERROR = "file_parsing.no_file_error"
     KEY_ERROR = "file_parsing.key_error"
 
     # RETRIEVING DIRECTORIES
-    FULL_PATH = "full_path.diploma"
+    DOCUMENTS_JSON = "path.documents.json"
     DOCUMENTS_PDF = "path.documents.pdf"
 
     def __init__(self, path):
@@ -28,6 +29,7 @@ class FileParsingTask:
 
         self.num_main_folders, self.num_inner_folders, self.num_files = 0, 0, 0
 
+        self.path_pdf = self.replace_directory_part()
         self.mains, self.inners, self.meetings = self.parse_json()
 
     def __str__(self):
@@ -80,6 +82,9 @@ class FileParsingTask:
     def set_num_files(self, num):
         self.num_files = num
 
+    def replace_directory_part(self):
+        return ReplaceDirectoryPartTask(self.path, self.DOCUMENTS_JSON, self.DOCUMENTS_PDF).replace_directory_part()
+
     def parse_json(self):
         Log("INFO", self.PARSING_START, self.path.split("/")[-1])
 
@@ -89,18 +94,18 @@ class FileParsingTask:
             data = json.load(open(self.path))
 
             for obj in data["documents"]:
-                m_folder = MainFolder(obj["folder name"], obj["folder name"] + "/")
+                m_folder = MainFolder(obj["folder name"], f"/{obj['folder name']}")
 
                 for folder in obj["folders"]:
                     for inner, files in folder.items():
-                        i_folder = InnerFolder(inner, m_folder.get_path() + inner + "/")
+                        i_folder = InnerFolder(inner, f"{m_folder.get_path()}/{inner}")
 
                         for m in files:
-                            meeting = File(m, i_folder.get_path() + m)
-                            meeting.set_pages(meeting.get_num_of_pages(RetrieveDirectoryTask(self.FULL_PATH)) +
-                                                                       RetrieveDirectoryTask(self.DOCUMENTS_PDF) +
-                                                                       meeting.get_path() + ".pdf")
+                            meeting = File(m, f"{i_folder.get_path()}/{m}")
+                            meeting.set_pages(meeting.get_num_of_pages(self.path_pdf + meeting.get_path() + ".pdf"))
+
                             meeting.set_outter_folder(i_folder)
+                            print(f"Datoteka '{meeting.get_name()}' ustvarjena")
                             i_folder.add_file(meeting)
 
                             meetings.append(meeting)
@@ -129,3 +134,5 @@ class FileParsingTask:
         except KeyError:
             Log("ERROR", self.KEY_ERROR)
             print("Podana je bila napačna .json datoteka.")
+        """except FileNotFoundError:
+                    Log("ERROR", self.NO_FILE_ERROR, )"""

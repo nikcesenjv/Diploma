@@ -6,22 +6,14 @@
 from src.retrieve_resources import retrieve_directory
 
 class RetrieveDirectoryTask:
-    def __init__(self, directory_title):
-        self.directory_title = directory_title
+    def __init__(self, *directory_titles):
+        self.directory_titles = directory_titles
 
-        self.directory_content = self.retrieve_directory_content()
+    def get_directory_titles(self):
+        return self.directory_titles
 
-    def __add__(self, other):
-        return self.directory_content + other.directory_content
-
-    def __str__(self):
-        return self.directory_content
-
-    def get_directory_title(self):
-        return self.directory_title
-
-    def set_directory_title(self, directory_title):
-        self.directory_title = directory_title
+    def set_directory_title(self, directory_titles):
+        self.directory_titles = directory_titles
 
     def retrieve_directory_content(self):
-        return retrieve_directory(self.directory_title)
+        return "".join([retrieve_directory(directory_title) for directory_title in self.directory_titles])

@@ -11,7 +11,7 @@ from src import LoggingTask as Log
 
 # DIRECTORIES
 DIPLOMA = "full_path.diploma"
-DOCUMENTS = "path.documents_json"
+DOCUMENTS = "path.documents.json"
 
 # MESSAGES
 MAIN_PROGRAM_START = "main_program.start"
@@ -20,7 +20,7 @@ PARSE_PICKLE = "pickle.success"
 
 # EXECUTE METHODS
 def execute_arg_find(params):
-    for obj in FindObjectsTask(open_pickle(), params.split(" ")).get_candidates():
+    for obj in FindObjectsTask(open_pickle(), params).get_candidates():
         print(obj)
 
 def execute_arg_language():
@@ -28,7 +28,9 @@ def execute_arg_language():
 
 def execute_arg_parse():
     with open("parsed_documents.pickle", "wb") as file:
-        pickle.dump(FileParsingTask(RetrieveDirectoryTask(DIPLOMA) + RetrieveDirectoryTask(DOCUMENTS)), file)
+        path = RetrieveDirectoryTask(DIPLOMA, DOCUMENTS).retrieve_directory_content()
+        task = FileParsingTask(path)
+        # pickle.dump(FileParsingTask(RetrieveDirectoryTask(DIPLOMA, DOCUMENTS).retrieve_directory_content()), file)
 
     Log("INFO", PARSE_PICKLE, "parsed_documents.pickle")
 
@@ -51,6 +53,7 @@ def main():
     args = parser.parse_args()
 
     if args.find:
+        # print(args.find)
         execute_arg_find(args.find)
 
     if args.parse:

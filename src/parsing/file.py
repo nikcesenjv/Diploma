@@ -88,7 +88,7 @@ class File(Structure):
 
     @staticmethod
     def get_num_of_pages(path):
-        return PdfFileReader(open(path, "rb")).numPages
+        return str(PdfFileReader(open(path, "rb")).numPages)
 
     def get_outter_folder(self):
         return self.outter_folder
