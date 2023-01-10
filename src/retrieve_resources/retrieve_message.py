@@ -16,7 +16,8 @@ def parse_json():
     return json.load(open(PROGRAM_MESSAGES))
 
 def format_message(message, args):
-    if len(args) > 0:
-        return message % args
+    return message % args if len(args) > 0 else message
 
-    return message
+def change_language(lang):
+    if lang == "en":
+        PROGRAM_MESSAGES.replace("_sl.json", "_en.json")

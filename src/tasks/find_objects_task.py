@@ -10,7 +10,7 @@ from .logging_task import LoggingTask as Log
 class FindObjectsTask:
 
     # LOGGING VARIABLES
-    FIND_START = "find_objects.starts"
+    FIND_START = "find_objects.start"
     FIND_SUCCESS = "find_objects.success"
     FIND_NONE = "find_objects.none"
 

@@ -28,9 +28,7 @@ def execute_arg_language():
 
 def execute_arg_parse():
     with open("parsed_documents.pickle", "wb") as file:
-        path = RetrieveDirectoryTask(DIPLOMA, DOCUMENTS).retrieve_directory_content()
-        task = FileParsingTask(path)
-        # pickle.dump(FileParsingTask(RetrieveDirectoryTask(DIPLOMA, DOCUMENTS).retrieve_directory_content()), file)
+        pickle.dump(FileParsingTask(RetrieveDirectoryTask(DIPLOMA, DOCUMENTS).retrieve_directory_content()), file)
 
     Log("INFO", PARSE_PICKLE, "parsed_documents.pickle")
 
@@ -44,22 +42,21 @@ def open_pickle():
 
 def main():
     parser = argparse.ArgumentParser()
-    # parser.add_argument("--parse", metavar="file_or_dir", type=str, help="parse .json file to get object")
 
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
-    parser.add_argument("-p", "--parse", help="parse files into pickle file")
+    parser.add_argument("-p", "--parse", nargs="*", help="parse files into pickle file")
     parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
     args = parser.parse_args()
 
     if args.find:
-        # print(args.find)
         execute_arg_find(args.find)
 
-    if args.parse:
+    if args.parse is not None:
         execute_arg_parse()
 
 if __name__ == "__main__":
+    execute_arg_parse()
     Log("INFO", MAIN_PROGRAM_START)
     main()
     Log("INFO", MAIN_PROGRAM_END)

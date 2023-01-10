@@ -32,6 +32,8 @@ class FileParsingTask:
         self.path_pdf = self.replace_directory_part()
         self.mains, self.inners, self.meetings = self.parse_json()
 
+        print(self.num_files)
+
     def __str__(self):
         return f"Število glavnih map:   {self.num_main_folders}\n" \
                f"Število notranjih map: {self.num_inner_folders}\n" \
