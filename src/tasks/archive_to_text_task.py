@@ -28,7 +28,7 @@ class ArchiveToTextTask:
         converter = TextConverter(resource_manager, file_handle)
         interpreter = PDFPageInterpreter(resource_manager, converter)
 
-        with open(self.file.get_path(), "rb") as f:
+        with open(self.file, "rb") as f:
             for site, page in enumerate(PDFPage.get_pages(f, caching=True, check_extractable=True)):
                 if start <= site + 1 <= finish:
                     interpreter.process_page(page)

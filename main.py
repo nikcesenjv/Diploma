@@ -4,14 +4,16 @@
 # Datoteka main.py
 
 import argparse
+import json
 import pickle
 
-from src import FileParsingTask, FindObjectsTask, RetrieveDirectoryTask
+from src import ArchiveToTextTask, FileParsingTask, FindObjectsTask, RetrieveDirectoryTask
 from src import LoggingTask as Log
 
 # DIRECTORIES
 DIPLOMA = "full_path.diploma"
 DOCUMENTS = "path.documents.json"
+DOCUMENTS_PDF = "path.documents.pdf"
 
 # MESSAGES
 FIND_INDEX_ERROR = "find_objects.params.error"
@@ -22,8 +24,9 @@ PARSE_PICKLE = "pickle.success"
 # EXECUTE METHODS
 def execute_arg_find(params):
     try:
-        for obj in FindObjectsTask(open_pickle(), params).get_candidates():
-            print(obj)
+        """for obj in FindObjectsTask(open_pickle(), params).get_candidates():
+            print(obj)"""
+        return FindObjectsTask(open_pickle(), params).get_candidates()
     except IndexError:
         Log("ERROR", FIND_INDEX_ERROR)
 
@@ -39,6 +42,14 @@ def execute_arg_parse():
 def execute_arg_text():
     pass
 
+
+def execute_arg_random(file_name):
+    data = execute_arg_find(["file", "name", file_name])[0].get_path()
+    path = RetrieveDirectoryTask(DIPLOMA, DOCUMENTS_PDF).retrieve_directory_content() + data + ".pdf"
+    text = ArchiveToTextTask(path).get_content(4, 4)
+    print(text)
+
+
 # PICKLE
 def open_pickle():
     with open("parsed_documents.pickle", "rb") as file:
@@ -49,13 +60,18 @@ def main():
 
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files into pickle file")
+    parser.add_argument("-r", "--random", help="get text for randomly chosen files")
     args = parser.parse_args()
 
     if args.find:
-        execute_arg_find(args.find)
+        for obj in execute_arg_find(args.find):
+            print(obj)
 
     if args.parse is not None:
         execute_arg_parse()
+
+    if args.random:
+        execute_arg_random(args.random)
 
     """parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")

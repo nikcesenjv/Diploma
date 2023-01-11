@@ -3,39 +3,35 @@
 # Študijsko leto 2022/2023
 # Datoteka retrieve_cer_task.py
 
-import os
+from cyrtranslit import to_latin
 from jiwer import cer
 
-import cyrtranslit
-
-import convert_text_task
-
 class RetrieveCERTask:
-    def __init__(self, error_file_directory, correct_file_directory):
-        self.error_file_directory = error_file_directory
-        self.correct_file_directory = correct_file_directory
+    def __init__(self, error_path, correct_path):
+        self.error_path = error_path
+        self.correct_path = correct_path
 
-        # self.cer = self.retrieve_cer()
+        self.cer = self.retrieve_cer()
 
-    def get_error_file_directory(self):
-        return self.error_file_directory
+    def get_error_path(self):
+        return self.error_path
 
-    def set_error_file_directory(self, error_file_directory):
-        self.error_file_directory = error_file_directory
+    def set_error_path(self, error_path):
+        self.error_path = error_path
 
-    def get_correct_file_directory(self):
-        return self.correct_file_directory
+    def get_correct_path(self):
+        return self.correct_path
 
-    def set_correct_file_directory(self, correct_file_directory):
-        self.correct_file_directory = correct_file_directory
-
-    """def get_cer(self):
-        return self.cer"""
+    def set_correct_path(self, correct_path):
+        self.correct_path = correct_path
+        
+    def get_cer(self):
+        return self.cer
 
     def retrieve_cer(self):
-        pass
+        return cer(self.open_file(self.get_error_path()), self.open_file(self.get_correct_path()))
 
     @staticmethod
     def open_file(file):
         with open(file, "r") as f:
-            return f.read()
+            return to_latin(f.read(), "sr")

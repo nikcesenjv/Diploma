@@ -13,6 +13,9 @@ class ReplaceDirectoryPartTask:
 
         self.replaced = self.replace_directory_part()
 
+    def __str__(self):
+        return self.replaced()
+
     def get_directory(self):
         return self.directory
 
