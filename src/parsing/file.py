@@ -9,9 +9,6 @@ from .structure import Structure
 
 class File(Structure):
 
-    FULL_DIRECTORY = "full_path.diploma"
-    PATH_PDF = "path.documents.pdf"
-
     def __init__(self, name, path):
         super().__init__(name, path)
 

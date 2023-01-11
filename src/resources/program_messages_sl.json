@@ -24,6 +24,8 @@
         "file_parsing.no_file_error": "Datoteka ni bila najdena",
         "file_parsing.key_error": "Napačna JSON datoteka",
 
+        "find_objects.params.error": "Podana je bila neustrezna količina parametrov",
+
         "pickle.error": "Objekti niso bili shranjeni v datoteko '%s'"
     },
 

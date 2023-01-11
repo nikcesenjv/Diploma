@@ -11,6 +11,8 @@ class ReplaceDirectoryPartTask:
         self.old_content = old_content
         self.new_content = new_content
 
+        self.replaced = self.replace_directory_part()
+
     def get_directory(self):
         return self.directory
 
@@ -29,7 +31,9 @@ class ReplaceDirectoryPartTask:
     def set_new_content(self, new_content):
         self.new_content = new_content
 
+    def get_replaced(self):
+        return self.replaced
+
     def replace_directory_part(self):
-        old = RetrieveDirectoryTask(self.old_content).retrieve_directory_content()
-        new = RetrieveDirectoryTask(self.new_content).retrieve_directory_content()
-        return self.directory.replace(old, new)
+        return self.directory.replace(RetrieveDirectoryTask(self.old_content).retrieve_directory_content(),
+                                      RetrieveDirectoryTask(self.new_content).retrieve_directory_content())

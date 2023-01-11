@@ -14,14 +14,18 @@ DIPLOMA = "full_path.diploma"
 DOCUMENTS = "path.documents.json"
 
 # MESSAGES
+FIND_INDEX_ERROR = "find_objects.params.error"
 MAIN_PROGRAM_START = "main_program.start"
 MAIN_PROGRAM_END = "main_program.end"
 PARSE_PICKLE = "pickle.success"
 
 # EXECUTE METHODS
 def execute_arg_find(params):
-    for obj in FindObjectsTask(open_pickle(), params).get_candidates():
-        print(obj)
+    try:
+        for obj in FindObjectsTask(open_pickle(), params).get_candidates():
+            print(obj)
+    except IndexError:
+        Log("ERROR", FIND_INDEX_ERROR)
 
 def execute_arg_language():
     pass
@@ -43,6 +47,7 @@ def open_pickle():
 def main():
     parser = argparse.ArgumentParser()
 
+    parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files into pickle file")
@@ -56,7 +61,6 @@ def main():
         execute_arg_parse()
 
 if __name__ == "__main__":
-    execute_arg_parse()
     Log("INFO", MAIN_PROGRAM_START)
     main()
     Log("INFO", MAIN_PROGRAM_END)

@@ -11,18 +11,17 @@ from .replace_directory_part_task import ReplaceDirectoryPartTask
 
 class FileParsingTask:
 
-    # LOGGING MESSAGES
+    # DIRECTORIES
+    DOCUMENTS_JSON = "path.documents.json"
+    DOCUMENTS_PDF = "path.documents.pdf"
+
+    # MESSAGES
     PARSING_START = "file_parsing.start"
     PARSING_SUCCESS = "file_parsing.success"
 
     DIRECTORY_ERROR = "file_parsing.directory_error"
     DECODER_ERROR = "file_parsing.file_type_error"
-    NO_FILE_ERROR = "file_parsing.no_file_error"
     KEY_ERROR = "file_parsing.key_error"
-
-    # RETRIEVING DIRECTORIES
-    DOCUMENTS_JSON = "path.documents.json"
-    DOCUMENTS_PDF = "path.documents.pdf"
 
     def __init__(self, path):
         self.path = path
@@ -31,8 +30,6 @@ class FileParsingTask:
 
         self.path_pdf = self.replace_directory_part()
         self.mains, self.inners, self.meetings = self.parse_json()
-
-        print(self.num_files)
 
     def __str__(self):
         return f"Število glavnih map:   {self.num_main_folders}\n" \
@@ -85,7 +82,7 @@ class FileParsingTask:
         self.num_files = num
 
     def replace_directory_part(self):
-        return ReplaceDirectoryPartTask(self.path, self.DOCUMENTS_JSON, self.DOCUMENTS_PDF).replace_directory_part()
+        return ReplaceDirectoryPartTask(self.path, self.DOCUMENTS_JSON, self.DOCUMENTS_PDF).get_replaced()
 
     def parse_json(self):
         Log("INFO", self.PARSING_START, self.path.split("/")[-1])
@@ -136,5 +133,3 @@ class FileParsingTask:
         except KeyError:
             Log("ERROR", self.KEY_ERROR)
             print("Podana je bila napačna .json datoteka.")
-        """except FileNotFoundError:
-                    Log("ERROR", self.NO_FILE_ERROR, )"""

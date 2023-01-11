@@ -3,32 +3,37 @@
 # Študijsko leto 2022/2023
 # Datoteka retrieve_cer_task.py
 
+import os
 from jiwer import cer
 
+import cyrtranslit
+
+import convert_text_task
+
 class RetrieveCERTask:
-    def __init__(self, error_file_path, correct_file_path):
-        self.error_file_path = error_file_path
-        self.correct_file_path = correct_file_path
+    def __init__(self, error_file_directory, correct_file_directory):
+        self.error_file_directory = error_file_directory
+        self.correct_file_directory = correct_file_directory
 
-        self.cer = self.retrieve_cer()
+        # self.cer = self.retrieve_cer()
 
-    def get_error_file_path(self):
-        return self.error_file_path
+    def get_error_file_directory(self):
+        return self.error_file_directory
 
-    def set_error_file_path(self, error_file_path):
-        self.error_file_path = error_file_path
+    def set_error_file_directory(self, error_file_directory):
+        self.error_file_directory = error_file_directory
 
-    def get_correct_file_path(self):
-        return self.correct_file_path
+    def get_correct_file_directory(self):
+        return self.correct_file_directory
 
-    def set_correct_file_path(self, correct_file_path):
-        self.correct_file_path = correct_file_path
+    def set_correct_file_directory(self, correct_file_directory):
+        self.correct_file_directory = correct_file_directory
 
-    def get_cer(self):
-        return self.cer
+    """def get_cer(self):
+        return self.cer"""
 
     def retrieve_cer(self):
-        return cer(self.open_file(self.error_file_path), self.open_file(self.correct_file_path))
+        pass
 
     @staticmethod
     def open_file(file):
