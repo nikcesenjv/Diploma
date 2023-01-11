@@ -47,11 +47,8 @@ def open_pickle():
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
-    parser.add_argument("-l", "--lang", type=str, help="change language of logs")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files into pickle file")
-    parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
     args = parser.parse_args()
 
     if args.find:
@@ -59,6 +56,11 @@ def main():
 
     if args.parse is not None:
         execute_arg_parse()
+
+    """parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
+    parser.add_argument("-l", "--lang", type=str, help="change language of logs")
+    parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
+    """
 
 if __name__ == "__main__":
     Log("INFO", MAIN_PROGRAM_START)

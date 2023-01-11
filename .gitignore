@@ -3,7 +3,6 @@
 .DS_Store
 documents/
 lib/.DS_Store
-lib/cer_test_files/
 .*
 __pycache__
 src/__pycache__
