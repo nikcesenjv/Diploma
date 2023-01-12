@@ -4,7 +4,7 @@
 # Datoteka find_by_file.py
 
 from .find_by_structure import *
-from src.tasks import ConvertNumeralsTask
+from src.tasks import convert_numerals_task
 
 def find_by_file(files, params):
     candidates = files
@@ -19,7 +19,8 @@ def find_by_index(files, index):
     return [file for file in files if index == file.get_index()]
 
 def find_by_num(files, num):
-    return [file for file in files if num == ConvertNumeralsTask(file.get_num().split(".")[0]).rim_to_arab()]
+    return [file for file in files if num == convert_numerals_task(file.get_num().split(".")[0])]
+
 
 def find_by_assembly(files, assembly):
     return [file for file in files if assembly == file.get_assembly()]

@@ -6,7 +6,7 @@
 from cyrtranslit import to_latin
 from jiwer import cer
 
-class RetrieveCERTask:
+"""class RetrieveCERTask:
     def __init__(self, error_path, correct_path):
         self.error_path = error_path
         self.correct_path = correct_path
@@ -34,4 +34,11 @@ class RetrieveCERTask:
     @staticmethod
     def open_file(file):
         with open(file, "r") as f:
-            return to_latin(f.read(), "sr")
+            return to_latin(f.read(), "sr")"""
+
+def retrieve_cer_task(first_path, second_path):
+    return cer(get_text(first_path), get_text(second_path))
+
+def get_text(path):
+    with open(path, "r") as file:
+        return to_latin(file.read(), "sr")

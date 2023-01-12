@@ -5,9 +5,30 @@
 
 from src.find_objects import find_object
 
-from .logging_task import LoggingTask as Log
+from .logging_task import log
 
-class FindObjectsTask:
+# LOGGING VARIABLES
+FIND_START = "find_objects.start"
+FIND_SUCCESS = "find_objects.success"
+FIND_NONE = "find_objects.none"
+
+def find_objects_task(data, params):
+    object_type, parsed_params = parse_params(params)
+    candidates = find_object(data, object_type, parsed_params)
+
+    if len(candidates) == 0:
+        log("WARNING", FIND_NONE)
+    else:
+        log("INFO", FIND_SUCCESS, len(candidates))
+
+    return candidates
+
+def parse_params(params):
+
+    return params[0], {params[i]: params[i + 1] for i in range(1, len(params), 2)}
+
+
+"""class FindObjectsTask:
 
     # LOGGING VARIABLES
     FIND_START = "find_objects.start"
@@ -41,4 +62,4 @@ class FindObjectsTask:
         else:
             Log("INFO", self.FIND_SUCCESS, len(candidates))
 
-        return candidates
+        return candidates"""

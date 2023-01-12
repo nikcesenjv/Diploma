@@ -10,8 +10,8 @@ from .find_by_file import find_by_file
 def find_object(data, type_of_object, params):
     match type_of_object:
         case "main":
-            return find_by_main_folder(data.get_mains(), params)
+            return find_by_main_folder(data[0], params)
         case "inner":
-            return find_by_inner_folder(data.get_inners(), params)
+            return find_by_inner_folder(data[1], params)
         case "file":
-            return find_by_file(data.get_files(), params)
+            return find_by_file(data[2], params)

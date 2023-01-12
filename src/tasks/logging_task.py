@@ -12,7 +12,7 @@ LOGGING_PATH = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/updates
 logging.basicConfig(filename=LOGGING_PATH, level=logging.INFO,
                     format="%(asctime)s [%(levelname)s] %(message)s", datefmt="%d.%m.%Y %H:%M:%S")
 
-class LoggingTask:
+"""class LoggingTask:
     def __init__(self, level, message_name, *args, lang="sl"):
         self.level = level
         self.message_title = message_name
@@ -33,4 +33,13 @@ class LoggingTask:
             case "ERROR":
                 logging.error(self.message_content)
             case "WARNING":
-                logging.warning(self.message_content)
+                logging.warning(self.message_content)"""
+
+def log(level, message_title, *params, lang="sl"):
+    match level:
+        case "INFO":
+            logging.info(retrieve_message(level, message_title, params, lang))
+        case "ERROR":
+            logging.error(retrieve_message(level, message_title, params, lang))
+        case "WARNING":
+            logging.warning(retrieve_message(level, message_title, params, lang))

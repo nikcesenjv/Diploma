@@ -4,11 +4,13 @@
 # Datoteka main.py
 
 import argparse
-import json
 import pickle
 
-from src import ArchiveToTextTask, FileParsingTask, FindObjectsTask, RetrieveDirectoryTask
-from src import LoggingTask as Log
+# from src import FileParsingTask, FindObjectsTask, RetrieveDirectoryTask
+from src import file_parsing_task
+from src import find_objects_task
+from src import retrieve_directory_task
+from src import log
 
 # DIRECTORIES
 DIPLOMA = "full_path.diploma"
@@ -24,11 +26,24 @@ PARSE_PICKLE = "pickle.success"
 # EXECUTE METHODS
 def execute_arg_find(params):
     try:
-        """for obj in FindObjectsTask(open_pickle(), params).get_candidates():
-            print(obj)"""
+        for found_object in find_objects_task(open_pickle(), params):
+            print(found_object)
+    except IndexError:
+        log("ERROR", FIND_INDEX_ERROR)
+
+def execute_arg_language():
+    pass
+
+def execute_arg_parse():
+    with open("parsed_documents.pickle", "wb") as file:
+        pickle.dump(file_parsing_task(retrieve_directory_task(DIPLOMA, DOCUMENTS)), file)
+
+
+"""def execute_arg_find(params):
+    try:
         return FindObjectsTask(open_pickle(), params).get_candidates()
     except IndexError:
-        Log("ERROR", FIND_INDEX_ERROR)
+        log("ERROR", FIND_INDEX_ERROR)
 
 def execute_arg_language():
     pass
@@ -37,18 +52,17 @@ def execute_arg_parse():
     with open("parsed_documents.pickle", "wb") as file:
         pickle.dump(FileParsingTask(RetrieveDirectoryTask(DIPLOMA, DOCUMENTS).retrieve_directory_content()), file)
 
-    Log("INFO", PARSE_PICKLE, "parsed_documents.pickle")
+    # Log("INFO", PARSE_PICKLE, "parsed_documents.pickle")
+    print("error")
 
 def execute_arg_text():
-    pass
+    pass"""
 
-
-def execute_arg_random(file_name):
+"""def execute_arg_random(file_name):
     data = execute_arg_find(["file", "name", file_name])[0].get_path()
     path = RetrieveDirectoryTask(DIPLOMA, DOCUMENTS_PDF).retrieve_directory_content() + data + ".pdf"
-    text = ArchiveToTextTask(path).get_content(4, 4)
-    print(text)
-
+    text = ArchiveToTextTask(path).get_content(1, 1)
+    print(text)"""
 
 # PICKLE
 def open_pickle():
@@ -63,7 +77,20 @@ def main():
     parser.add_argument("-r", "--random", help="get text for randomly chosen files")
     args = parser.parse_args()
 
+    """if args.find:
+        try:
+            for obj in execute_arg_find(args.find):
+                print(obj)
+        except IndexError:
+            log("ERROR", FIND_INDEX_ERROR)"""
+
     if args.find:
+        execute_arg_find(args.find)
+
+    if args.parse is not None:
+        execute_arg_parse()
+
+    """if args.find:
         for obj in execute_arg_find(args.find):
             print(obj)
 
@@ -71,7 +98,7 @@ def main():
         execute_arg_parse()
 
     if args.random:
-        execute_arg_random(args.random)
+        execute_arg_random(args.random)"""
 
     """parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
@@ -79,6 +106,6 @@ def main():
     """
 
 if __name__ == "__main__":
-    Log("INFO", MAIN_PROGRAM_START)
+    log("INFO", MAIN_PROGRAM_START)
     main()
-    Log("INFO", MAIN_PROGRAM_END)
+    log("INFO", MAIN_PROGRAM_END)
