@@ -42,21 +42,12 @@ def execute_arg_parse():
     except FileNotFoundError:
         log("ERROR", PARSE_FILE_ERROR)
 
-"""def execute_arg_random(path, *pages):
-    print(archive_to_text_task(retrieve_directory_task(DIPLOMA, DOCUMENTS_PDF) + path + ".pdf", pages))"""
-
 def execute_arg_random(params):
     path, pages = params[0], [int(page) for page in params[1:]]
     print(archive_to_text_task(retrieve_directory_task(DIPLOMA, DOCUMENTS_PDF) + path + ".pdf", pages))
 
 def execute_arg_text():
     pass
-
-"""def execute_arg_random(file_name):
-    data = execute_arg_find(["file", "name", file_name])[0].get_path()
-    path = RetrieveDirectoryTask(DIPLOMA, DOCUMENTS_PDF).retrieve_directory_content() + data + ".pdf"
-    text = ArchiveToTextTask(path).get_content(1, 1)
-    print(text)"""
 
 # PICKLE
 def open_pickle():
@@ -86,7 +77,6 @@ def main():
     """
 
 if __name__ == "__main__":
-    execute_arg_random(["/11_1934_SKJ/21-29_redni/1_XXI_SKJ_redni_18.6.1934", "4", "5"])
     log("INFO", MAIN_PROGRAM_START)
     main()
     log("INFO", MAIN_PROGRAM_END)
