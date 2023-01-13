@@ -9,60 +9,33 @@ from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter, PDFResourceManager
 from pdfminer.pdfpage import PDFPage
 
-# from .logging_task import LoggingTask as Log
-
-
-"""class ArchiveToTextTask:
-
-    # TODO: LOGGING VARIABLES
-
-    def __init__(self, file):
-        self.file = file
-
-    def get_content(self, start=1, finish=-1):
-        if finish == -1:
-            finish = 1000
-
-        resource_manager = PDFResourceManager()
-        file_handle = StringIO()
-        converter = TextConverter(resource_manager, file_handle)
-        interpreter = PDFPageInterpreter(resource_manager, converter)
-
-        with open(self.file, "rb") as f:
-            for site, page in enumerate(PDFPage.get_pages(f, caching=True, check_extractable=True)):
-                if start <= site + 1 <= finish:
-                    interpreter.process_page(page)
-
-            text = file_handle.getvalue()
-
-            converter.close()
-            file_handle.close()
-
-        if text:
-            return text
-
-        return None"""
-
-def archive_to_text_task(path, start=1, finish=-1):
-    if finish == -1:
-        finish = 1000
-
-    resource_manager = PDFResourceManager()
-    file_handle = StringIO()
+def archive_to_text_task(path, pages):
+    resource_manager, file_handle = PDFResourceManager(), StringIO()
     converter = TextConverter(resource_manager, file_handle)
     interpreter = PDFPageInterpreter(resource_manager, converter)
 
-    with open(path, "rb") as f:
-        for site, page in enumerate(PDFPage.get_pages(f, caching=True, check_extractable=True)):
-            if start <= site + 1 <= finish:
+    start, finish = get_pages_range(pages)
+
+    with open(path, "rb") as file:
+        for counter, page in enumerate(PDFPage.get_pages(file, caching=True, check_extractable=True)):
+            if start <= counter + 1 <= finish:
                 interpreter.process_page(page)
 
         text = file_handle.getvalue()
-
         converter.close()
         file_handle.close()
 
     if text:
         return text
-
     return None
+
+def get_pages_range(pages):
+    match len(pages):
+        case 0:
+            return 1, 1000
+        case 1:
+            return pages[0], pages[0]
+        case 2:
+            return pages[0], pages[1]
+        case _:
+            return 1, 1000

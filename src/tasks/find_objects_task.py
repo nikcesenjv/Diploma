@@ -4,8 +4,7 @@
 # Datoteka find_objects_task.py
 
 from src.find_objects import find_object
-
-from .logging_task import log
+from src.logging import log
 
 # LOGGING VARIABLES
 FIND_START = "find_objects.start"
@@ -24,7 +23,6 @@ def find_objects_task(data, params):
     return candidates
 
 def parse_params(params):
-
     return params[0], {params[i]: params[i + 1] for i in range(1, len(params), 2)}
 
 

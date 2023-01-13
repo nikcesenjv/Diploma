@@ -5,12 +5,18 @@
 
 from .find_by_structure import *
 
+from src.logging import log
+
+FIND_KEY_ERROR = "find_objects.key.error"
+
 def find_by_main_folder(main_folders, params):
     candidates = main_folders
-    for k, v in params.items():
-        func = globals()[METHOD_BASE + k]
-
-        candidates = func(candidates, v)
+    for attribute, value in params.items():
+        try:
+            func = globals()[METHOD_BASE + attribute]
+            candidates = func(candidates, value)
+        except KeyError:
+            log("WARNING", FIND_KEY_ERROR, attribute)
 
     return candidates
 

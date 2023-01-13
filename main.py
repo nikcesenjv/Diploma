@@ -6,28 +6,29 @@
 import argparse
 import pickle
 
-# from src import FileParsingTask, FindObjectsTask, RetrieveDirectoryTask
-from src import file_parsing_task
-from src import find_objects_task
-from src import retrieve_directory_task
-from src import log
+from src import archive_to_text_task, file_parsing_task, find_objects_task, retrieve_directory_task
+from src.logging import log
 
 # DIRECTORIES
 DIPLOMA = "full_path.diploma"
 DOCUMENTS = "path.documents.json"
 DOCUMENTS_PDF = "path.documents.pdf"
 
-# MESSAGES
-FIND_INDEX_ERROR = "find_objects.params.error"
+# MESSAGES [INFO]
 MAIN_PROGRAM_START = "main_program.start"
 MAIN_PROGRAM_END = "main_program.end"
-PARSE_PICKLE = "pickle.success"
+
+# MESSAGES [ERROR]
+FIND_INDEX_ERROR = "find_objects.index.error"
+PARSE_FILE_ERROR = "file_parsing.no_file.error"
 
 # EXECUTE METHODS
 def execute_arg_find(params):
     try:
-        for found_object in find_objects_task(open_pickle(), params):
+        found_objects = find_objects_task(open_pickle(), params)
+        for found_object in found_objects:
             print(found_object)
+        return found_objects
     except IndexError:
         log("ERROR", FIND_INDEX_ERROR)
 
@@ -35,28 +36,21 @@ def execute_arg_language():
     pass
 
 def execute_arg_parse():
-    with open("parsed_documents.pickle", "wb") as file:
-        pickle.dump(file_parsing_task(retrieve_directory_task(DIPLOMA, DOCUMENTS)), file)
-
-
-"""def execute_arg_find(params):
     try:
-        return FindObjectsTask(open_pickle(), params).get_candidates()
-    except IndexError:
-        log("ERROR", FIND_INDEX_ERROR)
+        with open("parsed_documents.pickle", "wb") as file:
+            pickle.dump(file_parsing_task(retrieve_directory_task(DIPLOMA, DOCUMENTS)), file)
+    except FileNotFoundError:
+        log("ERROR", PARSE_FILE_ERROR)
 
-def execute_arg_language():
-    pass
+"""def execute_arg_random(path, *pages):
+    print(archive_to_text_task(retrieve_directory_task(DIPLOMA, DOCUMENTS_PDF) + path + ".pdf", pages))"""
 
-def execute_arg_parse():
-    with open("parsed_documents.pickle", "wb") as file:
-        pickle.dump(FileParsingTask(RetrieveDirectoryTask(DIPLOMA, DOCUMENTS).retrieve_directory_content()), file)
-
-    # Log("INFO", PARSE_PICKLE, "parsed_documents.pickle")
-    print("error")
+def execute_arg_random(params):
+    path, pages = params[0], [int(page) for page in params[1:]]
+    print(archive_to_text_task(retrieve_directory_task(DIPLOMA, DOCUMENTS_PDF) + path + ".pdf", pages))
 
 def execute_arg_text():
-    pass"""
+    pass
 
 """def execute_arg_random(file_name):
     data = execute_arg_find(["file", "name", file_name])[0].get_path()
@@ -74,15 +68,8 @@ def main():
 
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files into pickle file")
-    parser.add_argument("-r", "--random", help="get text for randomly chosen files")
+    parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
     args = parser.parse_args()
-
-    """if args.find:
-        try:
-            for obj in execute_arg_find(args.find):
-                print(obj)
-        except IndexError:
-            log("ERROR", FIND_INDEX_ERROR)"""
 
     if args.find:
         execute_arg_find(args.find)
@@ -90,15 +77,8 @@ def main():
     if args.parse is not None:
         execute_arg_parse()
 
-    """if args.find:
-        for obj in execute_arg_find(args.find):
-            print(obj)
-
-    if args.parse is not None:
-        execute_arg_parse()
-
     if args.random:
-        execute_arg_random(args.random)"""
+        execute_arg_random(args.random)
 
     """parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
@@ -106,6 +86,7 @@ def main():
     """
 
 if __name__ == "__main__":
+    execute_arg_random(["/11_1934_SKJ/21-29_redni/1_XXI_SKJ_redni_18.6.1934", "4", "5"])
     log("INFO", MAIN_PROGRAM_START)
     main()
     log("INFO", MAIN_PROGRAM_END)

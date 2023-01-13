@@ -2,34 +2,36 @@
     "INFO": {
         "archive_to_text.start": "",
 
-        "file_parsing.start": "Začetek urejanja JSON datoteke '%s'",
-        "file_parsing.success": "JSON datoteka '%s' je bila uspešno urejena",
+        "file_parsing.progress": "   Urejanje...",
+        "file_parsing.start": "   Začetek urejanja JSON datoteke '%s'",
+        "file_parsing.success": "   JSON datoteka '%s' je bila uspešno urejena",
 
-        "file_parsing.main_folder.success": "Ustvarjena glavna mapa '%s'",
-        "file_parsing.inner_folder.success": "Ustvarjena notranja mapa '%s'",
-        "file_parsing.file_success": "Ustvarjena datoteka '%s'",
+        "file_parsing.main_folder.success": "   Ustvarjena glavna mapa '%s'",
+        "file_parsing.inner_folder.success": "   Ustvarjena notranja mapa '%s'",
+        "file_parsing.file_success": "   Ustvarjena datoteka '%s'",
 
-        "find_objects.start": "Začetek iskanja map/datotek",
-        "find_objects.success": "Najdenih je bilo %s ustreznih map/datotek",
+        "find_objects.start": "   Začetek iskanja map/datotek",
+        "find_objects.success": "   Najdenih je bilo %s ustreznih map/datotek",
 
-        "main_program.start": "----------PROGRAM SE ZAGANJA----------",
-        "main_program.end": "----------PROGRAM SE ZAPIRA----------\n",
+        "main_program.start": "-------------PROGRAM SE ZAGANJA-------------",
+        "main_program.end": "-------------PROGRAM SE ZAPIRA-------------\n",
 
-        "pickle.success": "Urejeni objekti so bili uspešno shranjeni v datoteki '%s'"
+        "pickle.success": "   Urejeni objekti so bili uspešno shranjeni v datoteki '%s'"
     },
 
     "ERROR": {
-        "file_parsing.directory_error": "Napačna pot direktorija",
-        "file_parsing.file_type_error": "Napačna vrsta datoteke",
-        "file_parsing.no_file_error": "Datoteka ni bila najdena",
-        "file_parsing.key_error": "Napačna JSON datoteka",
+        "file_parsing.directory.error": "  Napačna pot direktorija",
+        "file_parsing.file_type.error": "  Napačna vrsta datoteke",
+        "file_parsing.no_file.error": "  Datoteka ni bila najdena",
+        "file_parsing.key.error": "  Napačna JSON datoteka",
 
-        "find_objects.params.error": "Podana je bila neustrezna količina parametrov",
+        "find_objects.index.error": "  Podana je bila neustrezna količina parametrov",
 
-        "pickle.error": "Objekti niso bili shranjeni v datoteko '%s'"
+        "pickle.error": "  Objekti niso bili shranjeni v datoteko '%s'"
     },
 
     "WARNING": {
+        "find_objects.key.error": "Ukaz '%s' je bil izpuščen",
         "find_objects.none": "Najdena ni bila nobena ustrezna mapa/datoteka"
     }
 }
