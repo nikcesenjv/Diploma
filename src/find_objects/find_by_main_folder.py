@@ -10,15 +10,14 @@ from src.logging import log
 FIND_KEY_ERROR = "find_objects.key.error"
 
 def find_by_main_folder(main_folders, params):
-    candidates = main_folders
     for attribute, value in params.items():
         try:
             func = globals()[METHOD_BASE + attribute]
-            candidates = func(candidates, value)
+            main_folders = func(main_folders, value)
         except KeyError:
             log("WARNING", FIND_KEY_ERROR, attribute)
 
-    return candidates
+    return main_folders
 
 def find_by_index(main_folders, index):
     return [main_folder for main_folder in main_folders if index == main_folder.get_index()]

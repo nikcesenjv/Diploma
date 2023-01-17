@@ -29,7 +29,7 @@ def file_parsing_task(path):
 
 def execute_parsing(path_json, path_pdf):
     log("INFO", PARSING_PROGRESS)
-    all_main_folders, all_inner_folders, all_files = [], [], []
+    all_files, all_inner_folders, all_main_folders = [], [], []
     data = open_json(path_json)
 
     for element in data["documents"]:
@@ -53,7 +53,7 @@ def execute_parsing(path_json, path_pdf):
 
         all_main_folders.append(current_main_folder)
 
-    return all_main_folders, all_inner_folders, all_files
+    return all_files, all_inner_folders, all_main_folders
 
 def open_json(path):
     return json.load(open(path))

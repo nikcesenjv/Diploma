@@ -9,5 +9,6 @@
     "path.documents.pdf": "/lib/documents/pdf",
     "path.documents.txt": "/lib/documents/txt",
     "path.documents_word": "lib/documents/word",
-    "path.info": "/lib/info"
+    "path.info": "/lib/info",
+    "path.test_files": "lib/test_files_cer"
 }

@@ -31,8 +31,6 @@ def archive_to_text_task(path, pages):
 
 def get_pages_range(pages):
     match len(pages):
-        case 0:
-            return 1, 1000
         case 1:
             return pages[0], pages[0]
         case 2:

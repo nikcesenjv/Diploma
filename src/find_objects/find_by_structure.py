@@ -5,8 +5,8 @@
 
 METHOD_BASE = "find_by_"
 
-def find_by_name(data, name):
-    return [d for d in data if d.get_name() == name]
+def find_by_name(objects, name):
+    return [object_type for object_type in objects if object_type.get_name() == name]
 
-def find_by_path(data, path):
-    return [d for d in data if d.get_path() == path]
+def find_by_path(objects, path):
+    return [object_type for object_type in objects if object_type.get_path() == path]
