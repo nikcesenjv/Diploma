@@ -7,14 +7,9 @@ import argparse
 import os
 import pickle
 
-"""from src import archive_to_text_task, file_parsing_task, find_objects_task, parse_directory, retrieve_cer_task
-
-from src.logging import log
-from src.retrieve_resources import parse_json"""
-
 from src import *
 from src.logging import log
-from src.parsing import parse_directory, parse_json
+from src.parsing import parse_directory, parse_json, change_json_value
 
 # DIRECTORIES
 PROJECT = "full_path.project"
@@ -22,6 +17,7 @@ DOCUMENTS_JSON = "path.documents.json"
 DOCUMENTS_PDF = "path.documents.pdf"
 DIRECTORY_LIB = "path.lib"
 RESOURCES = "path.src.resources"
+BASIC_INFO = "path.basic_info.json"
 
 # MESSAGES [INFO]
 MAIN_PROGRAM_START = "main_program.start"
@@ -50,8 +46,8 @@ def execute_arg_find(params):
     except IndexError:
         log("ERROR", FIND_INDEX_ERROR)
 
-def execute_arg_language():
-    pass
+def execute_arg_language(lang):
+    change_json_value(parse_directory(PROJECT, BASIC_INFO), "language", lang)
 
 def execute_arg_parse():
     try:
@@ -90,6 +86,7 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
+    parser.add_argument("-l", "--lang", type=str, help="change language of logs")
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files into pickle file")
     parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
@@ -98,6 +95,9 @@ def main():
     if args.cer:
         cer_scores = execute_arg_cer(args.cer)
         print(f"Average: {calculate_average(cer_scores)}")
+
+    if args.lang:
+        execute_arg_language(args.lang)
 
     if args.find:
         for found_object in execute_arg_find(args.find):
@@ -110,7 +110,6 @@ def main():
         execute_arg_random(args.random)
 
     """parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
-    parser.add_argument("-l", "--lang", type=str, help="change language of logs")
     parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
     """
 

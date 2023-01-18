@@ -1,8 +1,9 @@
 {
     "full_path.project": "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma",
-    "full_path.program_messages_en": "src/resources/program_messages_en.json",
-    "full_path.program_messages_sl": "src/resources/program_messages_sl.json",
+    "path.program_messages_en": "src/resources/program_messages_en.json",
+    "path.program_messages_sl": "src/resources/program_messages_sl.json",
 
+    "path.basic_info.json": "src/resources/basic_info.json",
     "path.documentation": "lib/documentation",
     "path.documents": "lib/documents",
     "path.documents.json": "lib/datoteke.json",
