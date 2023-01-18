@@ -3,7 +3,7 @@
 # Študijsko leto 2022/2023
 # Datoteka retrieve_message.py
 
-from .parse_json import parse_json
+from src.parsing import parse_json
 
 PROGRAM_MESSAGES = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/src/resources/program_messages_sl.json"
 

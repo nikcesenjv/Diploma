@@ -5,7 +5,7 @@
 
 import logging
 
-from src.retrieve_resources import retrieve_message
+from .retrieve_message import retrieve_message
 
 LOGGING_PATH = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/updates.log"
 

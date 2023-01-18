@@ -31,7 +31,7 @@
     },
 
     "WARNING": {
-        "find_objects.key.error": "Ukaz '%s' je bil izpuščen",
+        "find_objects.key.error": "Parameter '%s' je bil izpuščen",
         "find_objects.none": "Najdena ni bila nobena ustrezna mapa/datoteka"
     }
 }

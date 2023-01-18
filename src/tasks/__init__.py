@@ -4,8 +4,6 @@
 # Datoteka tasks/__init__.py
 
 from .archive_to_text_task import archive_to_text_task
-from .convert_numerals_task import convert_numerals_task
-from .directory_task import *
 from .file_parsing_task import file_parsing_task
 from .find_objects_task import find_objects_task
 from .retrieve_cer_task import retrieve_cer_task

@@ -3,6 +3,7 @@
 # Študijsko leto 2022/2023
 # Datoteka parsing/__init__.py
 
-from .main_folder import MainFolder
-from .inner_folder import InnerFolder
-from .file import File
+from .directory_parsing import *
+from .json_parsing import parse_json
+from .numerals_parsing import convert_numerals
+from .object_parsing import *

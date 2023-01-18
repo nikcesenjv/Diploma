@@ -3,11 +3,8 @@
 # Študijsko leto 2022/2023
 # Datoteka file_parsing_task.py
 
-from .directory_task import retrieve_directory_task, replace_directory_part_task
-
 from src.logging import log
 from src.parsing import *
-from src.retrieve_resources import parse_json
 
 # DIRECTORIES
 PROJECT = "full_path.project"
@@ -25,7 +22,7 @@ KEY_ERROR = "file_parsing.key_error"
 
 def file_parsing_task(path):
     log("INFO", PARSING_START, path.split("/")[-1])
-    return execute_parsing(path, replace_directory_part_task(path, DOCUMENTS_JSON, DOCUMENTS_PDF))
+    return execute_parsing(path, replace_directory_part(path, DOCUMENTS_JSON, DOCUMENTS_PDF))
 
 def execute_parsing(path_json, path_pdf):
     log("INFO", PARSING_PROGRESS)
@@ -63,7 +60,7 @@ def create_inner_folder(name, outter_path):
 
 def create_file(name, outter_path, full_path, outter_folder):
     current_file = File(name, f"{outter_path}/{name}")
-    meeting_full_path = retrieve_directory_task(full_path, f"{current_file.get_path()}.pdf")
+    meeting_full_path = parse_directory(full_path, f"{current_file.get_path()}.pdf")
     current_file.set_pages(current_file.get_num_of_pages(meeting_full_path))
     current_file.set_outter_folder(outter_folder)
     return current_file

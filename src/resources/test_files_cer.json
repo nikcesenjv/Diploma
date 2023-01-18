@@ -8,7 +8,8 @@
             "meeting": "redni",
             "date": "18.6.1934",
             "page": [4],
-            "full name": "1_XXI_SKJ_redni_18.6.1934"
+            "full name": "1_XXI_SKJ_redni_18.6.1934",
+            "path": "11_1934_SKJ/21-29_redni/1_XXI_SKJ_redni_18.6.1934"
         },
         {
             "id": 2,
@@ -18,7 +19,8 @@
             "meeting": "redni",
             "date": "11.12.1936",
             "page": [1],
-            "full name": "3_III_NSKJ_redni_11.12.1936"
+            "full name": "3_III_NSKJ_redni_11.12.1936",
+            "path": "28_1936-1937_NSKJ/1-19_redni/3_III_NSKJ_redni_11.12.1936"
         },
         {
             "id": 3,
@@ -28,7 +30,8 @@
             "meeting": "redni",
             "date": "19.3.1937",
             "page": [11],
-            "full name": "4_XLII_NSKJ_redni_19.3.1937"
+            "full name": "4_XLII_NSKJ_redni_19.3.1937",
+            "path": "30_1937_NSKJ/39-63_redni/4_XLII_NSKJ_redni_19.3.1937"
         },
         {
             "id": 4,
@@ -38,7 +41,8 @@
             "meeting": "redni",
             "date": "14.4.1932",
             "page": [2],
-            "full name": "7_XXIV_SKJ_redni_14.4.1932"
+            "full name": "7_XXIV_SKJ_redni_14.4.1932",
+            "path": "19_1932_SKJ/18-40_redni/7_XXIV_SKJ_redni_14.4.1932"
         },
         {
             "id": 5,
@@ -48,7 +52,8 @@
             "meeting": "redni",
             "date": "24.3.1936",
             "page": [21],
-            "full name": "11_X_SKJ_redni_24.3.1936"
+            "full name": "11_X_SKJ_redni_24.3.1936",
+            "path": "13_1935-1936_SKJ/1-13_redni/11_X_SKJ_redni_24.3.1936"
         },
         {
             "id": 6,
@@ -58,7 +63,8 @@
             "meeting": "redni",
             "date": "25.3.1936",
             "page": [34],
-            "full name": "12_XI.I_SKJ_redni_25.3.1936"
+            "full name": "12_XI.I_SKJ_redni_25.3.1936",
+            "path": "13_1935-1936_SKJ/1-13_redni/12_XI.I_SKJ_redni_25.3.1936"
         },
         {
             "id": 7,
@@ -68,7 +74,8 @@
             "meeting": "seja",
             "date": "6.3.1922",
             "page": [1],
-            "full name": "18_XLVIII_NSSHS_seja_6.3.1922"
+            "full name": "18_XLVIII_NSSHS_seja_6.3.1922",
+            "path": "3_1921-1922_NSSHS/31-82_seja/18_XLVIII_NSSHS_seja_6.3.1922"
         },
         {
             "id": 8,
@@ -78,7 +85,8 @@
             "meeting": "redni",
             "date": "28.5.1919",
             "page": [19],
-            "full name": "23_XXVII_ZNPSHS_redni_28.5.1919"
+            "full name": "23_XXVII_ZNPSHS_redni_28.5.1919",
+            "path": "1_1919_ZNPSHS/5-40_redni/23_XXVII_ZNPSHS_redni_28.5.1919"
         },
         {
             "id": 9,
@@ -88,7 +96,8 @@
             "meeting": "redni",
             "date": "11.6.1932",
             "page": [8],
-            "full name": "25_XLVII_NSKJ_redni_11.6.1932"
+            "full name": "25_XLVII_NSKJ_redni_11.6.1932",
+            "path": "35_1932_NSKJ/23-56_redni/25_XLVII_NSKJ_redni_11.6.1932"
         },
         {
             "id": 10,
@@ -98,7 +107,8 @@
             "meeting": "redni",
             "date": "18.6.1919",
             "page": [7],
-            "full name": "34_XXXVIII_ZNPSHS_redni_18.6.1919"
+            "full name": "34_XXXVIII_ZNPSHS_redni_18.6.1919",
+            "path": "1_1919_ZNPSHS/5-40_redni/34_XXXVIII_ZNPSHS_redni_18.6.1919"
         }
     ]
 }
