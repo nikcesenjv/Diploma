@@ -3,7 +3,7 @@
 # Študijsko leto 2022/2023
 # Datoteka retrieve_directory.py
 
-import json
+from .parse_json import parse_json
 
 DIRECTORIES = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/src/resources/directories.json"
 
@@ -14,10 +14,7 @@ def retrieve_directory(directory_title):
     return None"""
     # return parse_json()[directory_title]
     try:
-        data = parse_json()
+        data = parse_json(DIRECTORIES)
         return data[directory_title]
     except KeyError:
         return directory_title
-
-def parse_json():
-    return json.load(open(DIRECTORIES))

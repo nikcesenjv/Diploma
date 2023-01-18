@@ -3,14 +3,14 @@
 # Študijsko leto 2022/2023
 # Datoteka file_parsing_task.py
 
-import json
-
-from .directory_task import replace_directory_part_task
+from .directory_task import retrieve_directory_task, replace_directory_part_task
 
 from src.logging import log
 from src.parsing import *
+from src.retrieve_resources import parse_json
 
 # DIRECTORIES
+PROJECT = "full_path.project"
 DOCUMENTS_JSON = "path.documents.json"
 DOCUMENTS_PDF = "path.documents.pdf"
 
@@ -25,12 +25,12 @@ KEY_ERROR = "file_parsing.key_error"
 
 def file_parsing_task(path):
     log("INFO", PARSING_START, path.split("/")[-1])
-    return execute_parsing(path, replace_path(path, DOCUMENTS_JSON, DOCUMENTS_PDF))
+    return execute_parsing(path, replace_directory_part_task(path, DOCUMENTS_JSON, DOCUMENTS_PDF))
 
 def execute_parsing(path_json, path_pdf):
     log("INFO", PARSING_PROGRESS)
     all_files, all_inner_folders, all_main_folders = [], [], []
-    data = open_json(path_json)
+    data = parse_json(path_json)
 
     for element in data["documents"]:
         current_main_folder = create_main_folder(element["folder name"])
@@ -55,21 +55,16 @@ def execute_parsing(path_json, path_pdf):
 
     return all_files, all_inner_folders, all_main_folders
 
-def open_json(path):
-    return json.load(open(path))
-
-def replace_path(directory, old_content, new_content):
-    return replace_directory_part_task(directory, old_content, new_content)
-
 def create_main_folder(name):
-    return MainFolder(name, f"/{name}")
+    return MainFolder(name, name)
 
 def create_inner_folder(name, outter_path):
     return InnerFolder(name, f"{outter_path}/{name}")
 
 def create_file(name, outter_path, full_path, outter_folder):
     current_file = File(name, f"{outter_path}/{name}")
-    current_file.set_pages(current_file.get_num_of_pages(full_path + current_file.get_path() + ".pdf"))
+    meeting_full_path = retrieve_directory_task(full_path, f"{current_file.get_path()}.pdf")
+    current_file.set_pages(current_file.get_num_of_pages(meeting_full_path))
     current_file.set_outter_folder(outter_folder)
     return current_file
 

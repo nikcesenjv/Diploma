@@ -9,7 +9,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter, PDFResourceManager
 from pdfminer.pdfpage import PDFPage
 
-def archive_to_text_task(path, pages):
+def archive_to_text_task(path, pages=None):
     resource_manager, file_handle = PDFResourceManager(), StringIO()
     converter = TextConverter(resource_manager, file_handle)
     interpreter = PDFPageInterpreter(resource_manager, converter)

@@ -3,5 +3,6 @@
 # Študijsko leto 2022/2023
 # Datoteka retrieve_messages/__init__.py
 
+from .parse_json import parse_json
 from .retrieve_message import retrieve_message
 from .retrieve_directory import retrieve_directory

@@ -1,14 +1,17 @@
 {
-    "full_path.diploma": "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma",
-    "full_path.program_messages_en": "/src/resources/program_messages_en.json",
-    "full_path.program_messages_sl": "/src/resources/program_messages_sl.json",
+    "full_path.project": "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma",
+    "full_path.program_messages_en": "src/resources/program_messages_en.json",
+    "full_path.program_messages_sl": "src/resources/program_messages_sl.json",
 
-    "path.documentation": "/lib/documentation",
-    "path.documents": "/lib/documents",
-    "path.documents.json": "/lib/datoteke.json",
-    "path.documents.pdf": "/lib/documents/pdf",
-    "path.documents.txt": "/lib/documents/txt",
+    "path.documentation": "lib/documentation",
+    "path.documents": "lib/documents",
+    "path.documents.json": "lib/datoteke.json",
+    "path.documents.pdf": "lib/documents/pdf",
+    "path.documents.txt": "lib/documents/txt",
     "path.documents_word": "lib/documents/word",
-    "path.info": "/lib/info",
+    "path.info": "lib/info",
+    "path.lib": "lib",
+    "path.src.resources": "src/resources",
+    "path.src": "src",
     "path.test_files": "lib/test_files_cer"
 }
