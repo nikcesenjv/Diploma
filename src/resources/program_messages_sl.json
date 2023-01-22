@@ -2,6 +2,8 @@
     "INFO": {
         "archive_to_text.start": "",
 
+        "change_language": "   Sprememba jezika...",
+
         "file_parsing.progress": "   Urejanje...",
         "file_parsing.start": "   Začetek urejanja JSON datoteke '%s'",
         "file_parsing.success": "   JSON datoteka '%s' je bila uspešno urejena",
@@ -26,6 +28,7 @@
         "file_parsing.key.error": "  Napačna JSON datoteka",
 
         "find_objects.index.error": "  Podana je bila neustrezna količina parametrov",
+        "find_objects.parameter.error": "  Napačna oblika objekta za iskanje",
 
         "pickle.error": "  Objekti niso bili shranjeni v datoteko '%s'"
     },

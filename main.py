@@ -20,12 +20,14 @@ RESOURCES = "path.src.resources"
 BASIC_INFO = "path.basic_info.json"
 
 # MESSAGES [INFO]
+CHANGE_LANGUAGE = "change_language"
 MAIN_PROGRAM_START = "main_program.start"
 MAIN_PROGRAM_END = "main_program.end"
 
 # MESSAGES [ERROR]
 FIND_INDEX_ERROR = "find_objects.index.error"
 NO_FILE_ERROR = "file_parsing.no_file.error"
+FIND_ERROR = "find_objects.parameter.error"
 
 # EXECUTE METHODS
 def execute_arg_cer(params):
@@ -48,6 +50,7 @@ def execute_arg_find(params):
 
 def execute_arg_language(lang):
     change_json_value(parse_directory(PROJECT, BASIC_INFO), "language", lang)
+    log("INFO", CHANGE_LANGUAGE)
 
 def execute_arg_parse():
     try:
@@ -71,8 +74,9 @@ def execute_arg_random(params):
 
 # HELPING METHODS
 def open_pickle():
-    with open("parsed_objects.pickle", "rb") as file:
-        return pickle.load(file)
+    """with open("parsed_objects.pickle", "rb") as file:
+        return pickle.load(file)"""
+    return pickle.load(open("parsed_objects.pickle", "rb"))
 
 def write_text(full_path, text):
     with open(full_path, "w") as file:
@@ -100,18 +104,17 @@ def main():
         execute_arg_language(args.lang)
 
     if args.find:
-        for found_object in execute_arg_find(args.find):
-            print(found_object)
+        try:
+            for found_object in execute_arg_find(args.find):
+                print(found_object)
+        except TypeError:
+            print("TypeError reached")
 
     if args.parse is not None:
         execute_arg_parse()
 
     if args.random:
         execute_arg_random(args.random)
-
-    """parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
-    parser.add_argument("-t", "--text", nargs="+", help="convert pdf file to text")
-    """
 
 if __name__ == "__main__":
     log("INFO", MAIN_PROGRAM_START)

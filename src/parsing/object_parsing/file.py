@@ -17,6 +17,7 @@ class File(Structure):
         self.pages = 0
         self.outter_folder = None
 
+    # PRINT OBJECT
     def __str__(self):
         info = f"Ime datoteke:       {self.name}\n" \
                f"Indeks:             {self.index}\n" \
@@ -31,18 +32,10 @@ class File(Structure):
 
         return info + f"Št strani:          {self.pages}\n"
 
+    # PARSING METHODS
     def parse_name(self):
         parsed = self.name.split("_")
         return parsed[0], parsed[1], parsed[2], parsed[3], parsed[4]
-
-    def get_index(self):
-        return self.index
-
-    def set_index(self, index):
-        self.index = index
-
-    def get_num(self):
-        return self.num
 
     def parse_num(self):
         parsed_num = self.num.split(".")
@@ -62,8 +55,29 @@ class File(Structure):
 
         return self.num
 
+    # STATIC METHODS
+    @staticmethod
+    def get_num_of_pages(path):
+        return str(PdfFileReader(open(path, "rb")).numPages)
+
+    # GETTERS & SETTERS
+    def get_index(self):
+        return self.index
+
+    def set_index(self, index):
+        self.index = index
+
+    def get_num(self):
+        return self.num
+
     def set_num(self, num):
         self.num = num
+
+    def get_assembly(self):
+        return self.assembly
+
+    def set_assembly(self, assembly):
+        self.assembly = assembly
 
     def get_meeting(self):
         return self.meeting
@@ -83,12 +97,14 @@ class File(Structure):
     def set_pages(self, pages):
         self.pages = pages
 
-    @staticmethod
-    def get_num_of_pages(path):
-        return str(PdfFileReader(open(path, "rb")).numPages)
-
     def get_outter_folder(self):
         return self.outter_folder
 
     def set_outter_folder(self, outter_folder):
         self.outter_folder = outter_folder
+
+    def add_pdf(self):
+        return f"{self.path}.pdf"
+
+    def add_txt(self):
+        return f"{self.path}.txt"

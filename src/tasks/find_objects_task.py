@@ -10,6 +10,7 @@ from src.logging import log
 FIND_START = "find_objects.start"
 FIND_SUCCESS = "find_objects.success"
 FIND_NONE = "find_objects.none"
+FIND_ERROR = "find_objects.parameter.error"
 
 def find_objects_task(data, params):
     object_type, parsed_params = parse_params(params)

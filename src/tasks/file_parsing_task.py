@@ -15,6 +15,7 @@ DOCUMENTS_PDF = "path.documents.pdf"
 PARSING_PROGRESS = "file_parsing.progress"
 PARSING_START = "file_parsing.start"
 PARSING_SUCCESS = "file_parsing.success"
+PARSING_MAIN = "file_parsing.main_folder.success"
 
 DIRECTORY_ERROR = "file_parsing.directory_error"
 DECODER_ERROR = "file_parsing.file_type_error"
@@ -38,7 +39,8 @@ def execute_parsing(path_json, path_pdf):
 
                 for note in files:
                     current_file = create_file(note, current_inner_folder.get_path(), path_pdf, current_inner_folder)
-                    print(f"Datoteka {current_file.get_name()} ustvarjena")
+                    # print(f"Datoteka {current_file.get_name()} ustvarjena")
+                    # log("INFO", PARSING_FILE, current_file.get_name())
 
                     current_inner_folder.add_file(current_file)
                     all_files.append(current_file)
@@ -49,6 +51,7 @@ def execute_parsing(path_json, path_pdf):
                 all_inner_folders.append(current_inner_folder)
 
         all_main_folders.append(current_main_folder)
+        log("INFO", PARSING_MAIN, current_main_folder.get_name())
 
     return all_files, all_inner_folders, all_main_folders
 

@@ -14,15 +14,24 @@ class MainFolder(Structure):
 
         self.folders = []
 
+    # PRINT OBJECT
     def __str__(self):
         return f"Ime mape:     {self.name}\n" \
                f"Indeks:       {self.index}\n" \
                f"Leto:         {self.year}\n" \
                f"Organizacija: {self.assembly}\n"
 
+    # PARSING METHOD
     def parse_name(self):
         parsed = self.name.split("_")
         return parsed[0], parsed[1], parsed[2]
+
+    # GETTERS & SETTERS
+    def get_index(self):
+        return self.index
+
+    def set_indes(self, index):
+        self.index = index
 
     def get_year(self):
         return self.year

@@ -12,6 +12,7 @@
         "find_objects.start": "Searching for folders/files started",
         "find_objects.success": "%s folders/files were found",
 
+        "main_program.start": "THE PROGRAM IS STARTING UP",
         "main_program.end": "----------THE PROGRAM IS CLOSING----------",
 
         "pickle.success": "Parsed objects were successfully saved to '%s' "
