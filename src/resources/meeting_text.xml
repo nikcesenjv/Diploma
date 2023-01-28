@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="11_X_SKJ_redni_24.3.1936"
+     xml:lang="sr"
+     ana="#parla.sitting #reference">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main" xml:lang="sl">neki neki</title>
+                <title type="sub" xml:lang="en">something something</title>
+                <meeting n="10" corresp="#SKJ" ana="#parla.lower #parla.meeting.regular">redni</meeting>
+                <respStmt>
+                    <persName>Nik Česenj Vodovnik</persName>
+                    <resp xml:lang="sl">Kodiranje TEI</resp>
+                    <resp xml:lang="en">TEI corpus encoding</resp>
+                </respStmt>
+                <funder>
+                    <orgName xml:lang="sl">Fakulteta za računalštvo in informatiko, Univerza v Ljubljani</orgName>
+                    <orgName xml:lang="en">Faculty of Computer and Information Science, University of Ljubljana</orgName>
+                </funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>1</edition>
+            </editionStmt>
+            <extent>
+                <measure unit="speeches" quantity="58" xml:lang="sl">58 govorov</measure>
+                <measure unit="speeches" quantity="58" xml:lang="en">58 speeches</measure>
+                <measure unit="words" quantity="11148" xml:lang="sl">11.148 besed</measure>
+                <measure unit="words" quantity="11148" xml:lang="en">11,148 words</measure>
+            </extent>
+            <publicationStmt>
+                <publisher>
+                   <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+                   <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+                   <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+                </publisher>
+                <idno subtype="handle" type="URI">http://hdl.handle.net/11356/1432</idno>
+                <availability status="free">
+                   <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+                   <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+                   <p xml:lang="sl">To delo je ponujeno pod <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Priznanje avtorstva 4.0 mednarodna licenca</ref>.</p>
+                </availability>
+                <date when="2021-06-11">January 26, 2023</date>
+            </publicationStmt>
+        </fileDesc>
+    </teiHeader>
+    <text ana="#reference">
+        <body>
+            <div type="mainHeader">
+                <head>STENOGRAFSKE BELEŠKE</head>
+                <head type="assembly">SENATA</head>
+                <head type="country">KRALJEVINE JUGOSLAVIJE</head>
+            </div>
+            <div type="generalInfo">
+                <head type="year">GODINA 5</head>
+            </div>
+        </body>
+    </text>
+</TEI>

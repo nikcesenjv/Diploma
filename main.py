@@ -9,12 +9,12 @@ import pickle
 
 from src import *
 from src.logging import log
-from src.parsing import parse_directory, parse_json, change_json_value
+from src.parsing import *
 
 # DIRECTORIES
 PROJECT = "full_path.project"
+DOCUMENTS = "path.documents"
 DOCUMENTS_JSON = "path.documents.json"
-DOCUMENTS_PDF = "path.documents.pdf"
 DIRECTORY_LIB = "path.lib"
 RESOURCES = "path.src.resources"
 BASIC_INFO = "path.basic_info.json"
@@ -49,13 +49,15 @@ def execute_arg_find(params):
         log("ERROR", FIND_INDEX_ERROR)
 
 def execute_arg_language(lang):
-    change_json_value(parse_directory(PROJECT, BASIC_INFO), "language", lang)
-    log("INFO", CHANGE_LANGUAGE)
+    supported_languages = ["sl", "en"]
+    if lang in supported_languages:
+        change_json_value(parse_directory(PROJECT, BASIC_INFO), "language", lang)
+        log("INFO", CHANGE_LANGUAGE)
 
 def execute_arg_parse():
     try:
-        with open("parsed_objects.pickle", "wb") as file:
-            pickle.dump(file_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON)), file)
+        with open("parsed_objects.pickle", "wb") as f:
+            pickle.dump(file_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON)), f)
     except FileNotFoundError:
         log("ERROR", NO_FILE_ERROR)
 
@@ -68,9 +70,12 @@ def execute_arg_random(params):
         print("already exists")
     finally:
         for random_file in parse_json(json_file)["random files"]:
-            archive_path = parse_directory(PROJECT, DOCUMENTS_PDF, f"{random_file['path']}.pdf")
+            archive_path = parse_directory(PROJECT, DOCUMENTS, f"{add_pdf_to_path(random_file['path'])}")
             meeting_text = archive_to_text_task(archive_path, random_file["page"])
-            write_text(parse_directory(target_path, f"{random_file['full name']}.txt"), meeting_text)
+            write_text(parse_directory(target_path, add_txt_to_name(random_file["full name"])), meeting_text)
+            # archive_path = parse_directory(PROJECT, DOCUMENTS_PDF, f"{random_file['path']}.pdf")
+            # meeting_text = archive_to_text_task(archive_path, random_file["page"])
+            # write_text(parse_directory(target_path, f"{random_file['full name']}.txt"), meeting_text)
 
 # HELPING METHODS
 def open_pickle():
@@ -79,8 +84,8 @@ def open_pickle():
     return pickle.load(open("parsed_objects.pickle", "rb"))
 
 def write_text(full_path, text):
-    with open(full_path, "w") as file:
-        file.write(text)
+    with open(full_path, "w") as f:
+        f.write(text)
 
 def calculate_average(cer_scores):
     return sum(cer_scores) / len(cer_scores)
@@ -94,11 +99,16 @@ def main():
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files into pickle file")
     parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
+
+    # TODO: XML PARSER
+    # parser.add_argument("-x", "--xml", nargs="*", help="get xml version of a chosen file")
     args = parser.parse_args()
 
     if args.cer:
-        cer_scores = execute_arg_cer(args.cer)
-        print(f"Average: {calculate_average(cer_scores)}")
+        try:
+            print(f"Average: {calculate_average(execute_arg_cer(args.cer))}")
+        except TypeError:
+            print("not found")
 
     if args.lang:
         execute_arg_language(args.lang)

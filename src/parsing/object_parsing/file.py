@@ -61,6 +61,15 @@ class File(Structure):
         return str(PdfFileReader(open(path, "rb")).numPages)
 
     # GETTERS & SETTERS
+    def get_pdf_path(self):
+        return f"pdf/{self.path}.pdf"
+
+    def get_txt_path(self):
+        return f"word/{self.path}.txt"
+
+    def get_word_path(self):
+        return f"word/{self.path}.docx"
+
     def get_index(self):
         return self.index
 
@@ -102,9 +111,3 @@ class File(Structure):
 
     def set_outter_folder(self, outter_folder):
         self.outter_folder = outter_folder
-
-    def add_pdf(self):
-        return f"{self.path}.pdf"
-
-    def add_txt(self):
-        return f"{self.path}.txt"

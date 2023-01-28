@@ -37,3 +37,7 @@ def find_by_date(files, date):
 
 def find_by_year(files, year):
     return [file for file in files if year in file.get_date()]
+
+def find_by_year2(files, year):
+    # return year in file.get_date()
+    return filter(lambda file: year in file.get_date(), files)

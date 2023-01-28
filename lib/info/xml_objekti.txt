@@ -1,0 +1,11 @@
+Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
+Nik Česenj Vodovnik, 04080450 - Upravna informatika
+Študijsko leto 2021/2022
+Datoteka xml_objekti.txt
+
+OSNOVA XML
+<?xml version="1.0" encoding="UTF-8"?>
+
+GLAVNI DEL [TEI]
+1. DEL [teiHeader]
+2. DEL [text]
