@@ -39,7 +39,7 @@ def execute_parsing(path_json, path_pdf):
 
                 for note in files:
                     current_file = create_file(note, current_inner_folder.get_path(), path_pdf, current_inner_folder)
-                    # print(f"Datoteka {current_file.get_name()} ustvarjena")
+                    print(f"Datoteka {current_file.get_name()} ustvarjena")
                     # log("INFO", PARSING_FILE, current_file.get_name())
 
                     current_inner_folder.add_file(current_file)

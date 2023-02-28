@@ -6,6 +6,7 @@
 import argparse
 import os
 import pickle
+import shelve
 
 from src import *
 from src.logging import log
@@ -37,16 +38,18 @@ def execute_arg_cer(params):
 
         return [retrieve_cer_task(parse_directory(first_path, first_file),
                                   parse_directory(second_path, second_file))
-                                  for first_file, second_file in zip(sorted(os.listdir(first_path)),
-                                                                     sorted(os.listdir(second_path)))]
+                                  for first_file, second_file in
+                                  zip(sorted(os.listdir(first_path)), sorted(os.listdir(second_path)))]
     except FileNotFoundError:
         log("ERROR", NO_FILE_ERROR)
+        return []
 
 def execute_arg_find(params):
     try:
         return find_objects_task(open_pickle(), params)
     except IndexError:
         log("ERROR", FIND_INDEX_ERROR)
+        return []
 
 def execute_arg_language(lang):
     supported_languages = ["sl", "en"]
@@ -55,6 +58,17 @@ def execute_arg_language(lang):
         log("INFO", CHANGE_LANGUAGE)
 
 def execute_arg_parse():
+    try:
+        with shelve.open("testDB") as db:
+            """db["file"], \
+            db["inner"], \
+            db["main"] = file_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON))"""
+            _file, _inner, _main = file_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON))
+            db["file"], db["inner"], db["main"] = _file, _inner, _main
+    except FileNotFoundError:
+        log("ERROR", NO_FILE_ERROR)
+
+def execute_arg_parse_pickle():
     try:
         with open("parsed_objects.pickle", "wb") as f:
             pickle.dump(file_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON)), f)
@@ -73,14 +87,13 @@ def execute_arg_random(params):
             archive_path = parse_directory(PROJECT, DOCUMENTS, f"{add_pdf_to_path(random_file['path'])}")
             meeting_text = archive_to_text_task(archive_path, random_file["page"])
             write_text(parse_directory(target_path, add_txt_to_name(random_file["full name"])), meeting_text)
-            # archive_path = parse_directory(PROJECT, DOCUMENTS_PDF, f"{random_file['path']}.pdf")
-            # meeting_text = archive_to_text_task(archive_path, random_file["page"])
-            # write_text(parse_directory(target_path, f"{random_file['full name']}.txt"), meeting_text)
 
 # HELPING METHODS
+def open_shelve():
+    with shelve.open("testDB") as db:
+        print(db["file"])
+
 def open_pickle():
-    """with open("parsed_objects.pickle", "rb") as file:
-        return pickle.load(file)"""
     return pickle.load(open("parsed_objects.pickle", "rb"))
 
 def write_text(full_path, text):
@@ -88,7 +101,7 @@ def write_text(full_path, text):
         f.write(text)
 
 def calculate_average(cer_scores):
-    return sum(cer_scores) / len(cer_scores)
+    return round(sum(cer_scores) / len(cer_scores) * 100, 2)
 
 # MAIN
 def main():
@@ -106,7 +119,7 @@ def main():
 
     if args.cer:
         try:
-            print(f"Average: {calculate_average(execute_arg_cer(args.cer))}")
+            print(f"Average: {(calculate_average(execute_arg_cer(args.cer)))}%")
         except TypeError:
             print("not found")
 
@@ -130,3 +143,5 @@ if __name__ == "__main__":
     log("INFO", MAIN_PROGRAM_START)
     main()
     log("INFO", MAIN_PROGRAM_END)
+    # open_shelve()
+    execute_arg_parse_pickle()

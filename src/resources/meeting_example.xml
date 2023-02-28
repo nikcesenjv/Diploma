@@ -51,7 +51,9 @@
                 <head type="country">KRALJEVINE JUGOSLAVIJE</head>
             </div>
             <div type="generalInfo">
-                <head type="year">GODINA 5</head>
+                <head type="meeting">X REDOVNI SASTANAK</head>
+                <head type="assembly">SENATA KRALJEVINE JUGOSLAVIJE</head>
+                <head type="datetime">DRŽAN 24 MARTA 1936 GODINE U BEOGRADU</head>
             </div>
         </body>
     </text>
