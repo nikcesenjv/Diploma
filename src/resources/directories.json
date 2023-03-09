@@ -6,7 +6,7 @@
     "path.basic_info.json": "src/resources/basic_info.json",
     "path.documentation": "lib/documentation",
     "path.documents": "lib/documents",
-    "path.documents.json": "lib/datoteke.json",
+    "path.documents.json": "src/resources/documents_info.json",
     "path.documents.pdf": "lib/documents/pdf",
     "path.documents.txt": "lib/documents/txt",
     "path.documents_word": "lib/documents/word",

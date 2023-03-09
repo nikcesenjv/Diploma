@@ -6,7 +6,7 @@
 METHOD_BASE = "find_by_"
 
 def find_by_name(objects, name):
-    return [object_type for object_type in objects if object_type.get_name() == name]
+    return [_object for _object in objects if _object.name == name]
 
 def find_by_path(objects, path):
-    return [object_type for object_type in objects if object_type.get_path() == path]
+    return [_object for _object in objects if _object.path == path]

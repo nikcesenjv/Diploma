@@ -16,8 +16,8 @@ def find_object(data, type_of_object, params):
 
     match type_of_object:
         case "file":
-            return find_by_file(data[0], params)
+            return find_by_file(data, params)
         case "inner":
-            return find_by_inner_folder(data[1], params)
+            return find_by_inner_folder(data, params)
         case "main":
-            return find_by_main_folder(data[0], params)
+            return find_by_main_folder(data, params)

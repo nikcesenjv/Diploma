@@ -4,10 +4,11 @@
 # Datoteka retrieve_cer_task.py
 
 from cyrtranslit import to_latin
-from jiwer import cer
+# from jiwer import cer
 
 def retrieve_cer_task(first_path, second_path):
-    return cer(get_text(first_path), get_text(second_path))
+    # return cer(get_text(first_path), get_text(second_path))
+    return False
 
 def get_text(path):
     with open(path, "r") as file:
