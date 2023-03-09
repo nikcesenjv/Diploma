@@ -18,6 +18,9 @@ def find_by_inner_folder(inner_folders, params):
     return inner_folders
 
 def find_by_num(inner_folders, num):
+    return [inner_folder for inner_folder in inner_folders if inner_folder.num == num]
+
+def find_by_spec_num(inner_folders, num):
     return [inner_folder for inner_folder in inner_folders if num in inner_folder.num]
 
 def find_by_meeting(inner_folders, meeting):

@@ -19,7 +19,7 @@ def find_by_file(files, params):
     return files
 
 def find_by_index(files, index):
-    return [file for file in files if file.index == index]
+    return [file for file in files if file.index == int(index)]
 
 def find_by_num(files, num):
     return [file for file in files if convert_numerals(file.num.split(".")[0]) == num]
@@ -35,3 +35,6 @@ def find_by_date(files, date):
 
 def find_by_year(files, year):
     return [file for file in files if file.year == year]
+
+def find_by_pages(files, pages):
+    return [file for file in files if file.pages == pages]

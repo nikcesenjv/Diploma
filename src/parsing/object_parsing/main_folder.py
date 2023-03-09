@@ -23,7 +23,7 @@ class MainFolder(Structure):
     # PARSING METHOD
     def parse_name(self):
         parsed = self.name.split("_")
-        return parsed[0], parsed[1], parsed[2]
+        return int(parsed[0]), parsed[1], parsed[2]
 
     # GETTERS & SETTERS
     @property
@@ -40,7 +40,10 @@ class MainFolder(Structure):
 
     @year.setter
     def year(self, new_year):
-        self._year = new_year
+        if type(new_year) == int:
+            self._year = str(new_year)
+        else:
+            self._year = new_year
 
     @property
     def assembly(self):

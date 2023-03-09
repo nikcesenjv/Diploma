@@ -119,16 +119,6 @@ def main():
         execute_arg_random(args.random)
 
 if __name__ == "__main__":
-    # log("INFO", "main_program.start")
-    # main()
-    # log("INFO", "main_program.end")
-    start = time.time()
-    # x = execute_arg_find(["file", "name", "1_V_ZNPSHS_redni_22.3.1919"])
-    x = execute_arg_find(["file", "year", "1919"])
-    for _file in x:
-        print(_file)
-    end = time.time()
-
-    print(end - start)
-    # open_shelve()
-    # execute_arg_parse_pickle()
+    log("INFO", "main_program.start")
+    main()
+    log("INFO", "main_program.end")

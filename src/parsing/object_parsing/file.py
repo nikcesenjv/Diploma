@@ -34,7 +34,7 @@ class File(Structure):
     # PARSE METHODS
     def parse_name(self):
         parsed = self.name.split("_")
-        return parsed[0], parsed[1], parsed[2], parsed[3], parsed[4]
+        return int(parsed[0]), parsed[1], parsed[2], parsed[3], parsed[4]
 
     def parse_num(self):
         parsed_num = self._num.split(".")
@@ -54,11 +54,11 @@ class File(Structure):
 
         return self._num
 
-    # GETTERS & SETTERS
     @staticmethod
     def get_num_of_pages(full_path):
-        return len(PdfReader(open(full_path, "rb")).pages)
+        return str(len(PdfReader(open(full_path, "rb")).pages))
 
+    # GETTERS & SETTERS
     @property
     def pdf_path(self):
         return f"pdf/{self.path}.pdf"
@@ -79,6 +79,7 @@ class File(Structure):
     def index(self, new_index):
         self._index = new_index
 
+    # TODO: rim. --> arab.
     @property
     def num(self):
         return self._num

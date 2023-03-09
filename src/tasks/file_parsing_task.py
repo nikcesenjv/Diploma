@@ -71,6 +71,8 @@ def execute_parsing(path_json, path_pdf):
                 current_inner_folder.outter_folder = current_main_folder
                 current_main_folder.add_folder(current_inner_folder)
 
+                all_inner_folders.append(current_inner_folder)
+
         all_main_folders.append(current_main_folder)
 
     return all_files, all_inner_folders, all_main_folders

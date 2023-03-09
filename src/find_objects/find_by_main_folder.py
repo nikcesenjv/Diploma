@@ -15,11 +15,11 @@ def find_by_main_folder(main_folders, params):
         except KeyError:
             log("WARNING", "find_objects.key.error", attribute)
 
-    log("INFO", "Najdenih %s map.", len(main_folders))
+    log("INFO", "Najdenih '%s' map.", len(main_folders))
     return main_folders
 
 def find_by_index(main_folders, index):
-    return [main_folder for main_folder in main_folders if main_folder.index == index]
+    return [main_folder for main_folder in main_folders if main_folder.index == int(index)]
 
 def find_by_year(main_folders, year):
     return [main_folder for main_folder in main_folders if year in main_folder.year]
