@@ -7,20 +7,18 @@ from .find_by_structure import *
 
 from src.logging import log
 
-FIND_KEY_ERROR = "find_objects.key.error"
-
 def find_by_inner_folder(inner_folders, params):
     for attribute, value in params.items():
         try:
             func = globals()[METHOD_BASE + attribute]
             inner_folders = func(inner_folders, value)
         except KeyError:
-            log("WARNING", FIND_KEY_ERROR, attribute)
+            log("WARNING", "find_objects.key.error", attribute)
 
     return inner_folders
 
 def find_by_num(inner_folders, num):
-    return [inner_folder for inner_folder in inner_folders if num in inner_folder.get_num()]
+    return [inner_folder for inner_folder in inner_folders if num in inner_folder.num]
 
 def find_by_meeting(inner_folders, meeting):
-    return [inner_folder for inner_folder in inner_folders if meeting == inner_folder.get_meeting()]
+    return [inner_folder for inner_folder in inner_folders if inner_folder.meeting == meeting]

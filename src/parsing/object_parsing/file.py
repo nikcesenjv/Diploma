@@ -112,6 +112,10 @@ class File(Structure):
         self._date = new_date
 
     @property
+    def year(self):
+        return self._date.split(".")[-1]
+
+    @property
     def pages(self):
         return self._pages
 
