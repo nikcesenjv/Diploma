@@ -72,6 +72,10 @@ class File(Structure):
         return f"word/{self.path}.docx"
 
     @property
+    def xml_path(self):
+        return f"xml/{self.path}.xml"
+
+    @property
     def index(self):
         return self._index
 

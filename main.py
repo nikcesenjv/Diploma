@@ -7,8 +7,6 @@ import argparse
 import os
 import shelve
 
-import time
-
 from src import *
 from src.logging import log
 from src.parsing import *
