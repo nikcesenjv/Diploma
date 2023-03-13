@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <product>
+    <item id="1234" price="24.99">PRODUKT ŠT. 1</item>
+    <brand name="test">Apple</brand>
+  </product>
+</root>

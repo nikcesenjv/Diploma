@@ -1,7 +1,7 @@
 # Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
 # Nik Česenj Vodovnik, 04180450 - Upravna informatika
 # Študijsko leto 2022/2023
-# Datoteka file_parsing_task.py
+# Datoteka object_parsing_task.py
 
 from src.logging import log
 from src.parsing import *
@@ -21,7 +21,7 @@ DIRECTORY_ERROR = "file_parsing.directory_error"
 DECODER_ERROR = "file_parsing.file_type_error"
 KEY_ERROR = "file_parsing.key_error"
 
-def file_parsing_task(path):
+def object_parsing_task(path):
     log("INFO", PARSING_START, path.split("/")[-1])
     return execute_parsing(path, replace_directory_part(path, DOCUMENTS_JSON, DOCUMENTS_PDF))
 
@@ -29,30 +29,6 @@ def execute_parsing(path_json, path_pdf):
     log("INFO", PARSING_PROGRESS)
     all_files, all_inner_folders, all_main_folders = [], [], []
     data = parse_json(path_json)
-
-    """for element in data["documents"]:
-        current_main_folder = create_main_folder(element["folder name"])
-
-        for folder in element["folders"]:
-            for inner, files in folder.items():
-                current_inner_folder = create_inner_folder(inner, current_main_folder.get_path())
-
-                for note in files:
-                    current_file = create_file(note, current_inner_folder.get_path(), path_pdf, current_inner_folder)
-                    # print(f"Datoteka {current_file.get_name()} ustvarjena")
-                    # log("INFO", PARSING_FILE, current_file.get_name())
-
-                    current_inner_folder.add_file(current_file)
-                    all_files.append(current_file)
-
-                current_inner_folder.set_outter_folder(current_main_folder)
-                current_main_folder.add_folder(current_inner_folder)
-
-                all_inner_folders.append(current_inner_folder)
-
-        all_main_folders.append(current_main_folder)
-        print(f"Glavna mapa {current_main_folder.get_name()} ustvarjena")
-        log("INFO", PARSING_MAIN, current_main_folder.get_name())"""
 
     for _main_folder in data["documents"]:
         current_main_folder = create_main_folder(_main_folder["folder name"])

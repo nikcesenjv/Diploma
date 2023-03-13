@@ -3,7 +3,7 @@
 # Študijsko leto 2022/2023
 # Datoteka tasks/__init__.py
 
-from .archive_to_text_task import archive_to_text_task
-from .file_parsing_task import file_parsing_task
+from .retrieve_text_task import retrieve_text_task
 from .find_objects_task import find_objects_task
 from .retrieve_cer_task import retrieve_cer_task
+from .object_parsing_task import object_parsing_task

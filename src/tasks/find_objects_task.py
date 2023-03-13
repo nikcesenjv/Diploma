@@ -16,11 +16,6 @@ def find_objects_task(data, params):
     object_type, parsed_params = parse_params(params)
     candidates = find_object(data, object_type, parsed_params)
 
-    """if len(candidates) == 0:
-        log("WARNING", FIND_NONE)
-    else:
-        log("INFO", FIND_SUCCESS, len(candidates))"""
-
     if candidates:
         log("INFO", FIND_SUCCESS, len(candidates))
     else:

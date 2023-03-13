@@ -55,7 +55,7 @@ class DocxRow(Namespace):
 
     def parse_text(self) -> str:
         text = self.row.findall(".//w:t", self.NAMESPACE)
-        return "".join([t.text for t in text])
+        return "".join([t.text for t in text]).replace("-", "")
 
 
 # self._text = self.parse_text()

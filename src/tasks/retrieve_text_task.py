@@ -1,7 +1,7 @@
 # Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
 # Nik Česenj Vodovnik, 04180450 - Upravna informatika
 # Študijsko leto 2022/2023
-# Datoteka archive_to_text_task.py
+# Datoteka retrieve_text_task.py
 
 from io import StringIO
 
@@ -9,7 +9,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter, PDFResourceManager
 from pdfminer.pdfpage import PDFPage
 
-def archive_to_text_task(path, pages=None):
+def retrieve_text_task(path, pages=None):
     resource_manager, file_handle = PDFResourceManager(), StringIO()
     converter = TextConverter(resource_manager, file_handle)
     interpreter = PDFPageInterpreter(resource_manager, converter)

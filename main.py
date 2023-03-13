@@ -50,7 +50,7 @@ def execute_arg_language(lang):
 def execute_arg_parse():
     try:
         with shelve.open("testDB") as db:
-            db["file"], db["inner"], db["main"] = file_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON))
+            db["file"], db["inner"], db["main"] = object_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON))
 
     except FileNotFoundError:
         log("ERROR", "file_parsing.no_file.error")
@@ -65,7 +65,7 @@ def execute_arg_random(params):
     finally:
         for random_file in parse_json(json_file)["random files"]:
             archive_path = parse_directory(PROJECT, DOCUMENTS, f"{add_pdf_to_path(random_file['path'])}")
-            meeting_text = archive_to_text_task(archive_path, random_file["page"])
+            meeting_text = retrieve_text_task(archive_path, random_file["page"])
             write_text(parse_directory(target_path, add_txt_to_name(random_file["full name"])), meeting_text)
 
 # HELPING METHODS

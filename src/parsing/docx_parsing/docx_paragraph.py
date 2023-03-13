@@ -16,6 +16,7 @@ class DocxParagraph(Namespace):
         self._rows:  list[DocxRow] = self.parse_rows()
 
         self._text: str = self.parse_text()
+        self._text_bold: str = self.parse_text_bold()
 
     # GETTERS & SETTERS
     @property
@@ -51,14 +52,31 @@ class DocxParagraph(Namespace):
         self._text = new_text
 
     @property
-    def text_with_bold_property(self) -> str:
+    def text_bold(self) -> str:
+        return self._text_bold
+
+    @text_bold.setter
+    def text_bold(self, new_text_bold: str) -> None:
+        self._text_bold = new_text_bold
+
+    # PARSING METHODS
+    def parse_style(self) -> str | None:
+        style_value = self.paragraph.find(".//w:pStyle", self.NAMESPACE)
+        if style_value is not None:
+            return list(style_value.attrib.values())[0]
+        return None
+
+    def parse_rows(self) -> list[DocxRow]:  # row_elements = self.paragraph.findall(".//w:r", self.NAMESPACE)
+        return [DocxRow(row_element) for row_element in self.paragraph.findall(".//w:r", self.NAMESPACE)]
+
+    def parse_text(self) -> str:
+        return "".join([row.text for row in self.rows])
+
+    def parse_text_bold(self, previous_bold: bool = False) -> str:
         res = ""
-        previous_bold = False
 
         for row_element in self._rows:
-            is_bold = row_element.is_bold()
-
-            if is_bold:
+            if row_element.is_bold():
                 if not previous_bold:
                     res += f"[{row_element.text}"
                 else:
@@ -75,36 +93,4 @@ class DocxParagraph(Namespace):
         if "[" in res and "]" not in res:
             res += "]"
 
-        """for row_element in self._rows:
-            if row_element.is_bold and not previous_bold:
-                res += f"[{row_element.text}"
-                previous_bold = True
-            elif row_element.is_bold and previous_bold:
-                res += row_element.text
-            else:
-                if not previous_bold:
-                    res += f"] {row_element.text}"
-                else:
-                    res += row_element.text
-                previous_bold = False
-"""
         return res
-
-    # PARSING METHODS
-    """def parse_text(self) -> str:
-        return "".join([str(row.text) for row in self._rows])"""
-    def parse_text(self) -> str:
-        seznam = []
-        for row in self.rows:
-            x = row.text
-            seznam.append(x)
-        return "".join(seznam)
-
-    def parse_style(self) -> str | None:
-        style_value = self.paragraph.find(".//w:pStyle", self.NAMESPACE)
-        if style_value is not None:
-            return list(style_value.attrib.values())[0]
-        return None
-
-    def parse_rows(self) -> list[DocxRow]:  # row_elements = self.paragraph.findall(".//w:r", self.NAMESPACE)
-        return [DocxRow(row_element) for row_element in self.paragraph.findall(".//w:r", self.NAMESPACE)]
