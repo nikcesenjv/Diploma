@@ -15,7 +15,7 @@ logging.basicConfig(filename=LOGGING_PATH,
                     datefmt="%d.%m.%Y %H:%M:%S",
                     filemode="w")
 
-def log(level, message_title, *params):
+def log(level: str, message_title: str, *params: list[str]) -> None:
     match level:
         case "INFO":
             logging.info(retrieve_message(level, message_title, params))

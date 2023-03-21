@@ -3,24 +3,21 @@
 # Študijsko leto 2022/2023
 # Datoteka retrieve_message.py
 
-from src.parsing import parse_json, parse_directory
+from src.management.json_management import parse_json
+from src.management.path_management import parse_path
 
-PROJECT = "full_path.project"
-MESSAGES_SL = "path.program_messages_sl"
-BASIC_INFO = "path.basic_info.json"
-
-def retrieve_message(level, name, args):
+def retrieve_message(level: str, name: str, args: str):
     messages_path = check_language()
     for message_name, message_content in parse_json(messages_path)[level].items():
         if message_name == name:
             return format_message(message_content, args)
 
-def check_language():
-    messages_path = parse_directory(PROJECT, MESSAGES_SL)
-    if parse_json(parse_directory(PROJECT, BASIC_INFO))["basic info"]["language"] == "sl":
+def check_language() -> str:
+    messages_path = parse_path("full_path.project", "path.program_messages_sl")
+    if parse_json(parse_path("full_path.project", "path.basic_info.json"))["basic info"]["language"] == "sl":
         return messages_path
     else:
         return messages_path.replace("_sl.json", "_en.json")
 
-def format_message(message, args):
+def format_message(message: str, args: str) -> str:
     return message % args if len(args) > 0 else message

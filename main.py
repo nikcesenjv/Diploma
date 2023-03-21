@@ -5,22 +5,16 @@
 
 import argparse
 import os
-import shelve
 
-from src import *
 from src.logging import log
-from src.parsing import *
+from src.tasks import find_objects_task, parse_objects_task
 
-# DIRECTORIES
-PROJECT = "full_path.project"
-DOCUMENTS = "path.documents"
-DOCUMENTS_JSON = "path.documents.json"
-DIRECTORY_LIB = "path.lib"
-RESOURCES = "path.src.resources"
-BASIC_INFO = "path.basic_info.json"
+from src.management.json_management import change_json_value
+from src.management.shelve_management import *
+from src.management.path_management import parse_path
 
 # EXECUTE METHODS
-def execute_arg_cer(params):
+"""def execute_arg_cer(params):
     try:
         first_path, second_path = parse_directory(PROJECT, DIRECTORY_LIB, params[0]), \
                                   parse_directory(PROJECT, DIRECTORY_LIB, params[1])
@@ -31,31 +25,28 @@ def execute_arg_cer(params):
                                   zip(sorted(os.listdir(first_path)), sorted(os.listdir(second_path)))]
     except FileNotFoundError:
         log("ERROR", "find_objects.index.error")
-        return []
+        return []"""
 
-def execute_arg_find(params):
+def execute_arg_find(params: list[str]) -> list[object]:
     try:
-        # return find_objects_task(open_pickle(), params)
         return find_objects_task(open_shelve(params[0]), params)
     except IndexError:
         log("ERROR", "find_objects.index.error")
         return []
 
-def execute_arg_language(lang):
+def execute_arg_language(lang: str) -> None:
     supported_languages = ["sl", "en"]
     if lang in supported_languages:
-        change_json_value(parse_directory(PROJECT, BASIC_INFO), "language", lang)
+        change_json_value(parse_path("full_path.project", "path.basic_info.json"), "language", lang)
         log("INFO", "change_language")
 
-def execute_arg_parse():
+def execute_arg_parse() -> None:
     try:
-        with shelve.open("testDB") as db:
-            db["file"], db["inner"], db["main"] = object_parsing_task(parse_directory(PROJECT, DOCUMENTS_JSON))
-
+        parse_objects_task(parse_path("full_path.project", "path.documents.json"))
     except FileNotFoundError:
         log("ERROR", "file_parsing.no_file.error")
 
-def execute_arg_random(params):
+"""def execute_arg_random(params):
     target_path, json_file = parse_directory(PROJECT, DIRECTORY_LIB, params[0]), \
                              parse_directory(PROJECT, RESOURCES, params[1])
     try:
@@ -66,22 +57,10 @@ def execute_arg_random(params):
         for random_file in parse_json(json_file)["random files"]:
             archive_path = parse_directory(PROJECT, DOCUMENTS, f"{add_pdf_to_path(random_file['path'])}")
             meeting_text = retrieve_text_task(archive_path, random_file["page"])
-            write_text(parse_directory(target_path, add_txt_to_name(random_file["full name"])), meeting_text)
-
-# HELPING METHODS
-def open_shelve(type_of_object):
-    with shelve.open("testDB") as db:
-        return db[type_of_object]
-
-def write_text(full_path, text):
-    with open(full_path, "w") as f:
-        f.write(text)
-
-def calculate_average(cer_scores):
-    return round(sum(cer_scores) / len(cer_scores) * 100, 2)
+            write_text(parse_directory(target_path, add_txt_to_name(random_file["full name"])), meeting_text)"""
 
 # MAIN
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
 
     parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
@@ -94,11 +73,11 @@ def main():
 
     args = parser.parse_args()
 
-    if args.cer:
+    """if args.cer:
         try:
             print(f"Average: {(calculate_average(execute_arg_cer(args.cer)))}%")
         except TypeError:
-            print("not found")
+            print("not found")"""
 
     if args.lang:
         execute_arg_language(args.lang)
@@ -113,8 +92,8 @@ def main():
     if args.parse is not None:
         execute_arg_parse()
 
-    if args.random:
-        execute_arg_random(args.random)
+    """if args.random:
+        execute_arg_random(args.random)"""
 
 if __name__ == "__main__":
     log("INFO", "main_program.start")

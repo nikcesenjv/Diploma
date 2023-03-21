@@ -3,4 +3,9 @@
 # Študijsko leto 2022/2023
 # Datoteka write_parlamint_document_task.py
 
+def write_parlamin_document_task():
+    # log
+    ...
 
+def execute_task():
+    ...
