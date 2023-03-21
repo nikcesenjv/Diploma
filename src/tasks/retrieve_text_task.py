@@ -9,7 +9,11 @@ from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter, PDFResourceManager
 from pdfminer.pdfpage import PDFPage
 
-def retrieve_text_task(path, pages=None):
+def retrieve_text_task(path):
+    # log
+    return execute_task(path)
+
+def execute_task(path, pages=None):
     resource_manager, file_handle = PDFResourceManager(), StringIO()
     converter = TextConverter(resource_manager, file_handle)
     interpreter = PDFPageInterpreter(resource_manager, converter)

@@ -3,13 +3,10 @@
 # Študijsko leto 2022/2023
 # Datoteka retrieve_cer_task.py
 
-from cyrtranslit import to_latin
-# from jiwer import cer
+from jiwer import cer
 
-def retrieve_cer_task(first_path, second_path):
-    # return cer(get_text(first_path), get_text(second_path))
-    return False
+from src.management.text_management import get_text
 
-def get_text(path):
-    with open(path, "r") as file:
-        return to_latin(file.read(), "sr")
+# TODO: IMPROVE CODE [LESS IN main.py]
+def retrieve_cer_task(first_path: str, second_path: str) -> float:
+    return cer(get_text(first_path), get_text(second_path))
