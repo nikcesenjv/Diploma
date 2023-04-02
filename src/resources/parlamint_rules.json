@@ -1,0 +1,14 @@
+{
+    "MAIN PAGE": [
+        {
+            "main.title": {
+                "contains": "STENOGRAFSKE BELEŠKE"
+            }
+        },
+        {
+            "utterances": {
+                "contains": "speaker"
+            }
+        }
+    ]
+}

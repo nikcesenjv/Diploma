@@ -1,15 +1,19 @@
+# Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
+# Nik Česenj Vodovnik, 04180450 - Upravna informatika
+# Študijsko leto 2022/2023
+# Datoteka general_objects_management.py
+
 from src.management.path_management import parse_path
 from src.objects.general_objects import File, InnerFolder, MainFolder
 
-def create_main_folder(name):
-    return MainFolder(name, name)
+def create_file(name: str, outter_folder: InnerFolder, path: str) -> File:
+    file = File(name, f"{outter_folder.path}/{name}")
+    file.pages = file.get_num_of_pages(parse_path(path, f"{file.pdf_path}"))
+    file.outter_folder = outter_folder
+    return file
 
-def create_inner_folder(name, outter_path):
+def create_inner_folder(name: str, outter_path: MainFolder) -> InnerFolder:
     return InnerFolder(name, f"{outter_path}/{name}")
 
-def create_file(name, outter_folder, path_pdf):
-    current_file = File(name, f"{outter_folder.path}/{name}")
-    meeting_full_path = parse_path(path_pdf, f"{current_file.path}.pdf")
-    current_file.pages = current_file.get_num_of_pages(meeting_full_path)
-    current_file.outter_folder = outter_folder
-    return current_file
+def create_main_folder(name: str) -> MainFolder:
+    return MainFolder(name, name)

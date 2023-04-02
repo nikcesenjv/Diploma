@@ -7,10 +7,12 @@ import xml.etree.ElementTree as ET
 
 from zipfile import ZipFile
 
-from .docx_paragraph import DocxParagraph
-from .namespace import Namespace
+import bs4
 
-class DocxDocument(Namespace):
+from docx_paragraph import DocxParagraph
+from element_parser import ElementParser
+
+class DocxDocument(ElementParser):
     def __init__(self, path: str):
         self._path: str = path
 
@@ -50,3 +52,36 @@ class DocxDocument(Namespace):
 
     def parse_text(self) -> str:
         return "".join([paragraph.text for paragraph in self.paragraphs])
+
+    def print_xml(self) -> None:
+        document = ET.fromstring(ZipFile(self.path).read("word/document.xml"))
+
+        x = ET.tostring(document)
+        t = bs4.BeautifulSoup(x).prettify()
+
+        print(t)
+
+
+x = DocxDocument("/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/documents/word/19_1932_SKJ/18-40_redni/9_XXVI_SKJ_redni_15.4.1932.docx")
+x.print_xml()
+
+def test(document: DocxDocument) -> None:
+    """_ = merge_paragraphs(document.paragraphs[0], document.paragraphs[1])
+    del document.paragraphs[1]"""
+
+    """for i, element in enumerate(document.ELEMENT_TYPES):
+        print(i, document.find_element(element), element)
+        print(document.paragraphs[i].text)
+        print()"""
+
+    for p in document.paragraphs:
+        print(p.text)
+
+def merge_paragraphs(*paragraphs: list[DocxParagraph]):
+    for paragraph in paragraphs[1:]:
+        paragraphs[0].text += "\n"
+        paragraphs[0].text += paragraph.text
+
+    return paragraphs[0]
+
+# test(x)

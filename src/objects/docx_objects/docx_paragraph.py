@@ -5,10 +5,10 @@
 
 import xml.etree.ElementTree as ET
 
-from .docx_row import DocxRow
-from .namespace import Namespace
+from docx_row import DocxRow
+from element_parser import ElementParser
 
-class DocxParagraph(Namespace):
+class DocxParagraph(ElementParser):
     def __init__(self, paragraph: ET):
         self._paragraph: ET = paragraph
 
@@ -70,7 +70,24 @@ class DocxParagraph(Namespace):
         return [DocxRow(row_element) for row_element in self.paragraph.findall(".//w:r", self.NAMESPACE)]
 
     def parse_text(self) -> str:
-        return "".join([row.text for row in self.rows])
+        # return "".join([row.text for row in self.rows])
+        res = ""
+        current_font_size = None
+        first_new_line = False
+
+        for row in self.rows:
+            font_size = row.font_size
+            if font_size != current_font_size:
+                if not first_new_line:
+                    res += row.text
+                    first_new_line = True
+                else:
+                    res += f"\n{row.text}"
+            else:
+                res += row.text
+            current_font_size = font_size
+
+        return res
 
     def parse_text_bold(self, previous_bold: bool = False) -> str:
         res = ""

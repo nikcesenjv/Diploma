@@ -4,7 +4,7 @@
 # Datoteka structure.py
 
 class Structure:
-    def __init__(self, name, path):
+    def __init__(self, name: str, path: str):
         self._name: str = name
         self._path: str = path
 

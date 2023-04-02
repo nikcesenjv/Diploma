@@ -1,26 +1,35 @@
+# Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
+# Nik Česenj Vodovnik, 04180450 - Upravna informatika
+# Študijsko leto 2022/2023
+# Datoteka parlamint_management.py
+
 import xml.etree.ElementTree as ET
+
+from .parlamint_header import initialize_tei_header
+from .parlamint_text import initialize_text
 
 from src.objects.parlamint_objects import ParlamintDocument
 
-from .create_parlamint_header import initialize_file_desc
+def create_parlamint_document(parlamint_document: ParlamintDocument, target_path: str) -> None:
+    xml_document = initialize_xml_file(parlamint_document.name)
 
-def create_parlamint_document():
-    ...
+    initialize_tei_header(xml_document, parlamint_document)
+    text_element = initialize_text(xml_document)
 
-def initialize_xml_file():
+    for xml_object in parlamint_document.objects:
+        xml_object.to_element(text_element)
+
+    parlamint_document.xml_element = xml_document
+    save_xml_file(xml_document, target_path)
+
+def initialize_xml_file(document_name: str) -> ET:
     tei = ET.Element("TEI", xmlns="http://www.tei-c.org/ns/1.0")
-    tei.set("xml:id", "test123")
-    tei.set("xml:lang", "sl")
+    tei.set("xml:id", document_name)
+    tei.set("xml:lang", "sr")
     tei.set("ana", "#parla.sitting #reference")
     return tei
 
-def initialize_tei_header(parent_element):
-    tei_header = ET.SubElement(parent_element, "teiHeader")
-
-    initialize_file_desc(tei_header)
-    ET.SubElement(tei_header, "encodingDesc")
-
-def save_xml_file(xml_document: ET):
+def save_xml_file(xml_document: ET, target_path: str) -> None:
     tree = ET.ElementTree(xml_document)
     ET.indent(tree, space="    ")
-    tree.write("/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/text2.xml", encoding="UTF-8", xml_declaration=True)
+    tree.write(target_path, encoding="UTF-8", xml_declaration=True)

@@ -5,15 +5,13 @@
 
 from .structure import Structure
 
-from ..general_objects import InnerFolder
-
 class MainFolder(Structure):
     def __init__(self, name, path):
         super().__init__(name, path)
 
         self._index, self._year, self._assembly = self.parse_name()
 
-        self._folders: list[InnerFolder] = []
+        self._folders: list[object] = []
 
     # PRINT OBJECT
     def __str__(self):
@@ -56,15 +54,15 @@ class MainFolder(Structure):
         self._assembly = new_assembly
 
     @property
-    def folders(self) -> list[InnerFolder]:
+    def folders(self) -> list[object]:
         return self._folders
 
     @folders.setter
-    def folders(self, new_list: list[InnerFolder]) -> None:
+    def folders(self, new_list: list[object]) -> None:
         self._folders = new_list
 
-    def add_folder(self, new_folder: InnerFolder) -> None:
+    def add_folder(self, new_folder: object) -> None:
         self._folders.append(new_folder)
 
-    def add_folders(self, new_folders: list[InnerFolder]) -> None:
+    def add_folders(self, new_folders: list[object]) -> None:
         self._folders += new_folders

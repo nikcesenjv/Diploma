@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="test123" xml:lang="sl" ana="#parla.sitting #reference">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="7_XXIV_SKJ_redni_14.4.1932" xml:lang="sr" ana="#parla.sitting #reference">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main" xml:lang="sl">STENOGRAFSKE BELEŽKE</title>
-                <title type="main" xml:lang="en">STENOGRAPHY</title>
-                <title type="sub" xml:lang="en">sub slo</title>
-                <title type="sub" xml:lang="en">sub eng</title>
-                <meeting n="2" corresp="#DZ">Redna</meeting>
-                <meeting n="7" corresp="#DZ">7. mandat</meeting>
+                <title type="main" xml:lang="sl">Parlamentarni korpus ParlaMint, redni 24 [ParlaMint]</title>
+                <title type="main" xml:lang="en">Parliamentary corpus ParlaMint, regular 24 [ParlaMint]</title>
+                <title type="sub" xml:lang="en">Zapisi sej SKJ, indeks 7, 14.4.1932</title>
+                <title type="sub" xml:lang="en">Minutes of the SKJ, index 7, 14.4.1932</title>
+                <meeting n="24" corresp="#SKJ" ana="#parla.lower #parla.meeting.regular">Redni</meeting>
+                <meeting n="7" corresp="#SKJ" ana="#parla.lower #parla.term #SKJ.7">Indeks 7</meeting>
                 <respStmt>
                     <persName>Nik Česenj Vodovnik</persName>
                     <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -22,4 +22,9 @@
         </fileDesc>
         <encodingDesc />
     </teiHeader>
+    <text ana="#reference">
+        <body>
+            <div type="debateSection" />
+        </body>
+    </text>
 </TEI>

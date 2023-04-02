@@ -6,7 +6,8 @@
 from PyPDF2 import PdfReader
 
 from .structure import Structure
-from ..general_objects import InnerFolder
+
+from src.management.numerals_management import convert_numerals
 
 class File(Structure):
     def __init__(self, name, path):
@@ -15,7 +16,7 @@ class File(Structure):
         self._index, self._num, self._assembly, self._meeting, self._date = self.parse_name()
 
         self._pages: int = 0
-        self._outter_folder: InnerFolder = None
+        self._outter_folder: object = None
 
     # PRINT OBJECT
     def __str__(self) -> str:
@@ -94,6 +95,10 @@ class File(Structure):
         self._num = new_num
 
     @property
+    def num_arab(self) -> int:
+        return convert_numerals(self.num)
+
+    @property
     def assembly(self) -> str:
         return self._assembly
 
@@ -130,9 +135,9 @@ class File(Structure):
         self._pages = new_num_of_pages
 
     @property
-    def outter_folder(self) -> InnerFolder:
+    def outter_folder(self) -> object:
         return self._outter_folder
 
     @outter_folder.setter
-    def outter_folder(self, new_outter_folder: InnerFolder) -> None:
+    def outter_folder(self, new_outter_folder: object) -> None:
         self._outter_folder = new_outter_folder
