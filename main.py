@@ -46,6 +46,12 @@ def execute_arg_parse() -> None:
     except FileNotFoundError:
         log("ERROR", "file_parsing.no_file.error")
 
+def execute_arg_parse_parlamint() -> None:
+    try:
+        ...
+    except FileNotFoundError:
+        log("ERROR", "file_parsing.no_file.error")
+
 """def execute_arg_random(params):
     target_path, json_file = parse_directory(PROJECT, DIRECTORY_LIB, params[0]), \
                              parse_directory(PROJECT, RESOURCES, params[1])
@@ -67,6 +73,7 @@ def main() -> None:
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files for shelving [serialization]")
+    # parser.add_argument("-pp", "--parse_parlamint", nargs="*")
     parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
 
     # TODO: XML PARSER
@@ -99,3 +106,7 @@ if __name__ == "__main__":
     log("INFO", "main_program.start")
     main()
     log("INFO", "main_program.end")
+
+    """file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])[0]
+    print(file)
+    create_parlamint_document(file, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/text2.xml")"""
