@@ -4,28 +4,20 @@
 # Datoteka main.py
 
 import argparse
-import os
 
 from src.logging import log
-from src.tasks import find_objects_task, parse_objects_task
+from src.tasks import find_objects_task, parse_objects_task, retrieve_cer_task
 
 from src.management.json_management import change_json_value
 from src.management.shelve_management import *
 from src.management.path_management import parse_path
 
 # EXECUTE METHODS
-"""def execute_arg_cer(params):
+def execute_arg_cer(params: list[str]) -> float:
     try:
-        first_path, second_path = parse_directory(PROJECT, DIRECTORY_LIB, params[0]), \
-                                  parse_directory(PROJECT, DIRECTORY_LIB, params[1])
-
-        return [retrieve_cer_task(parse_directory(first_path, first_file),
-                                  parse_directory(second_path, second_file))
-                                  for first_file, second_file in
-                                  zip(sorted(os.listdir(first_path)), sorted(os.listdir(second_path)))]
+        return retrieve_cer_task(params)
     except FileNotFoundError:
-        log("ERROR", "find_objects.index.error")
-        return []"""
+        log("ERROR", "file_parsing.directory.error")
 
 def execute_arg_find(params: list[str]) -> list[object]:
     try:
@@ -80,11 +72,8 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    """if args.cer:
-        try:
-            print(f"Average: {(calculate_average(execute_arg_cer(args.cer)))}%")
-        except TypeError:
-            print("not found")"""
+    if args.cer:
+        print(f"Average: {execute_arg_cer(args.cer)}%")
 
     if args.lang:
         execute_arg_language(args.lang)
@@ -106,7 +95,3 @@ if __name__ == "__main__":
     log("INFO", "main_program.start")
     main()
     log("INFO", "main_program.end")
-
-    """file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])[0]
-    print(file)
-    create_parlamint_document(file, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/text2.xml")"""
