@@ -18,7 +18,10 @@
         "main_program.start": "-------------PROGRAM SE ZAGANJA-------------",
         "main_program.end": "-------------PROGRAM SE ZAPIRA-------------\n",
 
-        "pickle.success": "   Urejeni objekti so bili uspešno shranjeni v datoteki '%s'"
+        "pickle.success": "   Urejeni objekti so bili uspešno shranjeni v datoteki '%s'",
+
+        "retrieve_cer.start": "   Začetek pridobivanja podatkov o napaki CER",
+        "retrieve_cer.average": "   Povprečje napake je %s%%"
     },
 
     "ERROR": {
