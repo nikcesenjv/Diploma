@@ -14,8 +14,6 @@ class ParlamintUtterance:
         self._utterance_num: int = utterance_num
         self._text: str = text
 
-        self._split_by_segments: bool = False
-
     @property
     def attendee(self) -> ParlamintAttendee:
         return self._attendee
@@ -61,7 +59,7 @@ class ParlamintUtterance:
         utterance.set("xml:id", f"{self.document_id}.u{self.utterance_num}")
         utterance.set("ana", f"#{self.attendee.type}")
 
-        self.split(utterance) if self.is_split_segments else utterance.text = self.text
+        # self.split(utterance) if self.is_split_segments else utterance.text = self.text
 
-    def split(self, parent_element: ET) -> None:
-        parent_element.text = self.text
+    """def split(self, parent_element: ET) -> None:
+        parent_element.text = self.text"""

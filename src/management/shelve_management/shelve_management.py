@@ -1,9 +1,17 @@
+# Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
+# Nik Česenj Vodovnik, 04180450 - Upravna informatika
+# Študijsko leto 2022/2023
+# Datoteka shelve_management.py
+
 import shelve
 
-def open_shelve(type_of_object):
+from src.objects.general_objects import File, InnerFolder, MainFolder
+from src.objects.parlamint_objects import ParlamintDocument
+
+def open_shelve(type_of_object: str):
     with shelve.open("objectsDB") as db:
         return db[type_of_object]
 
-def shelve_objects(files, inner_folders, main_folders):
+def shelve_objects(object_list: list[File | InnerFolder | MainFolder | ParlamintDocument], type_of_object: str) -> None:
     with shelve.open("objectsDB") as db:
-        db["file"], db["inner"], db["main"] = files, inner_folders, main_folders
+        db[type_of_object] = object_list

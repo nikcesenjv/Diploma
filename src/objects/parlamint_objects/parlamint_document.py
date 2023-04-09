@@ -13,11 +13,10 @@ from src.objects.docx_objects import DocxDocument
 from src.objects.general_objects import File
 
 class ParlamintDocument:
-    def __init__(self, file: File, docx_document: DocxDocument):
-        self._file: File = file
+    def __init__(self, docx_document: DocxDocument):
         self._docx_document: DocxDocument = docx_document
 
-        self._document_id = f"ParlaMint-SR_{self.file.name}"
+        self._document_id = f"ParlaMint-SR_{self.document_id}"
 
         self._attendees: list[ParlamintAttendee] = []
         self._attendees_by_name: list[str] = []
@@ -27,16 +26,8 @@ class ParlamintDocument:
 
     # GETTERS & SETTERS
     @property
-    def name(self) -> str:
-        return self.file.name
-
-    @property
-    def file(self) -> File:
-        return self._file
-
-    @file.setter
-    def file(self, new_file: File) -> None:
-        self._file = new_file
+    def document_id(self) -> str:
+        return self.docx_document.file.name
 
     @property
     def docx_document(self) -> DocxDocument:

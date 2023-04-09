@@ -16,7 +16,6 @@ class File(Structure):
         self._index, self._num, self._assembly, self._meeting, self._date = self.parse_name()
 
         self._pages: int = 0
-        self._outter_folder: object = None
 
     # PRINT OBJECT
     def __str__(self) -> str:
@@ -133,11 +132,3 @@ class File(Structure):
     @pages.setter
     def pages(self, new_num_of_pages: int) -> None:
         self._pages = new_num_of_pages
-
-    @property
-    def outter_folder(self) -> object:
-        return self._outter_folder
-
-    @outter_folder.setter
-    def outter_folder(self, new_outter_folder: object) -> None:
-        self._outter_folder = new_outter_folder

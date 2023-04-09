@@ -7,3 +7,4 @@ from .retrieve_text_task import retrieve_text_task
 from .find_objects_task import find_objects_task
 from .retrieve_cer_task import retrieve_cer_task
 from .parse_objects_task import parse_objects_task
+from .parse_parlamint_objects_task import parse_parlamint_objects_task
