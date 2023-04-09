@@ -5,8 +5,8 @@
 
 import xml.etree.ElementTree as ET
 
-from .docx_row import DocxRow
-from .element_parser import ElementParser
+from docx_row import DocxRow
+from element_parser import ElementParser
 
 class DocxParagraph(ElementParser):
     def __init__(self, paragraph: ET):

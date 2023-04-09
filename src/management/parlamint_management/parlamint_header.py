@@ -32,7 +32,7 @@ def initialize_title_stmt(parent_element: ET, file: File) -> ET:
     title_main_en.text = parlamint_main_title_en(file)
 
     title_sub_sl = ET.SubElement(title_stmt, "title", type="sub")
-    title_sub_sl.set("xml:lang", "en")
+    title_sub_sl.set("xml:lang", "sl")
     title_sub_sl.text = parlamint_sub_title_sl(file)
 
     title_sub_en = ET.SubElement(title_stmt, "title", type="sub")
