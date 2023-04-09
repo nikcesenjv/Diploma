@@ -21,7 +21,9 @@
         "pickle.success": "   Urejeni objekti so bili uspešno shranjeni v datoteki '%s'",
 
         "retrieve_cer.start": "   Začetek pridobivanja podatkov o napaki CER",
-        "retrieve_cer.average": "   Povprečje napake je %s%%"
+        "retrieve_cer.average": "   Povprečje napake je %s%%",
+
+        "shelve_objects.start": "   Shranjevanje %s objektov"
     },
 
     "ERROR": {

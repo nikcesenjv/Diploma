@@ -6,7 +6,7 @@
 import argparse
 
 from src.logging import log
-from src.tasks import find_objects_task, parse_objects_task, retrieve_cer_task
+from src.tasks import find_objects_task, parse_objects_task, parse_parlamint_objects_task, retrieve_cer_task
 
 from src.management.json_management import change_json_value
 from src.management.shelve_management import *
@@ -40,7 +40,7 @@ def execute_arg_parse() -> None:
 
 def execute_arg_parse_parlamint() -> None:
     try:
-        ...
+        parse_parlamint_objects_task(open_shelve("main"))
     except FileNotFoundError:
         log("ERROR", "file_parsing.no_file.error")
 
@@ -66,9 +66,8 @@ def main() -> None:
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files for shelving [serialization]")
     # parser.add_argument("-pp", "--parse_parlamint", nargs="*")
+    # parser.add_argument("-wp", "--write_parlamint", nargs="*")
     parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
-
-    # TODO: XML PARSER
 
     args = parser.parse_args()
 
@@ -95,3 +94,5 @@ if __name__ == "__main__":
     log("INFO", "main_program.start")
     main()
     log("INFO", "main_program.end")
+
+    execute_arg_parse_parlamint()

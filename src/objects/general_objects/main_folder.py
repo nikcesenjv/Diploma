@@ -3,6 +3,7 @@
 # Študijsko leto 2022/2023
 # Datoteka main_folder.py
 
+from .inner_folder import InnerFolder
 from .structure import Structure
 
 class MainFolder(Structure):
@@ -11,7 +12,7 @@ class MainFolder(Structure):
 
         self._index, self._year, self._assembly = self.parse_name()
 
-        self._folders: list[object] = []
+        self._folders: list[InnerFolder] = []
 
     # PRINT OBJECT
     def __str__(self):
@@ -54,15 +55,15 @@ class MainFolder(Structure):
         self._assembly = new_assembly
 
     @property
-    def folders(self) -> list[object]:
+    def folders(self) -> list[InnerFolder]:
         return self._folders
 
     @folders.setter
-    def folders(self, new_list: list[object]) -> None:
+    def folders(self, new_list: list[InnerFolder]) -> None:
         self._folders = new_list
 
-    def add_folder(self, new_folder: object) -> None:
+    def add_folder(self, new_folder: InnerFolder) -> None:
         self._folders.append(new_folder)
 
-    def add_folders(self, new_folders: list[object]) -> None:
+    def add_folders(self, new_folders: list[InnerFolder]) -> None:
         self._folders += new_folders

@@ -27,7 +27,8 @@ KEY_ERROR = "file_parsing.key_error"
 
 def parse_objects_task(path: str) -> None:
     log("INFO", PARSING_START, path.split("/")[-1])
-    execute_task(path, replace_path_part(path, DOCUMENTS_JSON, DOCUMENTS_PDF))
+    # execute_task(path, replace_path_part(path, DOCUMENTS_JSON, DOCUMENTS_PDF))
+    execute_task(path, parse_path("full_path.documents"))
 
 def execute_task(path_json: str, path_pdf: str) -> None:
     log("INFO", PARSING_PROGRESS)
@@ -56,7 +57,9 @@ def execute_task(path_json: str, path_pdf: str) -> None:
 
         all_main_folders.append(current_main_folder)
 
-    shelve_objects(all_files, all_inner_folders, all_main_folders)
+    shelve_objects(all_files, "file")
+    shelve_objects(all_inner_folders, "inner")
+    shelve_objects(all_main_folders, "main")
 
 """
         except IsADirectoryError:
