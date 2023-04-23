@@ -6,7 +6,7 @@
 class ParlamintAttendee:
     def __init__(self, name: str, attendee_type: str):
         self._name: str = name
-        self._type: str = attendee_type
+        self._attendee_type: str = attendee_type
         
         self._id: str = self.create_id()
 
@@ -19,12 +19,12 @@ class ParlamintAttendee:
         self._name = new_name
 
     @property
-    def type(self) -> str:
-        return self._type
+    def attendee_type(self) -> str:
+        return self._attendee_type
 
-    @type.setter
-    def type(self, new_type: str) -> None:
-        self._type = new_type
+    @attendee_type.setter
+    def attendee_type(self, new_attendee_type: str) -> None:
+        self._attendee_type = new_attendee_type
 
     @property
     def id(self):

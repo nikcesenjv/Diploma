@@ -6,7 +6,8 @@
 import argparse
 
 from src.logging import log
-from src.tasks import find_objects_task, parse_objects_task, parse_parlamint_objects_task, retrieve_cer_task
+
+from src.tasks import *
 
 from src.management.json_management import change_json_value
 from src.management.shelve_management import *
@@ -90,9 +91,22 @@ def main() -> None:
     """if args.random:
         execute_arg_random(args.random)"""
 
+"""def save_xml_file(xml_document: ET, target_path: str) -> None:
+    tree = ET.ElementTree(xml_document)
+    ET.indent(tree, space="    ")
+    tree.write(target_path, encoding="UTF-8", xml_declaration=True)"""
+
 if __name__ == "__main__":
     log("INFO", "main_program.start")
     main()
     log("INFO", "main_program.end")
 
-    execute_arg_parse_parlamint()
+    """file = execute_arg_find(["file", "name", "9_XXVI_SKJ_redni_15.4.1932"])[0]
+    docx = DocxDocument(file)
+    xml = docx.print_xml()
+    save_xml_file(xml, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test.xml")"""
+
+    """y = DocxDocument(x)
+    z = y.print_xml()"""
+
+    # save_xml_file(y, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma")

@@ -1,20 +1,23 @@
 {
     "full_path.documents": "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/documents",
     "full_path.project": "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma",
-    "path.program_messages_en": "src/resources/program_messages_en.json",
-    "path.program_messages_sl": "src/resources/program_messages_sl.json",
 
-    "path.basic_info.json": "src/resources/basic_info.json",
+    "path.parlamint_properties": "lib/resources/json_resources/parlamint_properties.json",
+    "path.paths": "lib/resources/json_resources/paths.json",
+    "path.program_messages_en": "lib/resources/json_resources/program_messages_en.json",
+    "path.program_messages_sl": "lib/resources/json_resources/program_messages_sl.json",
+
+    "path.basic_info.json": "lib/resources/json_resources/basic_info.json",
     "path.documentation": "lib/documentation",
     "path.documents": "lib/documents",
-    "path.documents.json": "src/resources/documents_info.json",
+    "path.documents.json": "lib/resources/json_resources/documents_info.json",
     "path.documents.pdf": "lib/documents/pdf",
     "path.documents.txt": "lib/documents/txt",
     "path.documents.word": "lib/documents/word",
     "path.documents.xml": "lib/documents/xml",
     "path.info": "lib/info",
     "path.lib": "lib",
-    "path.src.resources": "src/resources",
+    "path.src.json_resources": "lib/resources/json_resources",
     "path.src": "src",
     "path.test_files": "lib/test_files_cer"
 }

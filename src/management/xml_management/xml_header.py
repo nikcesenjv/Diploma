@@ -1,12 +1,11 @@
 # Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
 # Nik Česenj Vodovnik, 04180450 - Upravna informatika
 # Študijsko leto 2022/2023
-# Datoteka parlamint_header.py
+# Datoteka xml_header.py
 
 import xml.etree.ElementTree as ET
 
-from .parlamint_text_management.parlamint_titles import *
-from .parlamint_text_management.parlamint_meetings import *
+from src.management.xml_management.xml_text_management.parlamint_titles import *
 
 from src.objects.parlamint_objects import ParlamintDocument
 
@@ -18,7 +17,7 @@ def initialize_tei_header(parent_element: ET, parlamint_document: ParlamintDocum
 
 def initialize_file_desc(parent_element: ET, parlamint_document: ParlamintDocument):
     file_desc = ET.SubElement(parent_element, "fileDesc")
-    initialize_title_stmt(file_desc, parlamint_document.file)
+    initialize_title_stmt(file_desc, parlamint_document.document_id)
 
 def initialize_title_stmt(parent_element: ET, file: File) -> ET:
     title_stmt = ET.SubElement(parent_element, "titleStmt")

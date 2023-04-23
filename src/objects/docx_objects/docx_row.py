@@ -5,7 +5,7 @@
 
 import xml.etree.ElementTree as ET
 
-from element_parser import ElementParser
+from .element_parser import ElementParser
 
 from src.management.text_management import cyrillic_to_latin_text
 

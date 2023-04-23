@@ -8,19 +8,24 @@ import xml.etree.ElementTree as ET
 from difflib import get_close_matches
 
 from .parlamint_utterance import ParlamintAttendee
+from .parlamint_head import ParlamintHead
+from .parlamint_note import ParlamintNote
+from .parlamint_speaker import ParlamintSpeaker
 
 from src.objects.docx_objects import DocxDocument
-from src.objects.general_objects import File
 
 class ParlamintDocument:
     def __init__(self, docx_document: DocxDocument):
         self._docx_document: DocxDocument = docx_document
 
-        self._document_id = f"ParlaMint-SR_{self.document_id}"
+        self._xml_id = f"ParlaMint-SR_{self.document_id}"
 
         self._attendees: list[ParlamintAttendee] = []
         self._attendees_by_name: list[str] = []
-        self._objects: list[object] = []
+        self._objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker] = []
+
+        self._num_of_utterances: int = 0
+        self._num_of_segments: int = 0
 
         self._xml_element: ET = None
 
@@ -77,18 +82,53 @@ class ParlamintDocument:
                 return attendee
 
     @property
-    def objects(self) -> list[object]:
+    def objects(self) -> list[ParlamintHead | ParlamintNote | ParlamintSpeaker]:
         return self._objects
 
     @objects.setter
-    def objects(self, new_objects: list[object]) -> None:
+    def objects(self, new_objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
         self._objects = new_objects
 
-    def add_object(self, new_object: object) -> None:
+        for parlamint_object in self.objects:
+            if type(parlamint_object) == ParlamintSpeaker:
+                ...
+
+    def add_object(self, new_object: ParlamintHead | ParlamintNote | ParlamintSpeaker) -> None:
         self._objects.append(new_object)
 
-    def add_objects(self, new_objects: list[object]) -> None:
+        if type(new_object) == ParlamintSpeaker:
+            self.add_utterance()
+
+    def add_objects(self, new_objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
         self._objects += new_objects
+
+    @property
+    def num_of_utterances(self) -> int:
+        return self._num_of_utterances
+
+    @num_of_utterances.setter
+    def num_of_utterances(self, new_num_of_utterances: int) -> None:
+        self._num_of_utterances = new_num_of_utterances
+
+    def add_utterance(self) -> None:
+        self._num_of_utterances += 1
+
+    def add_utterances(self, num_of_utterances: int) -> None:
+        self._num_of_utterances += num_of_utterances
+
+    @property
+    def num_of_segments(self) -> int:
+        return self._num_of_segments
+
+    @num_of_segments.setter
+    def num_of_segments(self, new_num_of_segments: int) -> None:
+        self._num_of_segments = new_num_of_segments
+
+    def add_segment(self) -> None:
+        self._num_of_segments += 1
+
+    def add_segments(self, num_of_segments: int) -> None:
+        self._num_of_segments += num_of_segments
             
     @property
     def xml_element(self) -> ET:
