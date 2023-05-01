@@ -5,7 +5,7 @@
 
 import xml.etree.ElementTree as ET
 
-from src.management.xml_management.xml_text_management.parlamint_titles import *
+from .xml_header_management import *
 
 from src.objects.parlamint_objects import ParlamintDocument
 
@@ -17,7 +17,7 @@ def initialize_tei_header(parent_element: ET, parlamint_document: ParlamintDocum
 
 def initialize_file_desc(parent_element: ET, parlamint_document: ParlamintDocument):
     file_desc = ET.SubElement(parent_element, "fileDesc")
-    initialize_title_stmt(file_desc, parlamint_document.document_id)
+    initialize_title_stmt(file_desc, parlamint_document.docx_document.file)
 
 def initialize_title_stmt(parent_element: ET, file: File) -> ET:
     title_stmt = ET.SubElement(parent_element, "titleStmt")

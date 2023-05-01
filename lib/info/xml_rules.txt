@@ -1,3 +1,4 @@
-PRAVILA XML
+XML RULES
+Nik Česenj Vodovnik
 
 BASE: <?xml version="1.0" encoding="UTF-8"?>

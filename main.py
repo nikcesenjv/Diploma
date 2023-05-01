@@ -12,6 +12,9 @@ from src.tasks import *
 from src.management.json_management import change_json_value
 from src.management.shelve_management import *
 from src.management.path_management import parse_path
+from src.management.xml_management import create_parlamint_xml_document
+
+from src.objects.docx_objects import DocxDocument
 
 # EXECUTE METHODS
 def execute_arg_cer(params: list[str]) -> float:
@@ -101,9 +104,12 @@ if __name__ == "__main__":
     main()
     log("INFO", "main_program.end")
 
-    """file = execute_arg_find(["file", "name", "9_XXVI_SKJ_redni_15.4.1932"])[0]
-    docx = DocxDocument(file)
-    xml = docx.print_xml()
+    file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])
+    parlamint_document = parse_parlamint_objects_task(file)
+
+    create_parlamint_xml_document(parlamint_document, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test3.xml")
+
+    """xml = docx.print_xml()
     save_xml_file(xml, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test.xml")"""
 
     """y = DocxDocument(x)

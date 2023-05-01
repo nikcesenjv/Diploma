@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="7_XXIV_SKJ_redni_14.4.1932" xml:lang="sr" ana="#parla.sitting #reference">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main" xml:lang="sl">Parlamentarni korpus ParlaMint, redni 24 [ParlaMint]</title>
+                <title type="main" xml:lang="en">Parliamentary corpus ParlaMint, regular 24 [ParlaMint]</title>
+                <title type="sub" xml:lang="sl">Zapisi sej SKJ, indeks 7, 14.4.1932</title>
+                <title type="sub" xml:lang="en">Minutes of the SKJ, index 7, 14.4.1932</title>
+                <meeting n="24" corresp="#SKJ" ana="#parla.lower #parla.meeting.regular">Redni</meeting>
+                <meeting n="7" corresp="#SKJ" ana="#parla.lower #parla.term #SKJ.7">Indeks 7</meeting>
+                <respStmt>
+                    <persName>Nik Česenj Vodovnik</persName>
+                    <resp xml:lang="sl">Kodiranje TEI</resp>
+                    <resp xml:lang="en">TEI corpus encoding</resp>
+                </respStmt>
+                <funder>
+                    <orgName xml:lang="sl">Raziskovalna infrastruktura CLARIN</orgName>
+                    <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+                </funder>
+            </titleStmt>
+        </fileDesc>
+        <encodingDesc />
+    </teiHeader>
+    <text ana="#reference">
+        <body>
+            <div type="debateSection">
+                <head type="mainHeader">
+                    <head>STENOGRAFSKE BELEŠKE</head>
+                    <head type="assembly">KRALjEBINE JUGOSLAVIJE</head>
+                </head>
+                <head type="generalInfo">
+                    <head type="info">GODINA I    BEOGRAD, 1932 GOD.    BROZ 27</head>
+                    <head type="meeting">XXIV REDOVNI SASTANAK </head>
+                    <head type="assembly">SENATA KRALjEVINE JUGOSLAVIJE </head>
+                    <head type="datetime">DRŽAN 14 APRILA 1932 GODINE U BEOGRADU</head>
+                </head>
+                <head type="present" />
+                <note type="time" />
+                <note type="time" />
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -16,3 +16,7 @@ def change_json_value(path, key, value):
     data = parse_json(path)
     data["basic info"][key] = value
     write_json(path, data)
+
+def retrieve_json_value(path, key):
+    parsed = parse_json(path)
+    return parsed[key]

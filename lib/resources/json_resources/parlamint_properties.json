@@ -2,78 +2,96 @@
     "properties": [
         {
             "tag": "div",
-            "type": "debateSection",
+            "type": "mainHeader",
             "elements": [
                 {
-                    "tag": "div",
-                    "type": "mainHeader",
-                    "elements": [
-                        {
-                            "tag": "head",
-                            "type": null,
-                            "similar words": ["STENOGRAFSKE", "BELEŠKE"],
-                            "text": ""
-                        },
-                        {
-                            "tag": "head",
-                            "type": "assembly",
-                            "similar words": ["KRALJEVINE", "JUGOSLAVIJE"],
-                            "text": ""
-                        }
-                    ]
-                },
-                {
-                    "tag": "div",
-                    "type": "generalInfo",
-                    "elements": [
-                        {
-                            "tag": "head",
-                            "type": "meeting",
-                            "similar words": ["REDNI", "SEJA", "SASTANAK"],
-                            "text": ""
-                        },
-                        {
-                            "tag": "head",
-                            "type": "assembly",
-                            "similar words": ["SENATA", "KRALJEVINE", "JUGOSLAVIJE"],
-                            "text": ""
-                        },
-                        {
-                            "tag": "head",
-                            "type": "datetime",
-                            "similar words": ["Pričetak"],
-                            "text": ""
-                        }
-                    ]
-                },
-                {
-                    "tag": "div",
-                    "type": "present",
-                    "elements": []
-                },
-                {
-                    "tag": "note",
-                    "type": "time",
-                    "similar words": [],
+                    "tag": "head",
+                    "type": null,
+                    "similar words": [
+                        "STENOGRAFSKE",
+                        "BELEŠKE"
+                    ],
                     "text": ""
                 },
                 {
-                    "tag": "note",
-                    "type": ["who", "xml:id", "ana"],
-                    "text": [
-                        {
-                            "tag": "seg",
-                            "type": "xml:id"
-                        }
-                    ]
-                },
-                {
-                    "tag": "note",
-                    "type": "time",
-                    "similar words": ["Sednica", "zaključena"],
+                    "tag": "head",
+                    "type": "assembly",
+                    "similar words": [
+                        "SENATA",
+                        "KRALJEVINE",
+                        "JUGOSLAVIJE"
+                    ],
                     "text": ""
                 }
             ]
+        },
+        {
+            "tag": "div",
+            "type": "generalInfo",
+            "elements": [
+                {
+                    "tag": "head",
+                    "type": "info",
+                    "similar words": [
+                        "GOD."
+                    ]
+                },
+                {
+                    "tag": "head",
+                    "type": "meeting",
+                    "similar words": [
+                        "REDOVNI",
+                        "SASTANAK"
+                    ],
+                    "text": ""
+                },
+                {
+                    "tag": "head",
+                    "type": "assembly",
+                    "similar words": [
+                        "SENATA",
+                        "KRALJEVINE",
+                        "JUGOSLAVIJE"
+                    ],
+                    "text": ""
+                },
+                {
+                    "tag": "head",
+                    "type": "datetime",
+                    "similar words": [
+                        "GODINE",
+                        "BEOGRADU"
+                    ],
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "tag": "div",
+            "type": "present",
+            "elements": []
+        },
+        {
+            "tag": "note",
+            "type": "time",
+            "similar words": [
+                "početak"
+            ],
+            "text": ""
+        },
+        {
+            "tag": "speaker",
+            "type": []
+        },
+        {
+            "tag": "note",
+            "type": "time",
+            "similar words": [
+                "Sednica",
+                "zaključena",
+                "časova"
+            ],
+            "text": ""
         }
     ]
 }

@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 from difflib import get_close_matches
 
 from .parlamint_utterance import ParlamintAttendee
+from .parlamint_div import ParlamintDiv
 from .parlamint_head import ParlamintHead
 from .parlamint_note import ParlamintNote
 from .parlamint_speaker import ParlamintSpeaker
@@ -22,7 +23,7 @@ class ParlamintDocument:
 
         self._attendees: list[ParlamintAttendee] = []
         self._attendees_by_name: list[str] = []
-        self._objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker] = []
+        self._elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker] = []
 
         self._num_of_utterances: int = 0
         self._num_of_segments: int = 0
@@ -82,25 +83,21 @@ class ParlamintDocument:
                 return attendee
 
     @property
-    def objects(self) -> list[ParlamintHead | ParlamintNote | ParlamintSpeaker]:
-        return self._objects
+    def elements(self) -> list[ParlamintHead | ParlamintNote | ParlamintSpeaker]:
+        return self._elements
 
-    @objects.setter
-    def objects(self, new_objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
-        self._objects = new_objects
+    @elements.setter
+    def elements(self, new_elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
+        self._elements = new_elements
 
-        for parlamint_object in self.objects:
-            if type(parlamint_object) == ParlamintSpeaker:
-                ...
-
-    def add_object(self, new_object: ParlamintHead | ParlamintNote | ParlamintSpeaker) -> None:
+    """def add_object(self, new_object: ParlamintHead | ParlamintNote | ParlamintSpeaker) -> None:
         self._objects.append(new_object)
 
         if type(new_object) == ParlamintSpeaker:
             self.add_utterance()
 
     def add_objects(self, new_objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
-        self._objects += new_objects
+        self._objects += new_objects"""
 
     @property
     def num_of_utterances(self) -> int:

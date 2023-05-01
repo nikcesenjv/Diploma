@@ -5,19 +5,17 @@
 
 import xml.etree.ElementTree as ET
 
-from .element_parser import ElementParser
-
 from src.management.text_management import cyrillic_to_latin_text
 
-class DocxRow(ElementParser):
+class DocxRow:
     def __init__(self, row: ET):
         self._row: ET = row
 
-        self._style: str = self.parse_style()
-        self._font_size: int = self.parse_font_size()
-        self._is_bold: bool = self.is_bold()
+        self._is_bold: bool = None
+        self._style: str = None
+        self._font_size: int = None
 
-        self._text: str = self.parse_text()
+        self._text: str = None
 
     # GETTERS & SETTERS
     @property
@@ -27,6 +25,14 @@ class DocxRow(ElementParser):
     @row.setter
     def row(self, new_row: ET) -> None:
         self._row = new_row
+
+    @property
+    def bold(self) -> bool:
+        return self._is_bold
+
+    @bold.setter
+    def bold(self, new_bold_value: bool) -> None:
+        self._is_bold = new_bold_value
 
     @property
     def style(self) -> str:
@@ -52,19 +58,7 @@ class DocxRow(ElementParser):
     def text(self, new_text: str) -> None:
         self._text = new_text
 
-    def is_bold(self) -> bool:
-        return True if self.row.find(".//w:b", self.NAMESPACE) is not None else False
-
-    # PARSING METHODS
-    def parse_style(self) -> str:
-        style_value = self.row.find(".//w:rStyle", self.NAMESPACE)
-        return list(style_value.attrib.values())[0] if style_value is not None else None
-
-    def parse_font_size(self) -> int:
-        font_size = self.row.find(".//w:sz", self.NAMESPACE)
-        return int(list(font_size.attrib.values())[0]) / 2 if font_size is not None else None
-
-    def parse_text(self) -> str:
+    def to_string(self) -> str:
         text = ""
 
         for element in self.row.iter():

@@ -17,4 +17,5 @@ def folder_exists(path: str) -> bool:
     return os.path.isdir(path)
 
 def create_new_folder(path: str) -> None:
-    os.mkdir(parse_path(path))
+    if not folder_exists(path):
+        os.mkdir(parse_path(path))

@@ -4,10 +4,18 @@
 # Datoteka text_management.py
 
 from cyrtranslit import to_latin
+from difflib import get_close_matches
 from io import StringIO
 
 def cyrillic_to_latin_text(text: str) -> str:
     return to_latin(text, "sr")
+
+def close_match(similar_words: list[str], text: str,) -> bool:
+    text_split = text.split(" ")
+    for similar_word in similar_words:
+        if len(get_close_matches(similar_word, text_split)) > 0:
+            return True
+    return False
 
 def write_text(full_path: str, text: str) -> None:
     with open(full_path, "w") as f:

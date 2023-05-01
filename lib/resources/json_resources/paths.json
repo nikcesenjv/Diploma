@@ -15,9 +15,11 @@
     "path.documents.txt": "lib/documents/txt",
     "path.documents.word": "lib/documents/word",
     "path.documents.xml": "lib/documents/xml",
+
     "path.info": "lib/info",
     "path.lib": "lib",
     "path.src.json_resources": "lib/resources/json_resources",
+    "path.docx_properties": "lib/resources/json_resources/docx_properties.json",
     "path.src": "src",
     "path.test_files": "lib/test_files_cer"
 }
