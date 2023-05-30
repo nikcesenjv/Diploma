@@ -5,21 +5,23 @@
 
 import xml.etree.ElementTree as ET
 
-from nltk import tokenize
+from docx.text.paragraph import Paragraph
 
 from .parlamint_attendee import ParlamintAttendee
 from .parlamint_segment import ParlamintSegment
 
-class ParlamintUtterance:
-    def __init__(self, attendee: ParlamintAttendee, document_id: str,
-                 utterance_num: int, text: str, segments: bool = True):
-        self._attendee: ParlamintAttendee = attendee
-        self._document_id: str = document_id
-        self._utterance_num: int = utterance_num
-        self._text: str = text
-        self._segments: bool = segments
+from src.management.text_management import cyrillic_to_latin_text
 
-        self._segment_text: list[ParlamintSegment] = self.parse_segments()
+class ParlamintUtterance:
+    def __init__(self, attendee: ParlamintAttendee):
+        self._attendee: ParlamintAttendee = attendee
+
+        self._document_id: str = None
+        self._utterance_num: int = None
+        self._segment_start_num: int = None
+
+        self._paragraphs: list[str] = []
+        self._text: str = None
 
     @property
     def attendee(self) -> ParlamintAttendee:
@@ -46,6 +48,28 @@ class ParlamintUtterance:
         self._utterance_num = new_utterance_num
 
     @property
+    def segment_start_num(self) -> int:
+        return self._segment_start_num
+
+    @segment_start_num.setter
+    def segment_start_num(self, new_segment_start_num: int) -> None:
+        self._segment_start_num = new_segment_start_num
+
+    @property
+    def paragraphs(self) -> list[str]:
+        return self._paragraphs
+
+    @paragraphs.setter
+    def paragraphs(self, new_paragraphs: list[str]) -> None:
+        self._paragraphs = new_paragraphs
+
+    def add_paragraph(self, new_paragraph: str) -> None:
+        self._paragraphs.append(new_paragraph)
+
+    def add_paragraphs(self, new_paragraphs: list[str]) -> None:
+        self._paragraphs.extend(new_paragraphs)
+
+    @property
     def text(self) -> str:
         return self._text
 
@@ -53,34 +77,19 @@ class ParlamintUtterance:
     def text(self, new_text: str) -> None:
         self._text = new_text
 
-    @property
-    def segments(self) -> bool:
-        return self._segments
+    def to_string(self):
+        self.text = " ".join(cyrillic_to_latin_text(paragraph) for paragraph in self.paragraphs)
+        return self.text
 
-    @segments.setter
-    def segments(self, new_segments: bool) -> None:
-        self._segments = new_segments
-
-    def parse_segments(self) -> list[ParlamintSegment]:
-        if self.segments:
-            segment_list = []
-            for i, text_segment in enumerate(tokenize.sent_tokenize(self.text)):
-                print(i)
-                # segment_num = i +
-                # segment = ParlamintSegment(self.document_id, )
-            # return [ParlamintSegment(self.document_id, text_segment) for text_segment in tokenize.sent_tokenize(self.text)]
-        else:
-            return None
-
-    def utterance_id(self):
-        return f"{self.document_id}.u{self.utterance_num}"
-
-    def to_element(self, parent_element: ET) -> None:
+    def to_element(self, parent_element: ET) -> None | int:
         utterance = ET.SubElement(parent_element, "u", who=self.attendee.id)
-        utterance.set("xml:id", self.utterance_id())
-        utterance.set("ana", f"#{self.attendee.type}")
+        utterance.set("xml:id", f"{self.document_id}.u{self.utterance_num}")
+        utterance.set("ana", f"#{self.attendee.attendee_role}")
 
-        # self.split(utterance) if self.is_split_segments else utterance.text = self.text
+        segment_counter = self.segment_start_num
+        for paragraph in self.paragraphs:
+            segment = ET.SubElement(utterance, "seg")
+            segment.set("xml:id", f"{self.document_id}.seg{segment_counter}")
+            segment.text = paragraph.replace("-\n", "").replace("-", "")
 
-    """def split(self, parent_element: ET) -> None:
-        parent_element.text = self.text"""
+            segment_counter += 1

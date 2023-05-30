@@ -1,0 +1,97 @@
+{
+    "properties": [
+        {
+            "tag": "head",
+            "type": "generalInfo",
+            "similar words": [
+                "stenografske",
+                "beleške"
+            ]
+        },
+        {
+            "tag": "head",
+            "type": "info",
+            "similar words": [
+                "broj"
+            ]
+        },
+        {
+            "tag": "head",
+            "type": "meeting",
+            "similar words": [
+                "redovni",
+                "sastanak",
+                "sednica"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "leading",
+            "role": "chair",
+            "similar words": [
+                "pretsedavao",
+                "pretsednik"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "secretary",
+            "role": "chair",
+            "similar words": [
+                "sekretar"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "present",
+            "similar words": [
+                "prisutan",
+                "prisutni"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "time",
+            "similar words": [
+                "početak"
+            ],
+            "text": ""
+        },
+        {
+            "tag": "note",
+            "type": "content",
+            "similar words": [
+                "sadržaj"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "agenda",
+            "similar words": [
+                "dnevni"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "witnesses",
+            "role": "regular",
+            "similar words": [
+                "govornici"
+            ]
+        },
+        {
+            "tag": "speakers",
+            "type": null,
+            "similar words": [
+                "otvaram"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "time",
+            "similar words": [
+                "zaključena"
+            ]
+        }
+    ]
+}

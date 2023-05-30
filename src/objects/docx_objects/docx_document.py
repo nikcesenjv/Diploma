@@ -6,10 +6,13 @@
 import xml.etree.ElementTree as ET
 
 from zipfile import ZipFile
+from docx import Document
 
 from .docx_paragraph import DocxParagraph
 
 from src.objects.general_objects import File
+
+from src.management.path_management import parse_path
 
 class DocxDocument:
 
@@ -44,6 +47,11 @@ class DocxDocument:
     def add_paragraphs(self, new_paragraphs: list[DocxParagraph]) -> None:
         self._paragraphs.extend(new_paragraphs)
 
+    """def to_string(self):
+        return "\n".join([paragraph.text for paragraph in self.document.paragraphs])"""
+
+    """
+
     @property
     def text(self) -> str:
         return self._text
@@ -52,11 +60,15 @@ class DocxDocument:
     def text(self, new_text: str) -> None:
         self._text = new_text
 
-    def to_string(self) -> str:
+    def parse_paragraphs(self):
+        return [DocxParagraph(paragraph) for paragraph in self.document.paragraphs]"""
+
+"""    def to_string(self) -> str:
         return " ".join([paragraph.text for paragraph in self.paragraphs])
 
     def print_xml(self) -> ET:
         document = ET.fromstring(ZipFile(self.root_path + self.file.word_path).read("word/document.xml"))
-        from xml.dom import minidom
-        x = minidom.parseString(ET.tostring(document))
-        print(x.toprettyxml())
+        return document"""
+"""from xml.dom import minidom
+x = minidom.parseString(ET.tostring(document))
+return x.toprettyxml()"""

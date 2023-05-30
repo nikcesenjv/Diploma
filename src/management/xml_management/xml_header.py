@@ -17,7 +17,7 @@ def initialize_tei_header(parent_element: ET, parlamint_document: ParlamintDocum
 
 def initialize_file_desc(parent_element: ET, parlamint_document: ParlamintDocument):
     file_desc = ET.SubElement(parent_element, "fileDesc")
-    initialize_title_stmt(file_desc, parlamint_document.docx_document.file)
+    initialize_title_stmt(file_desc, parlamint_document.file)
 
 def initialize_title_stmt(parent_element: ET, file: File) -> ET:
     title_stmt = ET.SubElement(parent_element, "titleStmt")

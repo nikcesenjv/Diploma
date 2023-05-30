@@ -38,7 +38,7 @@ class ParlamintDiv:
         self._elements.extend(new_elements)
 
     def to_element(self, parent_element: ET) -> ET:
-        div = ET.SubElement(parent_element, "head")
+        div = ET.SubElement(parent_element, "div")
 
         if self.div_type is not None:
             div.set("type", self.div_type)

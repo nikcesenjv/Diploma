@@ -5,13 +5,14 @@
 
 import xml.etree.ElementTree as ET
 
-from src.objects.docx_objects import DocxParagraph
+from src.management.text_management import cyrillic_to_latin_text
 
 class ParlamintNote:
     def __init__(self, note_type: str):
         self._note_type: str = note_type
 
-        self._paragraphs: list[DocxParagraph] = []
+        self._paragraphs = []
+        self._text: str = None
 
     @property
     def note_type(self) -> str:
@@ -22,21 +23,30 @@ class ParlamintNote:
         self._note_type = new_note_type
 
     @property
-    def paragraphs(self) -> list[DocxParagraph]:
+    def paragraphs(self) -> list[str]:
         return self._paragraphs
 
     @paragraphs.setter
-    def paragraphs(self, new_paragraphs: list[DocxParagraph]) -> None:
+    def paragraphs(self, new_paragraphs: list[str]) -> None:
         self._paragraphs = new_paragraphs
 
-    def add_paragraph(self, new_paragraph: DocxParagraph) -> None:
+    def add_paragraph(self, new_paragraph: str) -> None:
         self._paragraphs.append(new_paragraph)
 
-    def add_paragraphs(self, new_paragraphs: list[DocxParagraph]) -> None:
+    def add_paragraphs(self, new_paragraphs: list[str]) -> None:
         self._paragraphs.extend(new_paragraphs)
 
+    @property
+    def text(self) -> str:
+        return self._text
+
+    @text.setter
+    def text(self, new_text: str) -> None:
+        self._text = new_text
+
     def to_string(self) -> str:
-        return "".join(self.paragraphs)
+        self.text = " ".join(cyrillic_to_latin_text(paragraph.replace("-\n", "").replace("\n", " ")) for paragraph in self.paragraphs)
+        return self.text
 
     def to_element(self, parent_element: ET) -> None:
         note = ET.SubElement(parent_element, "note", type=self.note_type)

@@ -2,7 +2,7 @@
     "full_path.documents": "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/documents",
     "full_path.project": "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma",
 
-    "path.parlamint_properties": "lib/resources/json_resources/parlamint_properties.json",
+    "path.parlamint_properties": "lib/resources/json_resources/parlamint_properties",
     "path.paths": "lib/resources/json_resources/paths.json",
     "path.program_messages_en": "lib/resources/json_resources/program_messages_en.json",
     "path.program_messages_sl": "lib/resources/json_resources/program_messages_sl.json",

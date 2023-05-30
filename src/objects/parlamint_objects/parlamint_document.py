@@ -5,43 +5,61 @@
 
 import xml.etree.ElementTree as ET
 
-from difflib import get_close_matches
+from docx import Document
 
-from .parlamint_utterance import ParlamintAttendee
+from .parlamint_attendee import ParlamintAttendee
 from .parlamint_div import ParlamintDiv
 from .parlamint_head import ParlamintHead
 from .parlamint_note import ParlamintNote
 from .parlamint_speaker import ParlamintSpeaker
 
-from src.objects.docx_objects import DocxDocument
+from src.management.path_management import parse_path
+
+from src.objects.general_objects import File
+
+# from src.objects.parlamint_objects import ParlamintAttendee, ParlamintHead
 
 class ParlamintDocument:
-    def __init__(self, docx_document: DocxDocument):
-        self._docx_document: DocxDocument = docx_document
+    def __init__(self, file: File):
+        self._file: File = file
 
-        self._xml_id = f"ParlaMint-SR_{self.document_id}"
+        self._docx_document: Document = Document(parse_path("path.documents", file.word_path))
+        self._document_id = f"ParlaMint-SR_{self.file.document_id}"
 
         self._attendees: list[ParlamintAttendee] = []
-        self._attendees_by_name: list[str] = []
         self._elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker] = []
 
-        self._num_of_utterances: int = 0
-        self._num_of_segments: int = 0
+        # self._attendees_by_name: list[str] = []
 
-        self._xml_element: ET = None
+        # self._num_of_utterances: int = 0
+        # self._num_of_segments: int = 0
+
+        # self._xml_element: ET = None
 
     # GETTERS & SETTERS
     @property
-    def document_id(self) -> str:
-        return self.docx_document.file.name
+    def file(self) -> File:
+        return self._file
+
+    @file.setter
+    def file(self, new_file: File) -> None:
+        self._file = new_file
 
     @property
-    def docx_document(self) -> DocxDocument:
+    def docx_document(self) -> Document:
         return self._docx_document
 
     @docx_document.setter
-    def docx_document(self, new_docx_document: DocxDocument) -> None:
+    def docx_document(self, new_docx_document: Document) -> None:
         self._docx_document = new_docx_document
+
+    @property
+    def document_id(self) -> str:
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, new_document_id: str) -> None:
+        self._document_id = new_document_id
 
     @property
     def attendees(self) -> list[ParlamintAttendee]:
@@ -58,6 +76,20 @@ class ParlamintDocument:
         self._attendees += new_attendees_list
 
     @property
+    def elements(self) -> list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]:
+        return self._elements
+
+    @elements.setter
+    def elements(self, new_elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
+        self._elements = new_elements
+
+    def add_element(self, new_element: ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker) -> None:
+        self._elements.append(new_element)
+
+    def add_elements(self, new_elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
+        self._elements.extend(new_elements)
+
+    """@property
     def attendees_by_name(self) -> list[str]:
         return self._attendees_by_name
 
@@ -80,15 +112,7 @@ class ParlamintDocument:
 
         for attendee in self.attendees:
             if attendee.name == real_attendee:
-                return attendee
-
-    @property
-    def elements(self) -> list[ParlamintHead | ParlamintNote | ParlamintSpeaker]:
-        return self._elements
-
-    @elements.setter
-    def elements(self, new_elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
-        self._elements = new_elements
+                return attendee"""
 
     """def add_object(self, new_object: ParlamintHead | ParlamintNote | ParlamintSpeaker) -> None:
         self._objects.append(new_object)
@@ -97,7 +121,7 @@ class ParlamintDocument:
             self.add_utterance()
 
     def add_objects(self, new_objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
-        self._objects += new_objects"""
+        self._objects += new_objects
 
     @property
     def num_of_utterances(self) -> int:
@@ -133,4 +157,4 @@ class ParlamintDocument:
     
     @xml_element.setter
     def xml_element(self, new_xml_element) -> None:
-        self._xml_element = new_xml_element
+        self._xml_element = new_xml_element"""

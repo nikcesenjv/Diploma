@@ -3,12 +3,17 @@
 # Študijsko leto 2022/2023
 # Datoteka parlamint_attendee.py
 
+from src.management.text_management import capitalize_every_word
+
 class ParlamintAttendee:
-    def __init__(self, name: str, attendee_type: str):
-        self._name: str = name
-        self._attendee_type: str = attendee_type
-        
-        self._id: str = self.create_id()
+    def __init__(self, name: str, attendee_role: str = "chair"):
+        self._name: str = capitalize_every_word(name)
+        self._attendee_role: str = attendee_role
+
+        """self.parse_name()
+        self.name = capitalize_every_word(self.name)"""
+
+        self._id: str = self.generate_id()
 
     @property
     def name(self) -> str:
@@ -16,15 +21,26 @@ class ParlamintAttendee:
 
     @name.setter
     def name(self, new_name: str) -> None:
-        self._name = new_name
+        self._name = capitalize_every_word(new_name)
+        self.id = self.generate_id()
+
+    def parse_name(self) -> str:
+        if self.name[-1] == ".":
+            self.name = self.name[:-1]
+        self.id = self.generate_id()
+
+        """if is_any_close_match(self.name, "izvestilac"):
+            self.name = self.name.replace(f"{remove_close_matches(self.name.lower(), 'izvestilac')[0] }", "")
+            self.name = capitalize_every_word(self.name)
+            self.attendee_role = "reporter"""
 
     @property
-    def attendee_type(self) -> str:
-        return self._attendee_type
+    def attendee_role(self) -> str:
+        return self._attendee_role
 
-    @attendee_type.setter
-    def attendee_type(self, new_attendee_type: str) -> None:
-        self._attendee_type = new_attendee_type
+    @attendee_role.setter
+    def attendee_role(self, new_attendee_role: str) -> None:
+        self._attendee_role = new_attendee_role
 
     @property
     def id(self):
@@ -34,6 +50,6 @@ class ParlamintAttendee:
     def id(self, new_id: str) -> None:
         self._id = new_id
         
-    def create_id(self):
+    def generate_id(self):
         parsed_name = self.name.split(" ")
-        return f"#{''.join(parsed_name[1:] + [parsed_name[0]])}"
+        return f"#{''.join(parsed_name[1:] + [parsed_name[0]])}".replace(".", "")

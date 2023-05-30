@@ -14,6 +14,7 @@ class File(Structure):
         super().__init__(name, path)
 
         self._index, self._num, self._assembly, self._meeting, self._date = self.parse_name()
+        self._document_id = self.create_document_id()
 
         self._pages: int = 0
 
@@ -54,6 +55,9 @@ class File(Structure):
             return f"{parsed_num[0]}, {second_part} del"
 
         return self._num
+
+    def create_document_id(self):
+        return f"{self.date.replace('.', '-')}_{self.assembly}{self.index}-{self.meeting}-{self.num}"
 
     @staticmethod
     def get_num_of_pages(full_path) -> int:
@@ -124,6 +128,14 @@ class File(Structure):
     @property
     def year(self) -> str:
         return self._date.split(".")[-1]
+
+    @property
+    def document_id(self) -> str:
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, new_document_id: str) -> None:
+        self._document_id = new_document_id
 
     @property
     def pages(self) -> int:

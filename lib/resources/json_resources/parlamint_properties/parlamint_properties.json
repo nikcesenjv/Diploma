@@ -10,8 +10,7 @@
                     "similar words": [
                         "STENOGRAFSKE",
                         "BELEŠKE"
-                    ],
-                    "text": ""
+                    ]
                 },
                 {
                     "tag": "head",
@@ -20,8 +19,7 @@
                         "SENATA",
                         "KRALJEVINE",
                         "JUGOSLAVIJE"
-                    ],
-                    "text": ""
+                    ]
                 }
             ]
         },
@@ -42,8 +40,7 @@
                     "similar words": [
                         "REDOVNI",
                         "SASTANAK"
-                    ],
-                    "text": ""
+                    ]
                 },
                 {
                     "tag": "head",
@@ -52,8 +49,7 @@
                         "SENATA",
                         "KRALJEVINE",
                         "JUGOSLAVIJE"
-                    ],
-                    "text": ""
+                    ]
                 },
                 {
                     "tag": "head",
@@ -61,27 +57,60 @@
                     "similar words": [
                         "GODINE",
                         "BEOGRADU"
-                    ],
-                    "text": ""
+                    ]
                 }
             ]
         },
         {
             "tag": "div",
             "type": "present",
-            "elements": []
+            "elements": [
+                {
+                    "tag": "note",
+                    "type": "leading",
+                    "similar words": [
+                        "Pretsedavao",
+                        "pretsednik"
+                    ]
+                },
+                {
+                    "tag": "note",
+                    "type": "secretary",
+                    "similar words": [
+                        "Sekretar"
+                    ]
+                },
+                {
+                    "tag": "note",
+                    "type": "present",
+                    "similar words": [
+                        "Prisutan",
+                        "Prisutni"
+                    ]
+                }
+            ]
         },
         {
             "tag": "note",
             "type": "time",
             "similar words": [
-                "početak"
+                "Početak"
             ],
             "text": ""
         },
         {
-            "tag": "speaker",
-            "type": []
+            "tag": "note",
+            "type": "agenda",
+            "similar words": [
+                "Sadržaj"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "witnesses",
+            "similar words": [
+
+            ]
         },
         {
             "tag": "note",

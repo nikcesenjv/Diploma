@@ -11,8 +11,8 @@ from .xml_text import initialize_text
 from src.objects.parlamint_objects import ParlamintDocument
 
 def create_parlamint_xml_document(parlamint_document: ParlamintDocument, target_path: str) -> None:
-    xml_document = initialize_xml_file(parlamint_document.document_id)
 
+    xml_document = initialize_xml_file(parlamint_document.document_id)
     initialize_tei_header(xml_document, parlamint_document)
     text_element = initialize_text(xml_document)
 
@@ -33,4 +33,4 @@ def initialize_xml_file(document_name: str) -> ET:
 def save_xml_file(xml_document: ET, target_path: str) -> None:
     tree = ET.ElementTree(xml_document)
     ET.indent(tree, space="    ")
-    tree.write(target_path, encoding="UTF-8", xml_declaration=True)
+    tree.write(target_path, encoding="UTF-8", xml_declaration=True, method="xml", short_empty_elements=True)

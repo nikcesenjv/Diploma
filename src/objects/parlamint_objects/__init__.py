@@ -9,3 +9,4 @@ from .parlamint_document import ParlamintDocument
 from .parlamint_head import ParlamintHead
 from .parlamint_note import ParlamintNote
 from .parlamint_speaker import ParlamintSpeaker
+from .parlamint_utterance import ParlamintUtterance
