@@ -29,6 +29,9 @@ class ParlamintSpeaker:
     def utterance(self, new_utterance: ParlamintUtterance) -> None:
         self._utterance = new_utterance
 
+    def to_string(self):
+        return self.utterance.to_string()
+
     def to_element(self, parent_element: ET):
         self.note.to_element(parent_element)
         self.utterance.to_element(parent_element)

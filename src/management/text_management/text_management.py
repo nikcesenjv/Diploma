@@ -16,7 +16,10 @@ def get_text(path):
         return to_latin(file.read(), "sr")
 
 def only_normal_characters(string: str) -> str:
-    return cyrillic_to_latin_text(string.replace("-\n", "").replace("\n", " ").replace("-", "").lower())
+    return cyrillic_to_latin_text(string.lower())
+
+def parse_string(string: str) -> str:
+    return cyrillic_to_latin_text(string.replace("-\n", "").replace("\n", " ").replace("-", ""))
 
 def is_close_match(string: str, string_list: str | list[str], threshold: int = 75, word_length: int = 3) -> bool:
     string_split = split_string_by_words(cyrillic_to_latin_text(string))
@@ -50,6 +53,11 @@ def is_close_match_attendee(string_one: str, string_two: str, threshold: int = 7
         for j in range(len(string_list) - i):
             if fuzz.ratio(" ".join(string_list[j:i + j + 1]), string_two) >= threshold:
                 return True
+
+    res = closest_longest_substring(string_one, string_two)
+    if res is not None:
+        return True
+
     return False
 
 def close_matches_to_remove(string_list_one: list[str], string_list_two: list[str], threshold: int = 75) -> list[str]:
@@ -90,6 +98,47 @@ def closest_substring(first_string: str, second_string: str, treshold: int = 75)
         return longest_match
 
     return None
+
+def closest_longest_substring(str1, str2):
+    longest_substring = ""
+
+    for i in range(len(str1)):
+        for j in range(i + 1, len(str1) + 1):
+            substring = str1[i:j]
+
+            if substring in str2:
+                substring_score = fuzz.ratio(substring, str2)
+
+                if len(substring) > len(longest_substring):
+                    longest_substring = substring
+                elif len(substring) == len(longest_substring) and substring_score > fuzz.ratio(longest_substring, str2):
+                    longest_substring = substring
+
+    return longest_substring
+
+"""def find_longest_closest_substring(str1, str2):
+    longest_substring = ""
+    closest_substring = ""
+    longest_length = 0
+    closest_score = 0
+
+    for i in range(len(str1)):
+        for j in range(i + 1, len(str1) + 1):
+            substring = str1[i:j]
+
+            if substring in str2:
+                substring_length = len(substring)
+                substring_score = fuzz.ratio(substring, str2)
+
+                if substring_length > longest_length:
+                    longest_substring = substring
+                    longest_length = substring_length
+
+                if substring_score > closest_score:
+                    closest_substring = substring
+                    closest_score = substring_score
+
+    return longest_substring, closest_substring"""
 
 def has_only_letters(string: str) -> bool:
     return all(letter.isalpha() for letter in string)

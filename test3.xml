@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV" xml:lang="sr" ana="#parla.sitting #reference">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV" xml:lang="sr" ana="#parla.sitting #reference">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="main" xml:lang="sl">Parlamentarni korpus ParlaMint, redni 25 [ParlaMint]</title>
-                <title type="main" xml:lang="en">Parliamentary corpus ParlaMint, regular 25 [ParlaMint]</title>
-                <title type="sub" xml:lang="sl">Zapisi sej SKJ, indeks 8, 15.4.1932</title>
-                <title type="sub" xml:lang="en">Minutes of the SKJ, index 8, 15.4.1932</title>
-                <meeting n="25" corresp="#SKJ" ana="#parla.lower #parla.meeting.regular">Redni</meeting>
-                <meeting n="8" corresp="#SKJ" ana="#parla.lower #parla.term #SKJ.8">Indeks 8</meeting>
+                <title type="main" xml:lang="sl">Parlamentarni korpus ParlaMint, redni 24 [ParlaMint]</title>
+                <title type="main" xml:lang="en">Parliamentary corpus ParlaMint, regular 24 [ParlaMint]</title>
+                <title type="sub" xml:lang="sl">Zapisi sej SKJ, indeks 7, 14.4.1932</title>
+                <title type="sub" xml:lang="en">Minutes of the SKJ, index 7, 14.4.1932</title>
+                <meeting n="24" corresp="#SKJ" ana="#parla.lower #parla.meeting.regular">Redni</meeting>
+                <meeting n="7" corresp="#SKJ" ana="#parla.lower #parla.term #SKJ.7">Indeks 7</meeting>
                 <respStmt>
                     <persName>Nik Česenj Vodovnik</persName>
                     <resp xml:lang="sl">Kodiranje TEI</resp>
@@ -25,505 +25,119 @@
     <text ana="#reference">
         <body>
             <div type="debateSection">
-                <head type="generalInfo">STENOGRAFSKE DELEŠKE SENATA KRALJEVINE JUGOSLAVIJE</head>
-                <head type="info">GODINA 1	BEOGRAD 1932 GOD.	BROJ 28</head>
-                <head type="meeting">XXV REDOVNI SASTANAK SENATA KRALJEVINE JUGOSLAVIJE ODRŽAN 15 APRILA 1932 GODINE U BEOGRADU</head>
-                <note type="leading">Pretsedavao: Potpredsednik □OVAN ALTIPAPMAKOV1Ć</note>
+                <head type="generalInfo">STENOGRAFSKE BELEŠKE KRALjEBINE JUGOSLAVIJE GODINA I	BEOGRAD, 1932 GOD.	BROZ 27</head>
+                <head type="meeting">XXIV REDOVNI SASTANAK SENATA KRALjEVINE JUGOSLAVIJE DRŽAN 14 APRILA 1932 GODINE U BEOGRADU</head>
+                <note type="leading">Pretsedavao: Pretsednik DR. ANTE PAVELIĆ</note>
                 <note type="secretary">Sekretar: MILAN POPOVIĆ</note>
-                <note type="present">Prisutan g. Ministar fizičkog vaspitanja naroda, dr. Dragan Kraljević.</note>
-                <note type="time">— Početak u 11.15 časova. —</note>
-                <note type="content">Sadržaj: Čitanje i usvajanje zapisnika XXIV redovnog sastanka; Saopštenje o konstituisanju Odbora za proučavanje zakonskog predloga o suzbijanju skupoće životnih namirnica i Odbora za proučavanje zakonskog predloga o ovlašćenju za neodloživu primenu međunanarodnih ugovora i sporazuma; Saopštenje o podnošenju Senatu izveštaja Odbora za proučavanje zakonskog predloga o ovlašćenju za neodloživu primenu međunarodnih ugovora i sporazuma; Saopštenje o podnošenju predloga Zakona o narodnom priznanju onim časnicima narodne vojske, koji su 1918 god. učestvovali u oslobodilačkim borbama na teritoriji bivše Štajerske i Koruške, i predloga rezolucije za odašiljanje izaslanstva od pet članova Senata na svesokolski slet u Prag — od strane senatora g. g. Ivana Hribara i drugova.</note>
-                <note type="agenda">Saopštenje o konstituisanju Odbora za proučavanje zakonskog predloga o suzbijanju skupoće životnih namirnica i Odbora za proučavanje zakonskog predloga o ovlašćenju za neodloživu primenu međunanarodnih ugovora i sporazuma; Saopštenje o podnošenju Senatu izveštaja Odbora za proučavanje zakonskog predloga o ovlašćenju za neodloživu primenu međunarodnih ugovora i sporazuma; Saopštenje o podnošenju predloga Zakona o narodnom priznanju onim časnicima narodne vojske, koji su 1918 god. učestvovali u oslobodilačkim borbama na teritoriji bivše Štajerske i Koruške, i predloga rezolucije za odašiljanje izaslanstva od pet članova Senata na svesokolski slet u Prag — od strane senatora g. g. Ivana Hribara i drugova. Dnevni red: Pretres u pojedinostima i konačno usvojenje Pravilnika o organizaciji službe i službenicima u Senatu Kraljevine Jugoslavije.</note>
-                <note type="witnesses">Govornici: Miloje Z. Jovanović, Milutin Dragović, Milan Marjanović, Milan Popović, izvestilac Svetozar Tomić.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u1" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg1"> Otvaram XXV redovni sastanak Senata. Molim gospođinasekretara da pročita zapisnik prošlog sastanka.</seg>
-                </u>
-                <note type="reading">Sekretar Milan Popović čita zapisnik XXIVredovni sastanak.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u2" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg2"> Ima liko od gospode senatora da učini kakvu primedbu napročitani zapisnik? (Nema.) Pošto primedbe nema, tosc zapisnik prima i overava.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg3">Izvolite, gospodo, senatori, čuti izveštaje o konstituisanju odbora.</seg>
-                </u>
-                <note type="speaker">Sekretar Milan Popović saopštava</note>
-                <u who="#PopovićMilan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u3" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg4"> Odbor zaproučavanje zakonskog predloga o suzbijanju skupoćeživotnih namirnica izveštava đa se je konstituisao i izabrao za pretsednika g. Miloja Z. Jovanovića, za potpretsednika g. Spiru HadižRistića i za sekretara g.Tomu Jalažbetića.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg5">Odbor za proučavanje zakonskog predloga o ovlašćenju za neodloživu primenu međunarodnih ugovorai sporazuma izveštava da se je konstituisao i izabraoza pretsednika g. Ivana Hribara, za potpretsednika g.Krstu Radovanovića i za sekretara g. Jovu Banjanina.</seg>
-                </u>
-                <note type="speaker">P o t p r c t s e đ n i k Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u4" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg6"> Ovi izveštaji o konstituisanju odbora primaju se na znajne.— Izvolite čuti saopštenje o jednom odborskom izveštaju.</seg>
-                </u>
-                <note type="speaker">Sekretar Milan Popović saopštava</note>
-                <u who="#PopovićMilan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u5" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg7"> Odbor zaproučavanje zakonskog predloga o ovlašćenju za neodloživu primenu međunarodnih ugovora i sporazumapodnosi Senatu na rešenje svoj izveštaj.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u6" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg8"> Ovajje odborski izveštaj otštampan, razdaće se sada gospodisenatorima i biće stavljen na dnevni red kad to Senatzaključi.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg9">Izvolite čuti predloge gospode senatora.</seg>
-                </u>
-                <note type="speaker">Sekretar Milan Popović saopštava</note>
-                <u who="#PopovićMilan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u7" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg10"> G. g. IvanHribar i drugovi podnose Senatu na rešenje predlogZakona o narodnom priznanju onim časnicima narodne vojske, koji su 1918 godine pod vodstvom deneralaRudolfa Maistra u oslobodilačkim borbama na teritoriji bivše Štajerske i Koruške imali naročitih zasluga zaJugoslaviju.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg11">G. g. Ivan Hribar i drugovi podnose Senatu predlog rezolucije za odašiljanje na svesokolski slet u Pragizaslanstva od pet članova Senata.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u8" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg12"> Za obaova predloga senatora g. Ivana Hribara i drugovaizabraćemo na narednoj sednici Senata naročite odbore.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg13">Prelazimo na dnevni red. Na dnevnom je redupretres u pojedinostima Pravilnika o organizaciji službei službenicima u Senatu Kraljevine Jugoslavije.</seg>
-                </u>
-                <note type="reading">Otvaram posebni pretres. Želi li ko od gospodesenatora da se javi za reč kod Glave I? (Niko se ncjavlja za reč.) Pošto se niko ne javlja za reč, i poštoje ovaj predlog Pravilnika izglasan u načelu, to ćemosada preći na glasanje o pojedinim članovima glave I.Molim g. izvestioca da zauzme svoje mesto i da pro-čita član 1.</note>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 1 (Vidi sast.XXII.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u9" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg14"> Stavljam na glasanje čl .1. Gospoda koja su za to da setaj član primi, izvoleće sedeti, a koja su protiv, izvoleće ustati. (Svi sede.) Svi sedc, prema tome oglašujemda je Senat primio čl. 1.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg15">Izvolite čuti čl .2.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 3. (VidiXXII.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u10" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg16"> Stavljam na glasanje čl. 2. Gospoda koja su za to da sečl. 2 primi, izvoleće sedeti, a koja su protiv, izvolećeustati. (Svi sede.) Oglašujem da je čl. 2 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg17">Izvolite pročitati čl. 3.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 3. (Vidisast. XXII.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u11" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg18"> Stavljani na glasanje čl .3. Gospoda koja su za to da seovaj član primi, izvoleće sedeti, a koja su protiv toga,izvoleće ustati. (Svi sede). Objavljujem da jc čl. 3 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg19">Izvolite čuti čl. 4.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 4 .(Vdi sast.XXII.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u12" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg20"> Stavljam na glasanje član 4. Gospoda koja su za to dase ovaj član primi, neka izvole sedeti, a koja su protiv,neka izvole ustati. (Svi sede). Objavljujem da je čl. 4primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg21">Izvolite čuti čl. 5.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 5. (Vidisast .XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u13" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg22"> Stavljam na glasanje čl. 5. Gospoda koja su za to da se ovaj član primi, neka izvole sedeti, a koja su protiv,neka izvole ustati .(Svi sede.) Objavljujem da je čl.5 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg23">Izvolite čuti čl. 6.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 6. (Vidisast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u14" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg24"> Stavljam na glasanje čl. б. Gospoda koja su za to da sečl. 6 primi, izvoleće sedeti, a koji su protiv, izvolećeustati. (Svi sede.) Objavljujem da je čl. 6 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg25">Izvolite čuti čl. 7.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 7. (Vidisast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u15" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg26"> Stavljam na glasanje, čl. 7. Gospoda koja su za to da seovaj član primi, izvoleće sedeti, a koja su protiv, izvoleće ustati. (Svi sedc). Objavljujem da je čl. 7 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg27">Izvolite čuti čl. 8.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 8. (Vidisast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u16" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg28"> Stavljam na glasanje čl .8. Gosnođa koja su za to da seovaj član primi, izvoleće sedeti, a koja su protiv, izvoleće ustati. (Svi secle.) Objavljujem da je član 8 primljen. Tome je ćela Glava I. primljena.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg29">Prelazimo na glavu II. Podela službe. Niko sene javlja za reč. Molim g. izvestioac da pročita čl. 9.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomtć čita Glava II. Po-dela službe. — čl. 9. (Vidi sast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u17" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg30"> Stavljam na glasanje čl .9. Gospoda koja su za to da seovaj član primi, izvoleće sedeti, a koja su protiv, izvoleće ustati .(Svi sede). Objavljujem da jc čl. 9. primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg31">Izvolite čuti čl. 10.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 10. (Vidisast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u18" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg32"> Stavljam na glasanje čl. 10. Gospoda koja su za to da se ovajčlan primi ,ncka izvole sedeti, a koja su protiv, neka izvole ustati. (Svi sedc). Objavljujem da je čl. 10 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg33">Izvolite čuti čl. 11.</seg>
-                </u>
-                <note type="speaker">Izvestilac Svetozar Tomić</note>
-                <u who="#TomićSvetozar" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u19" ana="#reporter">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg34"> Ovaj čl. 11. izbačen je iz projekta Pravilnika i tekst člana 12 postaje sada čl. 11. Čita čl. II (Vidi sast. ХХП.)</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u20" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg35"> Stavljam na glasanje čl .11. Gospoda koja su za to dasc ovaj član primi, izvoleće sedeti, a koja su protiv,izvoleće ustati. (Svi sede.) Objavljujem da je čl. čl.11 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg36">Izvolite čuti čl. 12.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 13. koji sadapostaje čl. 12. (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u21" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg37"> Stavljam na glasanje čl. 12. Gospoda koja su za to da sečl. 12 primi, neka izvole sedeti, a koja su protiv, nekaizvole ustati. (Svi sedc.) Objavljujem da je čl. 12primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg38">Izvolite čuti čl. 13.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član14, koji sada postaje član 13 (vidi sast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u22" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg39"> Stavljam na glasanje član 13. Gospoda koja su za to da seovaj član primi, neka izvole sedeti, a koja su protiv,neka izvole ustati. (Svi sede). Pošto svi sede, objavljujem da je član 13 primljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član15 koji sada postoji član 14 (Vidi sast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparniaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u23" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg40"> PrimaIi se pročitani član 14? (Prima) Objavljujem da jeprimljen.	&gt;</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član16 koji sada postaje član 15 (Vidi sast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparniaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u24" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg41"> Primali se pročitani član? (Prima). Objavljujem da je primljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član17 koja sada postaje član 16 (Vidi sast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmakov’ć</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u25" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg42"> Trimali se pročitani član? (Prima). Objavljujem da jcprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član18 koji sada postaje član 17. (Vidi sast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmakov</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u26" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg43">ć: Trimali se pročitani član? (Prima). Objavljujem da jcprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član19 koji sada postaje član 18. (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u27" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg44"> Trimali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član20 koji sada postaje član 19. (Vidi sast. XXII.)</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u28" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg45"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg46">Gospodo, objavljujem da je ovim Senat primioi u pojedinostima Glavu II — Pravilnika o organizaciji službe i službenicima u Senatu Kraljevine Jugoslavije.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg47">Prelazimo na pretres Glave III Pravilnika, koja seodnosi na podelu zvanja i poloažja. — Za reč se javiog. Miloje Jovanović. Ima reč g. Jovanović.</seg>
-                </u>
-                <note type="speaker">Miloje 2. Jovanović</note>
-                <u who="#ZJovanovićMiloje" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u29" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg48"> Gospodo senatori, kod oveglave III, koja govori o podeli zvanja i položaja uSenatu, ja imam da skrenem pažnju na to, da su oveodredbe koje su donete u pogledu položaja, plata,prinadležnosti i drugih uslova službe senatskih činovnika, nesravnjeno gore nego što je to kod činovnikaNaredne skupštine. Oni su, gospodo, u Narodnoj skupštini juče izglasali Pravilnik za svoječinovnike, i po tom Pravilniku, oni su, vodeći računao svojim činovnicima, i u pogledu plata i razvrstavanja,i u pogledu svega ostalog, doneli takve odredbe, kojesu za skupštinske činovnike povoljne ,dok, međutim,ovo što je predloženo u ovoj Glavi za senatske činovnike takvo je, da kad ovo bude izglasano i usvojeno,naši će činovnici biti u mnogo lošijem položaju negočinovnici Narodne skupštine. Ja smatram, gospodo, dami nemamo nikakva razloga da naše činovnike, kojemi većinom znamo još iz starog parlamenta, koji su</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg49">i dobri radnici i savesni činovnici, stavljamo u lošijipoložaj nego što je položaj činovnika Narodne skupštino. U ovom Pravilniku za senatske činovnike imanekoliko članova u kojima je ta razlika veoma velika.Zato ja mislim da bismo mi učinili jednu nepravdu,kada bismo izglasali za naše činovnike takav status itakve prinadležnosti, da oni budu stavljeni u goripoloažj nego činovnici Narodne skupštine. Mi nemamorazloga da tako postupimo, i ja apelujem na gospodusenatore da mi donesemo odluku: da ovu stvar vratimou Odbor, te đa Odbor prouči odredbe koje su doneteu Skupštini, te da se u ovaj Pravilnik unesu potrebneodredbe, koje će omogućiti da i jedni i drugi činovnici budu podjednako tretirani. (Čuje se: Navedite konkretne činjenice I)</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg50">Na primer, u čl. 21, gde je reč o podeli zvanjai položaja, trebalo bi u red činovnika sa fakultetskomspremom uzeti i načelnika Stenografskog biroa,koje je zvanje predviđeno u Pravilniku o skupštinskim činovnicima, jer je to zvanje i ranije uvek postojalo i potrebno je da postoji.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg51">U čl. 22 našeg Pravilnika treba predvideti u trećoj grupi pomoćnika načelnika Stenografskog biroa iadministrativnog višeg savetnika, koja su zvanja predviđena u trećoj grupi po skupštinskom Pravilniku, akod nas to nije učinjeno.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg52">U glavi IV, koja govori o prinadležnostima, treba uneti u čl. 24 redakciju iz čl. 21 skupštinskog Pravilnika, koja glasi: „Činovnici, činovnički pripravnici, zvaničnici i služitclji' primaju prinadležnosti kao aktivni državni službenici građanskog reda, a lični dodatak na skupoću za činovnike, zvaničnike i služitelje ispecijalni dodatak za prekovremeni rad za sve služženike određuje im Pretsednik Senata, u saglasnosti saAdministrativnim odborom". Ovo je i pravično, a istuovu odredbu imela je i Narodna skupština u svoj Pravilnik.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg53">U čl. 27 našeg Pravilnika treba uneti odredbu izčl. 22 skupštinskog Pravilnika, koja određuje: da sehonorarnim stenografima i činovnicima isplaćuje njihov stalni mesečni honorar svakog meseca unapred, jerbi tako ta odredba bila jasnija i potpunija.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg54">U glavi VIII, koja govori o penzijama, u čl. 41 našeg Pravilnika takođe je velika razlika između položaja senatskih i skupštinskih činovnika.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg55">U glavi X, u kojoj se nalaze prelazna naređenja,takodc ima velikih razlika između našeg i skupštinskog Pravilnika, na štetu naših činovnika.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg56">Ja ne kažem, gospodo, da sve ovo doslovce trebaprimiti, ali nalazim da bi ovu stvar trebalo vratitiOdboru, pa da se ispravi ono što se može ispraviti,tc da ne učinimo nepravdu našim činovnicima. Ja bihmolio Senat da usvoji moj predlog, da se ovo vratiu Odbor, pa da Odbor preradi pojedine odredbe ipodnese nam ih tako prerađene, pa ćemo mi posle otome govoriti i doneti odluku.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u30" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg57"> Imareč g. Milutin Dragović.</seg>
-                </u>
-                <note type="speaker">Milutin Dragović</note>
-                <u who="#DragovićMilutin" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u31" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg58"> Gospodo senatori, ja se potpuno slažem sa predlogom g. Miloja Jovanovića. Da jezakonodavac, koji je sastavljao Zakon o činovniicmagrađanskog reda i koji je sastavljao Poslovnik i Zakon o izborima narodnih poslanika i senatora, mislioda činovnici u Senatu i Narodnoj skupštini treba da</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg59">imaju jedan isti rang kao i činovnici u drugim državnim’nadleštvim’a i ustanovama, on ne bi dao Senatu i Narodnoj skupštini pravo, niti bi im stavio u dužnost daizrade naročiti Pravilnik, u kome će biti predviđene iregulisane prinadležnosti, razvrstavanje senatskih iskupštinskih činovnika i ostali njihovi službeni odnosi.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg60">Mi to znamo iz prakse, da je to od velike važnosti, mi znamo da i gospoda narodni poslanici i senatori donose pojedine odluke i u odborima i daju, da toizrade činovnici i tamo se mora voditi računa o svakoj zapeti i tački, mora se paziti na svaku sitnicu, jersamo jedna mala pogreška može napraviti zaplet uposlovima.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg61">Zbog toga, gospodo senatori, da bi Senat imaodobre činovnike, da bi ti činovnici radili marljivo i savesno svoje poslove i da bi sc utrkivali da dolaze tačnoi da vrše savesno svoju dužnost, smatram da trebaju daimaju ove specijalne nagrade, koje je i sama Narodnaskupština svojini činovnicima odredila.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg62">Međutim, gospodo senatori, kod nas je tako stanje, da je predložen mnogo gori Pravilnik, nego štoje Pravilnik Narodne skupštine, i ja smatram, da biSenat trebao da stane na gledište, da se glava III vrati u Administrativni odbor i da se saobrazi Pravilniku,koji je Narodna skupština na jučerašnjoj sednici jednoglasno primila i izglasala. Mi se time ništa nc razlikujemo, nego idemo pravilnim putem, kao što je išaoParlamenat.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg63">To je moj predlog i molim Senat da usvoji ovajpredlog, kako ga je g. Miloje Ž. Jovanović učinio .</seg>
-                </u>
-                <note type="speaker">Potpretseđnik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u32" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg64"> Imareč senator g. Milan Marjanović.</seg>
-                </u>
-                <note type="speaker">Milan Marjanović</note>
-                <u who="#MarjanovićMilan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u33" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg65"> Gospodo, ja ne delim mišljenjemojih predgovornika g. Jovanovića, ni g. Dragovića.(Milutin Dragović: Ti se uvek odvajaš, hvala Bogu!)Može izostati ta primeđba. Ja ću dati razloge zaštone delim vaše mišljenje.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg66">Gospodo, nama za ugled u pitanju uređenja Senata i službe u Senatu nc mora i čak i ne treba dasluži ono što jc Narodna skupština rešila. Mi pre svega ne znamo, na kakav je način tamo rešavano, koliko su oni u Klubu učestvovali u tom rešavanju i kakooni gledaju na budžetiranje uopšte u državi, — i prema tome ini smo u tom pogledu apsolutno nezavisni.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg67">Gospođin Jovanović je samo kazao, đa su oneplate predviđene izvesnim funkcionerima, koje je Narodna skupština odredila, nesravnjeno bolje, odnosnođa su ove plate, koje su predviđene u ovom Pravilniku, nesravnjeno gore od onih plata, koje se predviđaju u Pravilniku Narodne skupštine.</seg>
-                </u>
-                <note type="speaker">Ja bih molio, da ini kažu g. Dragović i g. Jovano-vić, zašto to nisu u Administrativnom odboru uradili?Lko g. Jovanović nije bio u tom odboru, (Milojc Ž. Jo-vanović</note>
-                <u who="#ZJovanovićMiloje" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u34" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg68"> Nisam bio!) ako on nije bio, g. Dragović jeibio i potpisao izveštaj, i nikakve napomene nije učinio,kad je ovaj Pravilnik predlagao Senatu. Onda je onmislio, da je i pravedno, i pravilno i dobro ono, štotaj odbor predlaže. Sad najedanput usled pojave nekog Pravilnika u Narodnoj skupštini želi se ovde vraćanje u odbor i da nam za putovođu služi ono, štosu oni u Narodnoj skupštini rešili.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg69">Ne, gospodo, ini se nc možemo takvom uticajupodložiti! Moramo samostalno rešavati, imati svojuglavu i u pitanju ovih zakonskih odredaba, koje se</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg70">tiču unutrašnjeg rada, poslovanja i službovanja u Senatu. Лко se bude našlo, da su te plate i ti položaji nedovoljni i t. d., mi ćemo to sada kod pojedinihparagrafa promeniti i izmeniti, ali da se samo zbogtoga vraća u odbor, da bi se za direktivu uzeo Pravilnik, koji je skupština đonela, ja sam protiv toga ličnoodlučno protivan. Protivan sam. i zbog toga, gospodo,što se ovde izlazi sa izvesnini neodređenim faktima,sa izvesnim neodređenim činjenicama, neupoređenimčinjenicama, u čemu se to razlikuje Pravilnik skupštinski od Pravilnika Senatskog? Samo je rečeno: goreje ovde predviđeno, nego tamo u Skupštini I</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg71">Treba gospoda to u detaljima da kažu u čemuje gore, pa onda imamo jednu osnovu sa kojom polazimo đa raspravljamo pitanje, da li su iste funkcije činovnika, predviđene tamo, ipak sa boljom platom iistovetne funkcije predviđene kod nas, a sa lošijomplatom.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg72">Zašto onda i od kuda ta razlika? Kad bismo tako uporedili taj pregled, mi bismo onda imali jedanosnov za razmišljanje, jer je tu rečeno, da za osnovicusluži zakon o činovnicima građanskog reda; i on je ovom odboru bez sumnje služio za osnovicu. Ako jeto tako, onda ne mogu đa vidim opravdanost razloga gospodina Dragovića, koji izvodi zaključak đazakonodavac, donoseći zakon o činovnicima građanskoga reda, nije mislio i na ove činovnike, koje ćeimati pretstavništva i da je zbog toga ostavio slobodujkretanja i odlučivanja našim pretstavništvima, da bi onamogla dati veće plate i da bi te plate trebale da serazlikuju od plata državnih činovnika. Zakonodavac jedao to ovlašćenje ovim ustanovima, koje su u izvesnornpogledu autonomne i nezavisne od same državne upravne i ekzekutivne vlasti, da one po svojim specijalnim potrebama mogu određivati i vrstu i broj svojih službenika. Лко to hoćemo da upoređujemo, onda — priznaće mi i sama gospoda činovnici koji budu služili u Narodnoj skupštini i Senatu, — da šu oniu mnogo boljem položaju od drugih činovnika. Oni ćebez sumnje imati naporan rad za vreme sednica, alioni su stalni činovnici i za ono vreme kad ove dveustanove ne rade; a to je priličan i povelik odmor.Ali idemo još malo dalje. Gospoda su tražila da onifiksiraju plate pojedinim činovnicima kako u Narodnojskupštini tako i ovđe. To bi značilo đa bi trebao našAdministrativni odbor ili g. Pretseđnik da nam pročita kakve plate oni imaju prema izvesnoj vrsti službenika. Ima raznih vrsta služba ovde i ja ulažem najozbiljniji protest protiv toga, jer nedavno smo imali državni budžet na rešavanju, i mi smo se svi staralida ga svedemo koliko god je moguće na manje, aovako, kako je u Senatu raspoređeno, daje se i suviše nekima. Tu treba revizije. U detaljima: trebalibismo uzeti u obzir plate diplomiranim, fakultetskiobrazovanim licima i uporediti ih sa platama naših činovnika, pa ćete videti da na primer diplomirani lekari, pravnici i suplenti imaju manje plate od našihpisara, za koje sumnjam đa imaju fakultetsku spremu.Ovde ima znatan broj lica koja raspolažu sa platomod 3.000.—, 2.800.— itd, a Senat ima 98 službenika!Лко nam pretsedništvo kaže da je to neophodan brojto je druga stvar, ali mi kao da vidimo da nije baštako. Kad će ovde jedna osoba koja vrši ulogu pisara, biti honorisana sa 2.000.— dinara mesečno, javas pitani koji drugi državni ukazni diplomirani služ</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg73">benik ima tu platu? Sudski pisar je nema; njegova jeplata 1.300.— dinara — suplent je nema, dakle svršeni filozof je nema, on ima u Beogradu oko 1.400.—a u unutrašnjosti još nešto manje. 1 kad gledate naizdatke koji se čine u Senatu, onda je strahovito veliko. Prema tome ovde bi se moglo ovo požcleti: dagospodinu Pretsedniku damo u pomoć Administrativni odbor, da bi oni mogli određivati te plate pravilnoi pravedno, i prema opštim intencijama oba Narodnapretstavništva saglasno sa državnim budžetiranjem. ,</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg74">Ja znam šta je to neotpornost, ja znam šta je topritisak, molba itd., sve to shvatam. Po blagorrodstvu duše često puta oni, koji raspolažu dodeljivanjemslužbe itd., ne mogu da budu otporni. I gospodo, jeli Senat ustanova takava koja ima da radi radi milosrđa i zahteva svačijeg, ili da najuporednije posmatranužnost i potrebe i da najštedljivije raspolaže sa državnim novcem. Ako je ovaj drugi zadatak Senata, jabih voleo i molio da nam se kaže, da li nije bilo potrebno da Senat odredi numerus klauzus sa jednimovlašćenjem Pretsednika u koliko on može preći preko toga broja i u danim slučajevima postaviti i veći broj.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg75">Ja ovde delim službu organa koji su angažovanii nalazim da u. administraciji ima potrebe za dobarnadzor a njega treba i platiti. Onda je naporna služba stenografa, suviše naporna, i treba je platiti, ali kada se dođe na ove odredbe paragrafa 20 mi vidimo da ako se odražava to na rad,da može da ispadne sasvim obrnuto. Mogu oni organičija služba nije toliko naporna, koja je mnogo manjenaporna, da budu mnogo više i mnogo bolje honorisani od onih, čija je služba naporna. To pravdatraži. Ako bi ostale ove plate, treba uneti odredbuda se osoblje za Senat .nabavlja konkursom i vi ćetevideti, da će se isprazniti gimnazije i sudovi i poletećesvi, i lekari, da budu činovnici Senata i Narodne skupštine, jer ovo što se daje ovde, nema u državnoj službi. Prema tome ja nisam mišljenja da nama za ugledsluži ma čiji drugi pravilnik i već da ini po svojojglavi rešavamo i reširno ovo pitanje.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg76">Gospodo, ja moram staviti taj svoj dodatak, dase izvrši revizija osoblja i plata, jer i plate nasleđenesu od neke administracije koja je prethodila formiranju Senata, a ono što smo nasledili ne mora bitiispravno, jer mi smo u praksi, u vođenju poslova uSenatu uočili šta je najnužnije, što više a što manjetreba da se honoriše.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u35" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg77"> Imareč g. Milutin Dragović, radi ličnog objašnjenja.</seg>
-                </u>
-                <note type="speaker">Milutin Dragović</note>
-                <u who="#DragovićMilutin" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u36" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg78"> Gospodo senatori, ja ću unapred izjaviti da priznajem da sam u pogledu tumačenja zakona u slabijem položaju od g. Marjanovića, jerje on pravnik a ja seljak. Sto se tiče moga potpisana izveštaju Administrativnog odbora, ja sam zbiljataj izveštaj potpisao kao član Administrativnog odbora ali su mi članovi odbora govorili da će se našPravilnik doneti kada ga donese Narodna skupštinai onako kako ga donese Narodna skupština. I tek tadaja sam se saglasio i potpisao taj izveštaj. Međutim,g. Popović Milan i posle toga menjao je neke članovei umetao neke odredbe u Pravilnik. To je jedno. Drugo, od mene se traži da navedem članove PravilnikaPa ja, gospodo, iz skupštinskog Pravilnika vidim datamo ima činovnika sa istom kvalifikacijom i na istim</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg79">položajima kao šefova odeljenja i da oni dolaze i IVi III grupu, dok se kod nas ti isti činovnici sa timistini kvalifikacijama i sa istim položajem razvrstavajuu VI i V grupu.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg80">Gospodo, g. Marjanović bio je član parlamentakao i ja i on vrlo dobro zna kakve su beneficije davanesluženicima Narodne skupštine u svakom pogledu. Zatoja ostajem pri tom, da je zakonodavac koji je doneoi zakon o Poslovnom redu i Ustav i Zakon o izborunarodnih poslanika hteo, da činovnici Senata kao ičinovnici Narodne skupštine kao činovnici građanskogareda budu s obzirom na njihov izuzetan položaj ispecijalne funkicje drugačije razvrstani nego ostali činovnici. Dakle, zakonodavac je hteo da Senat i Skupština sami izrade Pravilnik za svoje službenike i da ihtako nagradi, da bi oni prednjačili što boljim i uspešnijim radom.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg81">Na osnovi svega toga ja smatram da je potrebnoda se Glava III Pravilnika vrati odboru, pa da odborte odredbe saobrazi sa skupštinskim Pravilnikom.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u37" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg82"> Imareč g. Milan Popović, radi ličnog objašnjenja.</seg>
-                </u>
-                <note type="speaker">Milan Popović</note>
-                <u who="#PopovićMilan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u38" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg83"> Na napomene g. Dragovića ubitnosti i u načelu odgovoriće g. izvestilac. Ja ću samoda napomenem ovo. Ne stoji da sam ja unosio nekenove odredbe u Pravilnik, nego je to činio Administrativni odbor u prisutnosti dovoljnog broja članova,i to u saglasnosti sa g. Pretsednikom. Nadalje ističemda su te izmene sprovođene prema obrascu koji namje poslala Narodna skupština. Taj je obrazac stajaopred nama od početka do kraja. Mogu čak saopštitigospodi senatorima, da smo od strane Narodne skup.štine bili pozvani da požurimo s tim Pravilnikom,jer da će Narodna skupština čekati da mi donesemosvoj Pravilnik, pa da će prema našim napomenamaudešavati i svoj Pravilnik. Tako je i bilo, i g.Pretsednik Narodne skupštine saglasio se sa našimnapomenama i sa tim napomenama vratio PravilnikAdministrativnom odboru.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg84">Prema tome, nisam ja lično ništa tu menjao, negoAdministrativni odbor u saglasnosti sa svima članovima.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u39" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg85"> Imareč g. izvestilac Svetozar Tomić.</seg>
-                </u>
-                <note type="speaker">Izvestilac Svetozar Tomić</note>
-                <u who="#TomićSvetozar" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u40" ana="#reporter">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg86"> Gospodo senatori, na primedbe g. Jovanovića i g. Dragovića imamda kažem ovo. Prvo g. Dragoviću odgovaram, da jenovi zakon o činovnicima stupio na snagu 1 aprila1931 godine, kada nije bilo ni Senata ni Narodneskupštine, te se u njega nisu mogle ni uneti odredbeza činovnike Skupštine i Senata. Drugo, zakonodavackoji je doneo zakon o Poslovnom redu u Senatu, unjegovom 127 članu izrično kaže: „Sve osoblje Senatastoji pod upravom Pretsednika Senata. Osoblje možebiti stalno i privremeno. Godine službe stalnog osobljaračunaju se kao godine državne službe. Oni se razvrstavaju i primaju prinadležnosti po Zakonu o činovnicima prema svojim kvalifikacijama." Dakle onaj, kojije doneo ovaj Poslovnik, uputio nas je da radimoovaj Pravilnik na osnovu toga Zakona o činovnicimagrađanskog reda od 1 aprila 1931 godine. Imajućiovo u vidu, mi smo ovaj naš Pravilnik izradili premaovom uputu.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg87">Sto se tiče napomene g. Jovanovića da mi nismoSefa Stenografa ili Sefa nekog otseka stavili u III</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg88">grupu prvog ili drugog stepena, imam, gospodo, darečem ovo: nismo to stavili zato, što u trećoj grupi1 i 2 stepena dolaze brigadni generali, načelnici samoMinistarstva, načelnik Stenografskog biroa i načelnikAdministrativnog odeljenja Snaeta i još neki visokičinovnici. Mi smo dakle naše načelnike odcljenja izjednačili sa načelnicima Ministarstva i sa brigadnimgeneralima; šefove otseka sa pukovnicima, sa pretseđnicima sudova, sa direktorima gimnazija i onima kojisu sa njima po kvalifikacijama jednaki; svi oni dolaze,u IV grupu 1 i 2 stepena. Jedino ovde ako ima greške u ovom razvrstavnaju, to je što nismo i šefove otseka, koji ni u jednom Ministarstvu ne dolaze u IIIgrupu, stavili u 111 grupu 1 i 2 stepena.</seg>
-                </u>
-                <note type="speaker">Druga napomena na koju se g. Jovanović pozivato je član 21 skupštinskog Pravilnika, kome odgova-raju članovi 23, 27 i 28 našeg Pravilnika. Molim vas,gospodo, da saslušate šta kaže skupštinski Pravilnika šta kaže naš o tome. Skupštinski Pravilnik kaže</note>
-                <u who="#ZJovanovićMiloje" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u41" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg89" />
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg90">„Činovnici, činovnički pripravnici, zvaničnici i služitelji primaju prinadležnosti kao aktivni državni službenici građanskog reda, a lični dodatak na skupoćuza činovnike, zvaničnike i služitelje i specijalni dodatakza prekovremeni rad za sve službenike određuje Pretsednik Narodne skupštine u saglasnosti sa Administrativnim odborom".</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg91">Gospodo, ne može Pretsednik Senata đa određuje dodatak na skupoću, mimo onoga što je predviđeno uredbom ođ 12 marta ove godine, koja jeuredba sastavni deo zakona.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg92">Naš član 23 glasi o tome ovako:</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg93">„Činovnici, činovnički pripravnici, zvaničnici i služitelji primaju prinadležnosti kao i aktivni državni službenici građanskog reda, predviđene u članu IV Zakona o činovnicima ođ 31 marta 1931 godine i Uredbe Dr. Br. 10990/1 od 12Ш 1932 o ličnim i poro'tdičnim dodacima na skupoću."</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg94">Dakle, kao što se vidi, gospodo, ova dva propisa:zakon i uredba čine jednu celinu i mi ne moždinomimo zakona ništa drugo da donosimo. Mi smo imeliza prekovremeni rad, da Pretsednik Senata može odrediti naročite dodatke Pretsednik Senata u saglasnosti sa Administrativnim odborom".</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg95">Dalje, gospođo, član 29 kod nas kaže: „Sveeventualne promene u prinadležnostima državnih službenikagrađanskog reda u Zakonu o činovnicima od 31 marta1931 (Gl. IV) primeniće sc i na službenike Senata",dok u skupštinskom Pravilniku, stoji: „Sve eventualne promene u prinadležnostima državnih službenikagrađanskog reda u Zakonu o činovnicima ođ 31 marta1931 primeniće se i na službenike Narodne skupštinesamo sa pristankom Pretseđnika Narodne skupštinei Administrativnog odbora (čl. 24).</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg96">Molim vas, gospođo, nije zakonski, da se odredbeu jednom Zakonu mogu izvršavati samo sa dozvolomPretseđnika Skupštine. (Košta Timotijević: To nećemo.)Ovo je odgovor na primedbu o prinadležnostima.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg97">Sad dolazi na red drugo, o penzijama.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg98">Skupštinski član 35, a naš 40 govori o penzijama.U Zakonu o činovnicima građanskog reda, u članovima113, 116, 120, 123 i 124 precizno je rečeno šta seuzima za osnov penzije činovniku, kad ide u penziju.Skupštinski član 35 glasi:</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg99">„Službenici Narodne skupštine imaju prava napenziju prema odredbama Zakona o činovnicima.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg100">Posle napunjenih 30 godina skupštinske ili senatske službe stneografi imaju pravo na punu penziju.Oni dobijaju za prvih 10 godina službe 5Oo/o i zasvaku godinu još po 2,25o/o tako da posle navršenih30 godina službe dobijaju 95«/o penzijskog osnova".</seg>
-                </u>
-                <note type="speaker">Gospodo u Zakonu o činovnicima izrično stoji daslužbenici koji su napunili 35 godina efektivne službedobijaju punu penziju sa dodacima. Oni traže za 30godina punu penziju, a ovamo u njihovom Pravilnikukaže se da sc penzija službenicima Skupštine daje poZakonu o činovnicima građanskog reda. Svi mi imamoza prvih deset godina 1O&lt;&gt;/o, a za svaku iduću godinul,8Oo/o, a oni za sebe rešili 2,25«/o. To se ne slaže saZakonom i ne može da se unese u ovaj naš Pravil-nik, jer se Pravilnik donosi na osnovu Zakona o činov-nicima građanskog reda a prema paragrafu 127 Za-kona o poslovnom redu u Senatu. (Milutin Dragović</note>
-                <u who="#DragovićMilutin" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u42" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg101">Zakon donosi Senat i Skupština). Cim je ovaj Pravilnik napisan na osnovu Zakona i on dobija silu Zakona.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg102">Dalje gospodo, u ovom skupštinskom Pravilnikukaže se u čl. 35: ,,U osnov za određivanje količinepenzije ulazi, pored predviđenog zakonom o činovnicima i dodaci na skupoću (njihov čl. 21). Gospodo dodatci na skupoću nigde ne ulaze u penziju.Osnov je penzije osnovna plata i funkcionalni dodataki ništa više.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg103">Kod prelaznih naređenja, traže naši službenici jedan izuzetan položaj, traže da se i na njih primeneparagrafi 41, 42, 43 i 45, skupštinskog Pravilnika, ato je nešto što se ne može odobriti. Cl. 41 skupštinskog Pravilnika kaže, da se bivši službenici Narodneskupštine, u slučaju ponovnog primanja u službu Narodne skupštine, postavljaju u onu položajnu grupu,koja po zakonu o činovnicima odgovara njihovoj ranijoj kategoriji i grupi bez obzira na njihove školskekvalifikacije. Po Zakonu o činovnicima građanskogareda svako novo postavljenje mora se podvrći čl. 3 i4 Zakona o činovnicima građanskoga reda i premakvalifikacijama se činovnici postavljaju. Gospodo, drugo je priznanje godina za penziju, a drugo za unapređivanje po grupama. Ova njihova odredba ne možese nikako dovesti u sklad sa Zakonom o činovnicimagrađanskoga reda.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg104">Dalje čl. 45 njihov kaže: „Bivši činovnici ranijeNarodne skupštine, koji su se kao penzioneri, ili zbognedovoljnog broja godina službe za penziju otpušteniu 1929 godini, na dan obnarodovanja ovog Pravilnika,zatekli u skupštinskoj službi dobijaju, ako od prestankaranije službe u Narodnoj skupštini nisu dobili višugrupu u državnoj službi, narednu višu grupu ili stepen, odnosno, ako im zvanje nije raspoređeno u narednoj višoj grupi shodno čl. 19 ovoga Pravilnika, periodsku povišicu". Dakle ovim se traži nešto što sepotpuno kosi sa Zakonom o činovnicima građanskogareda. No mi smo ipak u naš Pravilnik imeli odredbukoja može da zadovolji naše službenike, dakle imalismo u vidu te ljude i naš čl. 51 glasi:</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg105">„Bivšim službenicima i stenografima bivše Narodne skupštine koji budu primljeni u službu Senata poodredbama ovoga Pravilnika, priznaje se za napredovanje u grupama i stepenima za penziju i ono vreme,koje im je ranije priznato izvršnim rešenjem kojim imje određena količina lične penzije." Dakle mi smo izašli u susret u ovom, u koliko zakon u najširem obimudopušta.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u43" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg106"> Molimvas, ovcle je u pitanju Glava III, i treba da vaš govorograničite na tu Glavu.</seg>
-                </u>
-                <note type="speaker">Izvestilac Svetozar Tomić</note>
-                <u who="#TomićSvetozar" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u44" ana="#reporter">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg107"> Prema tome, nemogu da primim primedbe g. Jovanovića, jer se neslažu sa Zakonom o činovnicima građanskoga reda,na osnovu kojega je zakona ovaj Pravilnik izrađen,u duhu čl. 127 Zakona o poslovnom redu Senata.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u45" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg108"> Molimvas, g. Jovanoviću, da formulišete vaš predlog.</seg>
-                </u>
-                <note type="speaker">Miloje 2. Jovanović</note>
-                <u who="#ZJovanovićMiloje" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u46" ana="#regular">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg109"> Moj predlog glasi ovako:Senat rešava da se Glava III vrati u Odbor, te daOdbor podnese naknadno svoj predlog, s pogledomna Pravilnik i odredbe koje je Skupština usvojila, kako bi se postiglo, da i u Senatu i u Narodnoj skupštini prinadležnosti i uslovi pod kojima činovnici služe budu isti.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u47" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg110"> Molimvas, g. izvestioče, da se izjasnite o ovom predlogu.</seg>
-                </u>
-                <note type="speaker">Izvestilac Svetozar Tomić</note>
-                <u who="#TomićSvetozar" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u48" ana="#reporter">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg111"> Ne primam tajpredlog, jer nije na zakonu osnovan. Mi se moramopri donošenju ovoga Pravilnika pridržavati isključivoZakona o činovnicima građanskoga reda, na osnovukoga je Pravilnik izrađen, a mimo Zakona ja nc moguprimiti nikakove druge amandmane.</seg>
-                </u>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u49" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg112"> Gospodo senatori, ovde je postavljeno prethodno pitanjeda se Glava HI vrati Administrativnom odboru, da bise članovi 20, 21 i 22 ponovo uzeli u pretres.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg113">Gospodin izvestilac ne prima predlog g. Jovanovića i zato će se on staviti na glasanje. Rešavaće sesedenjem i ustajanjem. Ona gospoda senatori kojasu za to da se predlog g. Jovanovića primi, izvolećesedeti, a gospoda koja su protiv predloga g. Jovanovića, izvoleće ustati. (Manjina sedi.)</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg114">Manjina sedi, a većina je ustala. Prema tome,objavljujem da je predlog g. Jovanovića, da se GlavaIII vrati Administrativnom odboru, odbijen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg115">Molim g. izvestioea da izvoli pročitati čl. 20.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 21 koji sadapostaje član 20 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u50" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg116"> Stavljam na glasanje čl. 20. Gospoda koja su za to da seovaj član primi, neka izvole sedeti, a koja su protiv,neka izvole ustati. (Svi sede). Objavljujem da je član20. primljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 22. koji sadapostaje član 21. (Vidi sast. HHP).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u51" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg117"> Stavljam na glasanje čl. 21. Gospoda koja su za ovaj član,izvoleće sedeti, a koja su protiv, izvoleće ustati. (Svisede). Objavljujem da je čl. 21 primljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 23 koji sadapostaje član 22. (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u52" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg118"> Stavljam na glasanje čl. 22. Gospoda koja su za to da seovaj član primi, izvoleće sedeti, a koja su protiv, izvoleće ustati. (Svi sede). Objavljujem da je čl. 22 primljen. Time je primljena Glava HI.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg119">Prelazimo na Glavu IV. Prinadležnosti. Niko sene javlja za reč.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg120">Molim g. izvestioca da pročita čl. 23.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 24 koji sadapostaje član 23. (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u53" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg121"> Stavljani na glasanje čl. 23. Gospoda koja su "za to da seovaj član primi, izvoleće sedeti, a koja su protiv, izvolećc ustati. (Svi sede). Objavljujem da je čl. 23 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg122">Molim g. izvestioca da pročita čl. 24.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita čl. 25 koji sadapostaje član 24. (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u54" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg123"> Stavljam na glasanje čl. 24. Gospoda koja su za to da seovaj član primi, neka izvole sedeti, a gospoda koja suprotiv, neka izvole ustati. (Svi sede). Objavljujem da ječl. 24 primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg124">Izvolite čuti čl. 25.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 26 koji sadapostaje član 25 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u55" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg125"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 27 kojisada postaje član 26 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u56" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg126"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 28 kojisada postaje član 27 (Vidi sast. XX M).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u57" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg127"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 29 kojisada postaje član 28 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u58" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg128"> Primah se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg129">Gospodo, ovim je primljena Glava IV Pravilnika.— Sad otvaram pretres u pojedinostima o Glavi VPravilnika — Primanje u službu i kretanje u njoj. Pošto nema prijavljenih govornika, to izvolte čuti naredničlan.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 30 kojisada postaje član 29 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u59" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg130"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 31 kojisada postaje član 30 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u60" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg131"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 32 kojisada postaje član 31 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u61" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg132"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 33 kojisada postaje član 32 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u62" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg133"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg134">Gospodo, ovim je primljena i Glava V. — Otvaram pretres o Glavi VI Pravilnika — Ocenjivanje. —Pošto nema prijavljenih govornika, izvolite čuti naredni član 33.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 34 kojisada postaje član 33 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u63" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg135"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 35 kojisada postaje član 34 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u64" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg136"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 36 kojisada postaje član 35 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u65" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg137"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg138">Ovim je primljena i Glava VI Pravilnika. — Otvaram pretres o Glavi VII — Opšte odredbe. Poštonema prijavljenih govornika, to izvolite čuti član 36.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 37 kojisada postaje član 36 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u66" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg139"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 38 kojisada postaje član 37 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u67" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg140"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 39 kojisada postaje član 38 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u68" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg141"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen..</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 40 kojisada postaje član 39 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u69" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg142"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg143">Gospodo, ovim je primljena i Glava VII. Otvarampretres o Glavi VIII Pravilnika. — Penzije. Poštonema prijavljenih govornika, izvolite čuti član 40.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 41 kojisada postaje član 40 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u70" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg144"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 42 kojisada postaje član 41 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u71" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg145"> Primali se pročitani član? (Prima). Objavljujem da jcprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg146">Gospodo, ovim je primljena i Glava VIII. — otvaram pretres o Glavi IX Pravilnika —Disciplinski propisi. — Pošto nema prijavljenih govornika, izvolitečuti član 42.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 43 kojisada postaje član 42 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u72" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg147"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 44 kojisada postaje član 43 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u73" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg148"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 45 kojisada postaje 44. (Vidi sast. HHI).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u74" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg149"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 46 kojisada postaje član 45 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u75" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg150"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg151">Objavljujem, prema tome, da je primljena GlavaIX. Prelazimo na pretres Glave X. Pošto nema prijavljenih govornika, zaključujem pretres. Molim g. izvestioca da pročita čl. 46.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 47 kojisada postaje član 46 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u76" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg152"> PrimaIi se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Iz vest i laz Svetozar Tomić čita član 48 kojisada postaje član 47 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u77" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg153"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvest i laz Svetozar Tomić čita član 49 kojisada postaje član 48 (Vidi sast. XX11).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u78" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg154"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 50 kojisada postaje član 49 (Vidi sast. HHPJ.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u79" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg155"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 51 kojisada postaje 50 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u80" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg156"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 52 kojisada postaje član 51 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u81" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg157"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 53 kojisada postaje član 52 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u82" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg158"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tomić čita član 54 kojisada postaje 53 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u83" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg159"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                </u>
-                <note type="reading">Izvestilac Svetozar Tom'ć čita član 55 kojisada postaje član 54 (Vidi sast. XXII).</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u84" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg160"> Primali se pročitani član? (Prima). Objavljujem da jeprimljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg161">Prema tome, objavljujem da je Senat primio i upojedinostima Pravilnik o organizaciji službe i službenicima u Senatu Kraljevine Jugoslavije.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg162">Prelazimo, gospodo, na drugo i konačno glasanjeo Pravilniku u celini. Molim g. sekretara da izvoliprozivati gospodu senatore radi glasanja.</seg>
-                </u>
-                <note type="speaker">Sekr etar Milan Popović proziva gospodu se-natore da glasaju, i oni su glasali ovako</note>
-                <u who="#PopovićMilan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u85" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg163" />
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg164">Alibegović Asim otsutan; Alkalaj dr. lsak za;Andrić dr. Vladimir otsutan; Arnautović Šerif otsutan;Banjanin Jovo za; Bogojević Vaša otsutan; Vidaković Antun otsutan; Vilović Osman ot^utan; Vujić Pavle za; Vukčević dr. Stanojlo otsutan; Gavrila dr. Emilo otsutan; Gavrilović dr. Bogdan otsutan; Gaj Ljudevit otsutan; Glušac dr. Vaso otsutan; Gmajner dr.Ivan otsutan; Grasi dr. Georg otsutan; Desnica dr.Uroš za; Dobrinić Petar za; Dragović Milutin za;Đirlić Petar za; Ivković dr. Momčilo za; llidžanovićDimitrije za; Jalžabetić Tomo za; Janković Stjepanza; Jovanović Ž. Miloje za; Karamehmedović dr. Hamdija otsutan; Kovačević Toma otsutan; Kostić Petarotsutan; Kostrenčić dr. Marko za; KukuljevićSekcinJski Fran otsutan; Ljubibratić dr. Sava za; Mažuranićdr. Želimir otsutan; Majstrović dr. Ivo otsutan; Marjanović Milan za; Mahmudbegović Sefcdin otsutan;Mitrović Vlada otsutan; Mićić dr. Mićo otsutan; Mihaldžić Stevan za; Muftić Salem otsutan; Novak dr.Fran za; Obradović Paja otsutan; Pavelić dr. Anteotsutan; Petrović Milutin za; Ploj dr. Miroslav za;Popović Đaka za; Popović Matija za; Popović Milanza; Ravnihar dr. Vladimir otsutan; Radovanović Krsta za; Radulović Marko otsutan; Rajar dr. Jankootsutan; Rožić dr. Valentin za; Samurović Janko za;Simonović Milan za; Smiljanić Krsta otsutan; Staninišić dr. Aleksa otsutan; Stanković Jovan za; Sulejma</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg165">nović dr. Džafer otsutan; Teslić Petar otsutan; Timotijević Košta za; Tomašić dr. Ljubomir za; TomićSvetozar za; Trinajstić dr. Dinko za; Ubavić Pavleza; Frangeš dr. Oton otsutan; Hadži Bošković Trajkoza; Hadži Ristić Spira za; Hribar Ivan dr. za; Cerović Gavrilo otsutan; Šverljuga dr. Stanko otsutan;Silović dr. Josip otsutan; Šola Atanasije otsutan;Superina dr. Benjamin za.</seg>
-                </u>
-                <note type="test">Posle glasanja.</note>
-                <note type="speaker">Potpretsednik Jovan Altiparmaković</note>
-                <u who="#Altipapmakov1ćOvan" xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.u86" ana="#chair">
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg166"> Izvolite, gospodo senatori, čuti rezultat glasanja. Glasaloje svega 36 gospode senatora i svi su glasali „za".Prema tome, objavljujem da je Senat primio konačnoi u celini Pravilnik o organizaciji službe i službenicima u Senatu Kraljevine Jugoslavije.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg167">Ovim je, gospodo, iscrpljen dnevni red. Predlažem da ovu sednicu zaključimo i da iduću zakažemza posle podne u 5 časova, sa sledećim dnevnimredom:</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg168">Pretres izveštaja odbora o predlogu Zakonao zaštiti zemljoradnika i o stavljanju na snagu pojedinih odredaba Zakona o izvršenju i obezbeđenju;</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg169">Pretres izveštaja odbora o predlogu Zakona opodizanju domova i drugih objekata udruženja i ustanova koje spadaju u nadležnost Ministarstva fizičkogvaspitanja naroda;</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg170">Pretres izveštaja odbora o predlogu Zakona oovlašćenju za neodloživu primenu međunarodnih ugovora i sporazuma;</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg171">Izbor odbora za proučavanje zakonskog predloga senatora g. g. Ivana Hribara i drugova o narodnom priznanju onim časnicima narodne vojske,koji su 1918 godine, pod vodstvom đenerala RudclfaMajstra, u oslobodilačkim borbama na teritoriji bivšeŠtajerske i Koruške imali naročitih zasluga za Jugoslaviju;</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg172">Izbor odbora za proučavanje predloga rezolucije senatora g. g. Ivana Hribara i drugova za odašiljanje na svesokolski slet u Prag izaslanstva od 5članova Senata.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg173">Prima li Senat ovaj dnevni red? (Prima.) Objavljujem daje ovaj dnevni red primljen.</seg>
-                    <seg xml:id="ParlaMint-SR_15-4-1932_SKJ8-redni-XXV.seg174">Zaključujem današnju sednicu, a iduću zakazujemza posle podne u 5 časova.</seg>
-                </u>
-                <note type="test">— Sednica je zaključena u 12.30 časova. —</note>
+                <note type="present">Prisutan zastupnik Ministra trgovine n in dustrije, Ministar poljoprivrede Jypaj Demetrović.</note>
+                <note type="time">Početak u 18.30 časova.</note>
+                <note type="content">Sadržaj: Čitanje i usvajanje zapisnika 23 redovnog sastanka; Saopštenje da Narodna Skupština dostavlja Senatu na dalji postupak predlog Zakona o suzbijalju skupoće životnih namirnica i predlog Zakona o ovlašćenju za neodloživu primenu međunarodnih ugovora i sporazuma; Bolovanje gospode senatora; Saopštenje izveštaja o konstituisanju Odbora za proučavanje zakonskog predloga o podizanju domova i drugih objekata udruženja i ustanova ko,je spadaju u nadležnost Ministarstva fizičkog vaspitalja naroda; saopštenje izveštaja Verifikacionog odbora da jc izabrao za potcredsednika senatora g. Kosta Tnmotijevića; Molbe i žalbe;</note>
+                <note type="agenda">Saopštenje da Narodna Skupština dostavlja Senatu na dalji postupak predlog Zakona o suzbijalju skupoće životnih namirnica i predlog Zakona o ovlašćenju za neodloživu primenu međunarodnih ugovora i sporazuma; Bolovanje gospode senatora; Saopštenje izveštaja o konstituisanju Odbora za proučavanje zakonskog predloga o podizanju domova i drugih objekata udruženja i ustanova ko,je spadaju u nadležnost Ministarstva fizičkog vaspitalja naroda; saopštenje izveštaja Verifikacionog odbora da jc izabrao za potcredsednika senatora g. Kosta Tnmotijevića; Molbe i žalbe; Dnevni red: 1) Pretres „zveštaja Imunitetskog odbora o izdavanju sudu senatora r. Tome Jalžabetića; 2) Izbor Odbora za proučavanje zakonskog predloga o suzbijanju skupoće životnih namirnica u zakonskog predloga o ovlašćenju za neodloživu primenu međunarodnih ugovora i sporazuma.</note>
+                <note type="witnesses">Govornici: Izvestilac Stjepan Janković, Svetozar Tomić, Miloje Ž. Jovanović.</note>
+                <note type="speaker">Pretsednik Dr. Ante PaveliI</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u1" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg1"> Otvaram 24 redovin sastanak Senata.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg2">Molim gospodina sekretara da izvoli pročitati zapisnik prošlog sastanka.</seg>
+                </u>
+                <note type="reading">Sekretar Milan Popović čita zapisnik 23 redovnog sastanka Senata.</note>
+                <note type="speaker">Pretsednik Dr. Ante Pavelić</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u2" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg3"> Imade li kakvih primedaba na ovako sastavljepi zapisnik? (Nema). Primedaba nema, zapisnik ce overovljava.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg4">Molim gospodina sekretara da izvoli pročitati saopštenje o zakonskim predlozima koji su upućeni Senatu na rad od strane Narodne skupštine.</seg>
+                </u>
+                <note type="reading">Sekretar Milan PopoviN čita Narodna Skupština Kraljevine Zugosdavije Br. 6998. 14. IV 1932 god. u Beogradu Gospodine pretsedniče, Čast mi je izvestiti Vas, da je Narodna skupština na svom 40 redovnom sastanku održanom 13 aprila 1932 godine u Beogradu, usvojnla predlog Zakona o suzbijalju skupoće životnih namirnica, podnet joj od strane Gospodina Ministra socijalne politike n narodnog zdrav/va na osnovi ovlašćenja datog mu ukazom lb. V. Kralja od 1 aprila 1932 godine. IzveštavajuEi Vas o prednjem menp jc čast, Gospodine Pretsedniče, na osnovi člana 64 Ustava p paragrafa 66 Zakona o Poslovnom redu u Narodnoj skupštšš, dostaviti Vam definitivan tekst ovoga zakonskoga predloga onako,«kako je usvojen u Narodnoj skupštini, kao i opnginalan Ukaz o ovlašćelju za podnošelje Narodnom pretstavpištvu pomsnutog zakopskog predloga, s molbom na Vaš dalji postupak. Ovaj zakonskp predlog pretresen je u Narodnoj skupštini no redovnom postupku. Izvolits primiti, Gospodine pretsedppče, i ovom prilikom uverenje o moms odličnom poštovanju.	■ aprila 1932. godine Beograd. Pretsednik Narodne skupštine, Dr. K. Kumanudi, s. r. Gospodinu D ru ANTI PAVELIĆU Pretsedniku Senata Beograd NARODNA SKUPŠTINA Kraljevipe Jugoslavije sazvana Ukazom od 23 septembra 1931 godine u vanredan saziv za 7 decembar 1931 godine na svom 40 redovnom sastanku, održanom 13 aprila 1932 godpne u Beogradu, usvojila je PREDLOG ZAKONA • o Suzbijanju skupoće životnih namirnica Pod životnim namirnicama, no ovom Zakonu, podrazumevaju ce: ljudska hrana (jelo i piće) p Stočna hrana, odeća, o6yha, ogrev, i osvetl&gt;enje, materijal za izradu istih i građevni maTerijal. Ovde ne spadaju predmeti, koji služe luksuzu. Monopolisani predmeti i lskovi, koji ce prodaju samo no apotekama, ne potpadaju pod odredbe ovoga Zakona, pošto ce i onako Beli upaprsd takslr.ju od padležn • vlasš Svaki ko prodaje ma kakve žlvotne namirnice u radnji (dućanu), prodavpici, na trgu (pazaru, pijaci), ili ma kom drugom mestu, mora označiti p istaći csne pojedinim predmetima i vrsti robe tako, da ih svakr može lako videti i razumeti. Isto tako mora istaći i cenovnik prJČIsan (d psllt jske nlasta. Niko ne sme prodavati skuplje od cene, Koja je za dotičnu namirnicu propisana, u cenovniku. Prodaja ispod ozpačsne cene u cspovniku dozvoljena je. Ovo važi za trgovce na veliko pli na malo u opšte, tako i za ildustrijalce, zanatlije ili ostala lica, koja ce bave prodajom životnlh pamirnica, bilo da ih sami proizvode ili samo preprodaju. Od prednje obavezs izuzimaju ce samo proizvođači, zemljoradpici, seljaci, koji su svoje proizvode doneli na trg radi prodaje, ali ns p seljaci, koji vrše preprodaju tuđih proizvoda. Ko ce ogreši o prednje odredbe, kazniće ce zatvorom do trp meseca i povčanom kaznom do 10.000 dinara. U hotelima, restoracijama, kafanama, javpim kuhnnjama i ugostiteljskim radnjama uopšte cene jelu i piću označavaće ce ia jelovniku, cenovniku: za jelo no porcijama, a za nnha po uobičajenom načinu (litar, boca od 7/10 l., čaša, šolja). .V hotelima i ugostiteljskim radnjama kojeizdaju sobe, istaći he ce u svakoj sobi cenovnik iste. Iz cenovpika ce mora videti i od koga do Kora časa ce računa označena cena i koje je minimalno vrems za otkaz. U označenu cenu ss uračunava i nagrada za poslugu, što ce pzrično ima označiti u cepovnnku. Ko ce ogreši o prednje odredbe kazniće ce zatvorom do tri meseca i novčanom kaznom do 10.000.— dinara. Svaki prodavac je obavezan da izlaže prodajn sve životne namirnice nabavl&gt;ene pli proizvedene u cilju prodaje. Zabranjuje ce pagomilavaljs životnih lamirnica u svrhu, da ce ma koja vrsta izuzme iz prometa i time povisi njena cena. Ko ce ogreši o prednje odredbe kazniće ce zatvorom do šest meseci i novčanom kaznom do 50.000.— dinara. Prodavcima životnih namirnica zabraljuje ss da traže Behy cenu za iste od one, koja obezbeđuje običnu u dozvoljenu trgovačku čistu dobit. Ova dobit ns sme biti ni u kom slučaju Beha od 2O«/o. Ovo ce ne odnosi na zemljoradnike, koji donoce na trg svoje proizvode na prodaju. Upu nzračunavalju procelta čists dobiti uzima ce za osnovicu nabavla cena robs (cene sirovina, poluprerađevina, p prerađevina), kao i troškovi oko dobavl&gt;alja robe (carina, otpremnpčki troškovi, izdatci za pakovanje, provizija posrednika i t. sl.); zatim ošpti p poslovni troškovi, (porezi i prirezi, troškoni za manjkel provizije zastupnika, troškovi za prerađivanje, plats i nadnice nameštenika i radnika, nzdatci za socijalno osigurai&gt;e, ša osiguranje preduzeka, zakupnine, poštanski i reklamni troškovi, amortizacija i sl.).  Ko ce ogreši o odredbe prvog stava ovoga paragrafa kazniće ce do tri meseca i novčanom kaznom do 10.000. dinara. Zabranjuje ce višestruko preprodavanje (verižna trgovina) i nečista spekulacija, kojom ce namerno ide za poskupljivanjem cena životnim namirnicama, a paročito šprenje neistinitih Bečili p dogovaranje između proizvođaca ili posrednika da bi ce povisila cena robi. Zabranjuje ce kupovanje životnih namirnica na trgovima (pijacama) i sajmovima (vašarima, papađurima), radi preprodaje na istom mestu i za vreme trajanja istog pazarnog dana. Maloprodavci, radi svoga snabdevanja, mogu sa velikoprodavcima zaključivati kupoprodaje samo posle vremena, određenog za prodaju na malo na dotičnom mestu. Ko ce ogreši o prednje odredbs kazniće cć zatvorom do šest meseci i novčanom kaznom do kaznom do 1O.(H)(). dinara. Prp prodaji životnph namirnica ko lažno meri pli smanjuje uobičajens obroks (porcije), kazniće ss zatvorom do šest meseci p novčanom kaznom do 10.000,— dinara. Ko radi prevare u trgovini ili promstu prodaje: surogat kakve robe kao pravu robu ilp pridaje robi svojstva, kojih ona nema, robu domaćeg porekla pod vidom robe stranog porekla ili robi daje na ma koji način poreklo kojeg ona nije, kazniće ce zatvorom do šest meseci i novčano do 50.000,— dinara. Izviđanje krivica no ovom Zakonu vršike ce: bilo na prijavu privatnih lica, bilo no nj&gt;cstavci iadležnog policijskog ili opštinskog oprana no službenoj dužnosti. U prijavi i prestavci mora ce označiti:krpvac, delo, dokazno sretstvo — svedoci i podiosilac. Prestavka zakletog padležnog policijskog ilp opštipskog oprana potpun je dokaz o delu i krivici optužnog lica. U iedostatku ovoga dokaza važe npoiiiicn Zakona o sudskom i krivičnom postupku. § 10. Prethodno izviđanje i presuđivanje krivica no ovom Zakonu vršiće i mesno nadležna opšte upravna vlast prvoga stepena po odredbama Zakona o sudskom i krivičnom postupku od 16 februara 1929. god. i ovoga zakona. Isleđenje ce može izvršiti i presuda izrsći odmah na licu mesta. § I Presude izrečene u visini kazns zatvorom do deset dana i novčane kazne do 1.000,— dinara odmah su izvršne. Protiv ostalih izrečenih presuda, interesovana lica imaju pravo priziva, odnosno revizije na nadležni Okružni sud u roku od tri dana, računajući od dana saopštenja, i to neposredno preko vlastp koja.je izrekla presudu. Okružni sud može presudu prvostepene vlasti: odobriti ili poništiti ili preinačiti. Predaja priziva, odnosno revizije preko nošte pa povratni recepis, smatra ce kao da je toga dana predata vlasti koja je donela presudu. § 12. Ko učipi u povratku jedno od dela spomenutih u paragrafima 4, 5, 6 i 8 ovoga Zakona, kazniće ce pored kazne predviđene za to delo, i zabranom daljeg rada do godine dana. § 13. Po ovome Zakonu: kazna zatvorom ne može biti manja od tri dana; povčana kazna ne može biti manja od 300. dinara; izvršenje kazne ne može bpti odlagano. § 14. Kazna zatvorom, izrečena no ovom Zakonu ne može ce zameljivatp povcem. 11ovčana kazna u slučaju da ce ne može naplatiti u roku od mesec dana iz trekine imanja osuđenoga, zamenike ce zatvorom, računajuNp svaki dap zatvora no 100 dipara. Zamena novčane kazne u kaznu zatvora ne može npehn všpe od tri meseca, a u slučajevima novrata ne može preći više od šest meseci zatvora.	v Odluku o zameni novčane kazne kaznom zatvora donosi vlast, koja je donela rešenjs, odnosno presudu o kazni. § 15. U slučajevima iz paragrafa 4, 5, 6 i 8 ovoga Zakona, pored kazne zatvorom i povčape kazne, osuđenom hc ce oduzeti i sva količina robe koja je bila predmet krivičnoga dela, i prodaće ce v korist „Fonda za ishranu sirotpnje“. Oduzimanje robe i njezino čuvanje do pravnosnažnosti presude vrši ce no postojećim za to propisima. Ako jc privremeno ilp definitivno oduzeta roba podložena kvaru, prodaće ce, u roku od 21 sata no oduzimanju, javnim nadmetanjem; u protivnom slučaju prodaKs ce u roku od pet dana no pravosnažnosti presude. Ako okrivljeni ne bude osuđeN, vratićs mu ss oduzeta roba, odnosno novac, odbijep od prodaje ljegove robe. § 16. Vlasnik preduzeća jamči za kazne na koje bude bio osuđen zastuppik ili koji službeiik njegovog preduzeća za dela protivpa propisima onoga Zakona p to solidarno sa osuđenim licem tako, da ce polovina iznosa novčane kazne ima naplatiti od vlasnika preduzeKa odmah no pravosnažnosti presude, a njemu ce ostavl.a pravo da posle traži naknadu od osuđenog lica.  Pod vlasnikom preduzeća razume ce p svako pravno lice. § 17. Tužba i krivice no ovome Zakonu zastarevdju Za tri meseca. Presude kako o krivicp, tako i o dosuđsnoj naknadi ,štete zastarevaju za godinu dana. • § 18. Pravosnažne presude no kaznama iz ovoga Zakona objavljivaće ce o trošku osuđenoga: preko Službenih novina teritorijalno padležne Kraljevske banske uprave, a prsko Službenih povina u Beogradu za teritoriju Uprave grada Beograda i teritorije onih Kraljevskih banskih uprava, koje eventualno ne budu imale svoje službens novine. Isto tako ove ce presude dostavljaju i nadležnoj opštinskoj vlastp, ako ista postoji u mestu stanovanja osuđenoga, da ih javno oglasi. ■ U slučaju kad je osuđenome zabranjsn dalt rad no paragrafu 12 ovoga Zakopa, presuda he ce dostaviti radp znanja i dotičnoj komori. Mrijava vlasti da ce neko lice ogrešilo o odredbs ovoga Zakona, ns podleži plaćanju takse. ra*ca na žal'bu je 20.— dinara. Taksa za vođenje istrage i presudu je 50.— dinara, kad presuda postane pravosnažpa. I ovde vredi propps člana 5 Zakona o taksama, ca njegovim izmenama i dopupama. Pri svakoj opštinskoj vlastp obrazovaće ce „Odbor za određivanje cena životpih namirnica“, koji ce sastojn od pet do petnajest lcca. Njegova je dužpost da kontroliše čenjenice pomsnute u stavu 3 paragrafa 5 ovoga Zakona; da povremeno, prema potrebi, odrsđuje maksimalne cene životnim namirnicama, koje he nadležna policijska vlast objavljivati kao cenovnik no kome ce moraju prodavati namirnice (najskuplje) i da na poziv vlastp vrše potrebno veštačenjs. Članove ovoga Odbora određuje opštinska vlast iz redova: zemljoradnika, zanatlija, trgovaca, industrijalaca i potrošača. Gde je ma iz koga razloga nemoguće obrazovalje ovoga Odbora pri opštinskbj vlastiJ iictii he ce obrazovati pri nadležnom srsskom načelstcu, a članove he imenovati sreski načelnik. Ako ce pri izviđanju i donošelju presude određeni policijski organ ili sudija namerno ogreši o odredbe ovoga Zakona tako, da neko lice bude nevino ili suviše strogo kažnjeno odgovaraće disciplinski pr Zakonu o činovnicima. Ako policijski ili opštinski opran, koji podnosi pretstavku za isleđenje krivice no ovome Zakonu, podnese namerno nevernu pretstavku, kazniće ce otpustom iz slgžbe ili novčanom kaz nom do 3000 dinara. Kaznu izriče nadležni starešina. Oštećeno lice možs sudskim putem tražiti od prouzrokovača štete naknadu iste; Ako član „Odbora za određivanje cena životnih namirnica“ nesavesno vršp poverenu mu dužnost, kazniće ce novčanom kaznom do'10.000.— dinara, a pored toga osudiće ce i na plaćanje naknade eventualno pričiljene štete. Prijavu podnosi nadležna policijska vlast, a presudu donosi nadležni sreski sud, odnosno sudija, pojedinac okružnog suda, gde sreski sudovi još ne postoje. Novčana kazna ce izriče u korist „Fonda za ishranu sirotinje“. „Fond za ishranu sirotinje“ postoji kod Državne hipotekarne banke u Beogradu. Prihodi su mu: novčane kazne i novac dobiven od prodate uzapćene robe no krivicama ovoga Zakona, kao i kamate na ovaj uloženn novac. Fondom rukuje i raspolaže Ministar Socijalne politike i narodpog zdravlja. Novac za ishranu sirotinje može Ministar davati pojedinim društvima, organizacijama u vidu subvencnje. Ubrane 1novčane kazne i novac dobiven za prodatu uzapćepu robu, vlasti he dostavljati svakog messca za protekli meSec Državnoj hipogekarnoj banci za „FoPd za ishranu sprotilje“. Uz novac ce šalje i akt u kome mora biti paznačeno: prezime, ime i zanimanje kažnjenoga; mesto njegovog stanovanja; koja ra je vlast kaznila; delo za koje je kažnjen; broj i datum pravnosnažnepresude; iznos sume koja ss šalje saoznačenjem: kolnko je od novčane kazne, a koliko od prodats uzapćene robe. Isto ovakav akt i istovremeno šalje ce Ministarstvu socijalne polptike i Narodnog zdravl^a. (Opšte odeljenje). Svi nerešeni predmsti no Zakonu o suzbijanju skupoće životnih namirnica i nesavesne konkurencije od 30 decembra* 1921 godine imaju ce raspraviti no odredbama istoga Zakona i Pravilnika za njegovo izvršenje od 7 septsmbra 1922 godine. Pravosnažne presude, ali još neizvršene, imaju ce takođe izvršiti no odredbama istoga Zakona. Ovlašćuje ce Ministar socijalne politike i narodnog zdravlja da može u sporazumu ca Mipistrom unutrašnjih poslova, propisati Pravilnikom bliže odredbe za izvrtenjs ovoga Zakona. Ovaj Zakon stupa u život kad ra Kralj potpiše a dobija obaveznu snagu danom obnarodovanja 4u „Službenim novinama", kada prestaje da važi: Zakon o suzbijalju skupoće životnih namirnica ,i nesavesne špekulacije od 30 decembra 1921 godine, Pravilnik od 7 decembra 1922 godine za izvršelje istoga Zakona, kao i svi ostali Za konski propisi koji bi bili u suprotnostp sa odredbama ovrga Zakona. Beograd, 13 aprila 1932 godine (M. P.) Pretsednik 'Narodne skupštine Dr. K. Kumanudi, s. r. Sekretar, AntOn Kovač, s. r. Narodna Skupština Kraljevina Zugoslalije Br 6997 14 1V1932 god. u Beogradu Gospodine Pretsedniče, Čast mi je izvestiti Vas, da je Narodna skupština na svom 40 redovpom sastapku održapom 13 aprila 1932 godine. usvojila predlog Zakona o ovlaškenju za neodloživu primepu međunarodnih ugovora u sporazuma, podnet joj od strane g. g. Minnstra inostranih poslova i Ministra trgovine i industrije na osnovu ovlaškenja datog pm Ukazom Nj. V. Kralja od 9 aprila 1932 godine. Izveštavajuki Vas o prednjem, meni je čast, Gospodine Pretsedniče, na osnovi člapa 64 Ustava i paragrafa 66 Zakona o Poslovpom redu u Narodnoj skupštinidostaviti Vam definitivan tekst ovoga zakonskog predloga onako, kako jc usvojen u Narodnoj skupštini, kao i originalap Ukaz o ovlaškulju za podnošenje Narodnom pretstavništvu pomenutog zakonskog predloga, — s molbom za Vaš dalji postupak. Ovaj zakonski predlog pretressn je u Narodnoj skupštini no redovnom postupku. Izvolite primiti, Gospodine Pretsednnče, i ovom prilikom uverelje o mom osobitom poštovanju. ,	Pretsednik Narodne skupštine, Dr. K. Kumanudi, s. r. Gospodinu D)ru ANTI PAVELIĆU, Pretsedniku Senata Beograd. NARODNA SKUPŠTINA Kraljevine Jugoslavije sazvana Ukazom od 23 septembra 1931 godine u vanredan saziv za 7 decembar 1931 godine na svom 40 redovnom sastanku, održanom 13 aprila 1932 rodine u Beogradu, usvojila je PREDLOG ZAKONA o Ovlašćenju za neodloživu primenu Međunarodnih Ugovora i Sporazuma koji glasi: U smislu stava 3 čl. 65 Ustava ovlaškuje ce Ministarski savet, da može i pre odobrelja Na rodnog pretstavništva, kada ce za to ukaže državna potreba, na predlog Ministra inostranih poslova, Ministra trgovine i industrije svojim rešenjem odrediti neodložnu primenu ugovora i sporazuma zaključenih sa stranim državama u svrhu regulisanja privrednih odnosa između naše Kraljevine i odnospih zemalja, a predloženih na odobrenje 1 Jarodnom pretstavništvu. Ovaj zakon stupa u život kad ra Kralj potpiše, a obaveznu snagu dobija danom obnarodovanja u Službenim novinama i prestaje važiti 1 aprila 1933 godine. Beograd, 13 aprila 1932 godine. (M. P.) Narodne skupštine, Dr. K. Kumanudi, s. r. Sekretar, Anton Kovač, s. r.</note>
+                <note type="speaker">Pretsednik dr. Ante Pavelić</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u3" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg5"> Za ova dva zakonska predloga izabraćemo na kraju današnje sednice specijalne odbors, koji ke ih proučiti i Senatu podneti izveštaje u najskorije vreme.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg6">Molim gospodina sekretara da izvolp sopštiti jednu molbu za bolovalje.</seg>
+                </u>
+                <note type="speaker">Sekretar Mnlan Popovik saopštava</note>
+                <u who="#PopovićMilan" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u4" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg7"> Senator g. Baca Bogojevik moli produženje bolovanja za još 40 dana.</seg>
+                </u>
+                <note type="speaker">P r e t s e d n i k dr. Ante PaveliE</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u5" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg8"> Odobrava li Senat traženo bolovanje g. Bogojeviću? (Odobrava) Objavljujem da je Sepat odobrio ovo bolovalje.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg9">Molim gospodina sekretara da izvoli pročita ti izveštaj o konstituisanju odbora.</seg>
+                </u>
+                <note type="reading">Sekretar Milan Popović čita Odbor za proučavanje zakonskog predloga o podizanju domova i drugih o'bjekata udruženja i ustanova, koje spadaju u padležnost Ministarstva fizičkog vaspitanja paroda, izveštava da ce konstituisao p izabrao: za pretsednika g. Krstu Smiljanića, za cotpretsednika g. dr. Vladimira Andrića i za sekretara g. dr. Ivana Gmajnera. Verifikacioni odbor izveštava da je nased. nici od 14 ovog meseca izabrao, shodno dopunjenom paragrafu 6 Zakona o poslovnom redu u Senatu, za potpretsednika senatora g. Kostu Timotijevika.</note>
+                <note type="speaker">P r e t s e d n i k dr. Ante Pavelik</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u6" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg10"> Izvsštaj o konstituisanju ovog odbora i o izboru potpretsednpka Verifikacionog odbora prpma ce na znanje.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg11">Molim gospodina sekretara da saopšti prispele molbe i žalbe.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg12">S e k r e t a r Milan Popović saopštava molbe Matice srpske pz Novog Sada i molbu Stane "Mplojević, udove iz Beograda.</seg>
+                </u>
+                <note type="speaker">Pretsednik dr. AIte Pavelić</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u7" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg13"> Ove dve saopštene molbe uputiće ss nadležnom Odboru za molbe i žalbe.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg14">Prelazimo na dnevni red. Ha dnevnom je redu kao prva tačka: Pretres u pojedinostima Pravilnnka o organizaciji službe i službenicpma u Senatu Kraljevine Jugoslavije. Kao druga tačka</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg15">je na dnevnom redu: Pretres izveštaja Imunitetskog odbora o zahtevu g. Minnstra pravde za izdavalje sudu senatora g. Tome Jalžabetika. Molim Senat da bi izvoleo ovu drugu tačku: Pretres izveštaja Imunitetskog odbora o pomenutom zahtevu g. Mššstra pravde, staviti na dnevpi red kao prvu tačku, da uzmognemo pitanje Pravilnika, koje je važno i koje je sada u rešavan&gt;u, raspraviti p rešpti u sporazumu sa Narodnom skupštinom. Prima li Senat ovakvu promenu DNevnoga reda? (Prima) Objavljujem da je primljeno. (Miloje Ž. Jovanovpk: Ja bih molio da ee ovaj predlog o Iravilniku vrati Odboru, jep ovde ima 7—8 članova koje bi trebalo imati u vidu prema onome kako ce to rešava u Narodnojskupštini). Gospodine senatore, sada to nnje na dpevnom redu. Kada to bude na dnevnom redu, onda možete o tome govoriti. Sada je ua dnevnom redu prema rešenju Senata, pretres izveštaja Imunitetskog odbora. Molim gospodina izvestioca da podnese izveštaj.</seg>
+                </u>
+                <note type="speaker">Izvestplac Stjepan Janković</note>
+                <u who="#JankovićStjepan" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u8" ana="#reporter">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg16"> Gospodossnatori, nedavno je zatražio g. Ministar pravde izručenje sudu našeg kolege gospodina Tome Jalžabetika, radp krivnje iz paragrafa 297 i 301 Kaznenog Zakona. Krivnja koja ce upisuje g. Jalžabetiku sastoji ce u tome, što ce on na jednoj skupštini Marvogojne zadruge u Tlurđevcu poslužio u kritica malo oštrpjim. rečima, za koje je njegov protivnik Valent Vodovik našao da mu nanose uvrede i tužio ra sudu. Međutim, gospodo, moramo razumeti našeg druga Jalžabetika, kad ziamoda je on osnivač te zadruge; da je dugo godina bio njen pretsednik i da je tu zadrugu doveo do takvog cvata, da ce možemo ponositi tim krajem što ima onake lepu stoku. Ako uzmemo u obzir u to da ce na našem selu ljudp služe malo jačim izrazima nego u gradu i kod gospode, onda je sasvim razumljivo da je gospodin Jalžabetik mogao u onoj prilici peku takve rsči, kad je video da ce njegovo delo, koje je on stvorio sa toliko muka, kvari no jednom čoveku u da mu ce nanosn šteta, ne samo njemu, pego i čitavom onom kraju. Osim toga, gospodin Jalžabetik je izjavio pred sudom, u prigovoru na tužbu, da on mije imao namere da vređa' nego da je to samo bila jedna kritika, istina malo oštrija, ali da on apsolutno nije imao nikakve namere da vređa.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg17">Sve ovo uzeo je Imunitetski odbor u rasmatranje i najposle doneo zaključak, da ce gospodin Jalžabetik pe izda sudu, n ja preporučujem najtoplije gospodi senatorima da usvoje ovaj predlog Imunitetskog odbora.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg18">Molim vas, gospodo senatori, da saslušate sada izveštaj Imuiitetskog idbora koji glasi:</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg19">Sepatu Kraljevine Jugoslavije,</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg20">Imunitetski odbor primio je preko gospodina Pretsednika Senata akt Gospodina Mipistra pravde od 29 februara og. Br. 18329, koji sadrži za^tev Kotarskog suda u Đurđevcu, da ce senator r. Jalžabetik Toma izda sudu za delo prestupa iz §§ 297 i 301 K. z.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg21">Ha svojoj sednicp od 13 aprila o.g. Imunitetski odbor dopeo je svoju odluku da ce senator g.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg22">Jalžabetik Toma ne izda sudu na suđenje no dslima iz §§ 297 i 301 K. z.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg23">Za izvestioca određen je r. senator Jankovik Stjepan.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg24">Sva akta ce vrakaju.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg25">Beograd, 13 aprila 1932 god.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg26">Pdetsednik Imunitetskog odbora, Dr. J. Šilović, s. r.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg27">Sekretar,</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg28">Stj. Janković, s. r.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg29">Članovi:</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg30">P. I. Vujik, s. r.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg31">Dr. Ravnihar, s. r. D. Ilidžanovik, s. r. Dr. Jb. Tomašik, s. r.</seg>
+                </u>
+                <note type="speaker">Pretsednpk dr. Ante Pavelik</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u9" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg32"> Pošto ce u ovoj stvari nitko mije javio za reč, prelazimo na glasanje. Molim gospodina sekretara, da izvrši prozivku. Ona gospoda senatori, koja prihvakaju izveštaj Imunitetskog odbora, glasake sa „za“, a koja ne prihvaćaju glasake sa „protiv“.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg33">Sekretar Milan Popović proziva gospodu sepatore da glasaju, i oni cj7 glasali ovako:</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg34">Alibegovik Asim otsutan; Alkalaj dr. Isak otsutan; Altimarmakovik Jovan za; Andrik dr. Vladimir za; Arpautovik Šerpf otsutan; Banjanin Jovo za; Bogojevik Baca otsutap; Vidakovik Antun za; Vilovik Osman za; Vujik Pavle za; Vukčevik dr. Stanojlo otsutan; Gavrila dr. Emilo za: Gavrilovik dr. Bogdan za; Gaj Ljudevit otsutan;" Glušac dr. Vaso otsutan: Gmajper dr. Ivan otsutap; Grasl dr. Georg otsutan; Dobrinik Petar otsutan; Dragovik Milutin otsutan; Tšrlčk Petao otsutan; Ivkovik dr Momčilo za; Ilidžanovik Dimitrije za; Jalžabetik Tomo za; Jankovik Stjepan za; Jovanovik Ž. Miloje za; Karamehmedovik dr. Hamdija otsutap; Kovačevik Tomo otsutan; Kostik Petar otsutap; Kostrenčik dr. Marko za; KukuljevikSakcinski Frap otcvtan: Jbv6n6DaTiik dp. Sava za: Mažuranik do. Želimpr otsutan; Majstrovik dr. Ivap otsutan; Marjaiovik Milan otsutan; Mahmutbegovik Sefedip otsutan; Mitrovik Vlada otsutai; Mikpk dr. Muka otsutan; Mihaldžik Stevan za; Muftik Salem otsutan; Novak dr. Fran za; Obradovpk Paja otsutan; Petrovik Milutin otsutan; Ploj dr. Miroslav otsutan; Popovik Daka za; Popovik Matija za; Popovik Milap za; Ravnihar dr. Vladimir otsutan; Radovanovik Krsta za; Radulovik Marko otsutan; Rajar dr. Janko za; Rožpk dr. Valentip otsutan; Samurovik Janko za; Simonovik Milan otsutan; Smiljanik Krsta za: Stanimnk dr. Aleksa otsutan; Stankovik Jovap za; Sulejmanovik dr. Džafer otsutan; Teslik Pstar za; Timotijevik Kosta otsutan; Tomašik dr. Ljubomir za; Tomik Svetozar za; Triiajstik dr. Dinko Đza; Ubavik Pavle otsutan; Frangeš dr. Oton otsutan; Hadži Boškovik Trajko otsutan; Hadži Ristić Spira za; Hribar Ivap za; Cerovik Gavrilo otsutan; Šverljuga.dr. Stanko otsutan; Šilovik dr. Josip za; Šola Atapasije otsutap; Šuiiepima dr. Benjamin.</seg>
+                </u>
+                <note type="speaker">Pretsednik dr. Ante Pavelić</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u10" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg35"> Čast mi je saopštiti da je glasalo svega 33 gospode senatora, i svi su glasali ca „za". Prema tome bbjavljujem da je izveštaj imušpetskog odbo.ra primljen, i da ce g. senator Jalžabetić nehe izdati sudu.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg36">Prelazimo na dalju tačku dnevnoga reda. Čast mi je izvestiti da je prispela kandidatska lista, ca dovoljnim brojem potpisnika, za izbor Odbora za proučavanje predloga Zakona o suzbijalju skupoće životnih namirnica. Kao članovn tog odbora prsdloženi su g.g. senatori: Spira Hadži Ristić, dr. Otop Frangeš, dr. Vladimir Ravpihar, dr. Georg Grasl, Daka Popović, dr. Dinko Trinajstić, Antun Vidaković, Miloje Ž. JovanoviE, Krsta Radovanović, dr. Momčilo Ivković, p Toma Jalžabetić.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg37">A kao zamenici predloženi su g. g. senatori Milutpn Petrović, Milutii Dragović, dr. 1,1afer Sulejmanovik, Krsta Smiljanić, Mplap Simonović, Petar Dobrššć, Svetozar ToMiih, Milan Marjanović, Sefedin MahmutbegoviK, Trajko Haci Boškovik, i dr. Urot Desnica.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg38">Prima li ce ovako predložena lista? (Jednoglasan odziv: Prima ce). Objavljujem da su gospoda sepatori, čija su imena pročitana, izabrani u Odbor za proučavanje zakonskog predloga o suzbijalju skupoće životpih namirnica.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg39">Zatim je prispela kandidatska lista, ca dovoljnim brojem potpisnika, za izbor Odbora za proučavanje zakonskog predloga o ovlašKenju za neodloživu primepu međunarodnih ugov.ora i sporazuma.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg40">Za članove toga odbora su predloženi gospoda senatorn: dr. Aleksa Stanišić, dr. Bogdan Gavrilović, dr. Benjamin Šuperina, dr. VasoGlušac, Dimitrije Ilidžanović, Svetozar Tomić, dr. Ljubomir Tomašić, Ivan Hribar, Jovo Banjašš, dr. Miroslav Ploj i Osman Vilović.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg41">Kao zamenici predloženi su gospoda senatorc: dr. Fran Novak, dr. Valentin Rožić, dr. Vladimir Andrić, Gavrilo Cerović, Matija Popovićj dr. 'Ivan Gmajner, Krsta Radovanović, Janko Samurović, dr. Muha Mnhnh, Stevan Mihaldžić i Pavle VujpK.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg42">Prima li ce ovako predložena lista? (Jednoglasan odziv: Prima ce.)</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg43">Objavljujem da su gospoda senatori čija su imena pročitana izabrani u Odbor za proučavan&gt;e zakonskog predloga o ovlašćenju za neodloživu primenu međunarOdnih ugovora i sporazuma.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg44">Odbor za proučavanje zakonskog predloga o zaštiti zemljoradiika i Odbor za proučavanje zakonskog predloga o podizanju domova podpeli su Senatu svoje izveštaje. Ovi he ce izveštaji oštampati i razdati gospodi senatorima, a bike stavl.eni na dnevni red kad to Senat zaključp.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg45">Ako je sporazuman Senat, da današnju sednicu zaključimo, a da sutra pređemo na pretres u pojedinostima Pravilnika o orgapizaciji službe i službenicima v Senatu Kraljevine Jugoslavije. To je predlog koji bih imao da učinim.</seg>
+                </u>
+                <note type="speaker">Svetozar Tomić</note>
+                <u who="#TomićSvetozar" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u11" ana="#regular">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg46"> Molim za reč o Poslovpiku.</seg>
+                </u>
+                <note type="speaker">P r e t s e d n u k dr. Ante Pavelić</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u12" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg47"> Ima reč senator g. ToMiih.</seg>
+                </u>
+                <note type="speaker">Svetozar Tomić</note>
+                <u who="#TomićSvetozar" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u13" ana="#regular">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg48"> Po paragrafu 55 Zakona o Poslovnom redu u Senatu, čim ce zakonski predlog iznese u izglasa u pačelu, odmah ce prelazi na pretres u pojedinostima. Ovaj zakonski predlog Pravilnik izglasan je u načelu upe nekoliko sedpica, i mim0 Poslovnika, on ce odlaže od sednice na sednicu, a to ce kosi ca Zakonom o poslovnom redu u’Senatu. Ja bih molio da ce ovaj predlog Pravilnika iznese sada na rešavanje, na ako ce primi, primi, a ako ce odbIje, da ce odbije.</seg>
+                </u>
+                <note type="speaker">Pretsednik dr. Ante Pavelić</note>
+                <u who="#AntePavelićDr" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u14" ana="#chair">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg49"> Gospodo, ja sam izneo predlog pred Senat, i ja mislim, ako Senat o jednoj stvari donese odluku, da onda može da ce uradi ovako kako ce predlaže. Mogu nastati izvesni hitni momenti, koji traže da ce jedia stvar odloži, — i u tom slučaju' ona ce može odložiti. Prema tome, ako je Senat sporazuman s ovim mojim predlogom, onda ja mislim da pema nikakvih poteškoća u pogledu te stvari. — Prima li Senat moj iredlog?... (Svetozar Tomić: Niko ne može gaziti Zakon o poslovnom redu u Senatu.)... Ja smatram da ovo pije gaženje zakona. Mislim da je Senat ovlašken da odgodi rešenje jedne stvari, na čak i da Je skine ca dnevnog reda. U ovom slučaju, mi samo odlažemo rešenje ove stvari za sutra, — i ja molpm Senat da ce o tome izjasni. Ona gospoda koja su a a ovaj predlog, neka izvole sedeti, a oni koji su protiv ieka izvole ustati. (Većina sedi.)</seg>
+                </u>
+                <note type="speaker">Miloje Ž. Jovanović</note>
+                <u who="#ŽJovanovićMiloje" xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.u15" ana="#regular">
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg50"> Molim vas, gospodo, Gospodii Pretsednik je predložio da prekinemo sednicu, da ne produžavamo dalji rad večeras. To je nešto što pije protivno zakonu. U Poslovniku nigde nema odredbe koja bi to zabranjivala, u, prema tome, ja mislim da tu ne može biti reči o gaženju zakona, te zato mi ovaj predlog Gospodina Pretsednika možemo usvojiti. (Glasovi: Tako je!)</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg51">Pretsednik dr. Ante Pavelić: Gospodo, da ne bi bilo nesporazuma, ja hy ponoviti ono što sam rekao. Ona gospoda koja su za to da današnju sednicu zaključimo i rešavanje o Pravilniku odložimo za iduKu sednicu, koja he ce održatn sutra, neka izvole seDeti, — a ona gospoda koja su protiv toga, neka izvole ustatp. (Većina sedi.) Kako većipa. sedi, objavljujem da je Sepat većinrm glasova peiiino da ovu današnju sednicu zaključpmo. Naredpa sednica 6nl&gt;c sutra, 15. ovog Mecena, u 11 časova, s ovim dnevpim redom:</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg52">Pretres u pojedipostima Pravilnika o orgaiizaciji službe i službenicima u Sepatu Kraljevine Jugoslavije.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg53">Prima li Sepat predloženi dpevni red? (Prima.) — Objavljujem da je predloženi dnsvni red primljep.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg54">Molnm gospodu sepatore koji su izabrani u odbore da posle sednice ostanu i da ce kopstituišu.</seg>
+                    <seg xml:id="ParlaMint-SR_14-4-1932_SKJ7-redni-XXIV.seg55">Dapašnju Sednicu zaključujem, a iduću uričem za sutra, u 11 časova upe podpe, s objavljenim u primljepim dnevnim redom.</seg>
+                </u>
+                <note type="time">— Sedpica je zaključena u 19 časova. —</note>
             </div>
         </body>
     </text>

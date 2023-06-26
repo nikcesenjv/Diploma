@@ -51,5 +51,5 @@ class ParlamintAttendee:
         self._id = new_id
         
     def generate_id(self):
-        parsed_name = self.name.split(" ")
+        parsed_name = [name_part for name_part in self.name.split(" ") if "." not in name_part]
         return f"#{''.join(parsed_name[1:] + [parsed_name[0]])}".replace(".", "")

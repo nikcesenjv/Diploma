@@ -8,16 +8,13 @@ import xml.etree.ElementTree as ET
 from docx import Document
 
 from .parlamint_attendee import ParlamintAttendee
-from .parlamint_div import ParlamintDiv
 from .parlamint_head import ParlamintHead
 from .parlamint_note import ParlamintNote
-from .parlamint_speaker import ParlamintSpeaker
+from .parlamint_speaker_list import ParlamintSpeakerList
 
 from src.management.path_management import parse_path
 
 from src.objects.general_objects import File
-
-# from src.objects.parlamint_objects import ParlamintAttendee, ParlamintHead
 
 class ParlamintDocument:
     def __init__(self, file: File):
@@ -27,12 +24,12 @@ class ParlamintDocument:
         self._document_id = f"ParlaMint-SR_{self.file.document_id}"
 
         self._attendees: list[ParlamintAttendee] = []
-        self._elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker] = []
+        self._elements: list[ParlamintHead | ParlamintNote | ParlamintSpeakerList] = []
+
+        self._utterance_num: int = 0
+        self._segment_num: int = 0
 
         # self._attendees_by_name: list[str] = []
-
-        # self._num_of_utterances: int = 0
-        # self._num_of_segments: int = 0
 
         # self._xml_element: ET = None
 
@@ -76,18 +73,34 @@ class ParlamintDocument:
         self._attendees += new_attendees_list
 
     @property
-    def elements(self) -> list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]:
+    def elements(self) -> list[ParlamintHead | ParlamintNote | ParlamintSpeakerList]:
         return self._elements
 
     @elements.setter
-    def elements(self, new_elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
+    def elements(self, new_elements: list[ParlamintHead | ParlamintNote | ParlamintSpeakerList]) -> None:
         self._elements = new_elements
 
-    def add_element(self, new_element: ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker) -> None:
+    def add_element(self, new_element: ParlamintHead | ParlamintNote | ParlamintSpeakerList) -> None:
         self._elements.append(new_element)
 
-    def add_elements(self, new_elements: list[ParlamintDiv | ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
+    def add_elements(self, new_elements: list[ParlamintHead | ParlamintNote | ParlamintSpeakerList]) -> None:
         self._elements.extend(new_elements)
+
+    @property
+    def utterance_num(self) -> int:
+        return self._utterance_num
+
+    @utterance_num.setter
+    def utterance_num(self, new_utterance_num: int) -> None:
+        self._utterance_num = new_utterance_num
+
+    @property
+    def segment_num(self) -> int:
+        return self._segment_num
+
+    @segment_num.setter
+    def segment_num(self, new_segment_num: int) -> None:
+        self._segment_num = new_segment_num
 
     """@property
     def attendees_by_name(self) -> list[str]:
@@ -114,13 +127,13 @@ class ParlamintDocument:
             if attendee.name == real_attendee:
                 return attendee"""
 
-    """def add_object(self, new_object: ParlamintHead | ParlamintNote | ParlamintSpeaker) -> None:
+    """def add_object(self, new_object: ParlamintHead | ParlamintNote | ParlamintSpeakerList) -> None:
         self._objects.append(new_object)
 
-        if type(new_object) == ParlamintSpeaker:
+        if type(new_object) == ParlamintSpeakerList:
             self.add_utterance()
 
-    def add_objects(self, new_objects: list[ParlamintHead | ParlamintNote | ParlamintSpeaker]) -> None:
+    def add_objects(self, new_objects: list[ParlamintHead | ParlamintNote | ParlamintSpeakerListList]) -> None:
         self._objects += new_objects
 
     @property

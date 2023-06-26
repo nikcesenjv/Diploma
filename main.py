@@ -105,9 +105,9 @@ if __name__ == "__main__":
     log("INFO", "main_program.end")
 
     # file = execute_arg_find(["file", "year", "1919"])
-    file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])
+    # file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])
     # file = execute_arg_find(["file", "name", "8_XXV_SKJ_redni_15.4.1932"])
-    # file = execute_arg_find(["file", "name", "9_XXVI_SKJ_redni_15.4.1932"])
+    file = execute_arg_find(["file", "name", "9_XXVI_SKJ_redni_15.4.1932"])
 
     parlamint_document, attendees = parse_parlamint_objects_task([file[0]], [])
     create_parlamint_xml_document(parlamint_document, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test3.xml")

@@ -5,10 +5,7 @@
 
 import xml.etree.ElementTree as ET
 
-from docx.text.paragraph import Paragraph
-
 from .parlamint_attendee import ParlamintAttendee
-from .parlamint_segment import ParlamintSegment
 
 from src.management.text_management import cyrillic_to_latin_text
 
@@ -18,7 +15,7 @@ class ParlamintUtterance:
 
         self._document_id: str = None
         self._utterance_num: int = None
-        self._segment_start_num: int = None
+        self._segment_start_num: int = 1
 
         self._paragraphs: list[str] = []
         self._text: str = None
@@ -82,6 +79,7 @@ class ParlamintUtterance:
         return self.text
 
     def to_element(self, parent_element: ET) -> None | int:
+        # print(self.attendee.id)
         utterance = ET.SubElement(parent_element, "u", who=self.attendee.id)
         utterance.set("xml:id", f"{self.document_id}.u{self.utterance_num}")
         utterance.set("ana", f"#{self.attendee.attendee_role}")

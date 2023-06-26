@@ -17,8 +17,7 @@ def create_parlamint_xml_document(parlamint_document: ParlamintDocument, target_
     text_element = initialize_text(xml_document)
 
     for element in parlamint_document.elements:
-        if element is not None:
-            element.to_element(text_element)
+        element.to_element(text_element) if element is not None else None
 
     parlamint_document.xml_element = xml_document
     save_xml_file(xml_document, target_path)
