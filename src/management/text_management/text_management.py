@@ -20,8 +20,9 @@ def only_normal_characters(string: str) -> str:
 
 def parse_string(string: str) -> str:
     return cyrillic_to_latin_text(string.replace("-\n", "").replace("\n", " ").replace("-", ""))
+    # return string.replace("-\n", "").replace("\n", " ").replace("-", "")
 
-def is_close_match(string: str, string_list: str | list[str], threshold: int = 75, word_length: int = 3) -> bool:
+"""def is_close_match(string: str, string_list: str | list[str], threshold: int = 75, word_length: int = 3) -> bool:
     string_split = split_string_by_words(cyrillic_to_latin_text(string))
 
     if type(string_list) == str:
@@ -32,7 +33,7 @@ def is_close_match(string: str, string_list: str | list[str], threshold: int = 7
             if len(best_match) > word_length and similarity >= threshold:
                 return True
 
-        return False
+        return False"""
 
 def is_close_match_list(string: str, string_list: list[str], threshold: int = 75, word_min_length: int = 3) -> bool:
     for word in [word for word in split_string_by_words(only_normal_characters(string)) if len(word) > word_min_length]:
@@ -42,8 +43,7 @@ def is_close_match_list(string: str, string_list: list[str], threshold: int = 75
     return False
 
 def is_close_match_string(string_one: str, string_two: str, threshold: int = 75) -> bool:
-    if fuzz.ratio(only_normal_characters(string_one), only_normal_characters(string_two)) >= threshold:
-        return True
+    return fuzz.ratio(only_normal_characters(string_one), only_normal_characters(string_two)) >= threshold
 
 def is_close_match_attendee(string_one: str, string_two: str, threshold: int = 75) -> bool:
     string_list, string_two = split_string_by_words(only_normal_characters(string_one)), \
@@ -51,12 +51,27 @@ def is_close_match_attendee(string_one: str, string_two: str, threshold: int = 7
 
     for i in range(len(string_list)):
         for j in range(len(string_list) - i):
-            if fuzz.ratio(" ".join(string_list[j:i + j + 1]), string_two) >= threshold:
+            x = " ".join(string_list[j:i + j + 1])
+            if fuzz.ratio(x, string_two) >= threshold:
+                """print(f"first:  {x}")
+                print(f"second: {string_two}")
+                print()"""
                 return True
 
-    res = closest_longest_substring(string_one, string_two)
+    """res = closest_longest_substring(string_one, string_two)
     if res is not None:
-        return True
+        return True"""
+
+    """string_list_one, string_list_two = split_string_by_words(only_normal_characters(string_one)), \
+        split_string_by_words(only_normal_characters(string_two))
+
+    for i in range(len(string_list_two)):
+        for j in range(len(string_list_two) - i):
+            x = " ".join(string_list_one[j:i + j + 1])
+            if fuzz.ratio(x, string_two) >= threshold:
+                print(x, string_two)
+                print()
+                return True"""
 
     return False
 
@@ -72,7 +87,7 @@ def close_matches_to_remove(string_list_one: list[str], string_list_two: list[st
 
 def remove_close_matches(string: str, string_list: list[str]) -> str:
     string = cyrillic_to_latin_text(string)
-    close_matches = close_matches_to_remove(split_string_by_words(string, return_list=True), string_list)
+    close_matches = close_matches_to_remove(split_string_by_words(string), string_list)
 
     for word in close_matches:
         string = string.replace(f"{word} ", "").replace(f"{word}\n", "")
@@ -99,6 +114,48 @@ def closest_substring(first_string: str, second_string: str, treshold: int = 75)
 
     return None
 
+def has_similar_string(substring, longer_string, threshold=75):
+    for word in longer_string.split():
+        similarity_score = fuzz.ratio(substring, word)
+        if similarity_score >= threshold:
+            return True
+    return False
+
+def extract_attendees_from_string(string: str) -> list[str]:
+    attendee_names_list, temporary_list = [], []
+
+    for segment in string.strip(".").split(", "):
+        if ":" in segment:
+            segment = segment.split(": ")[1]
+
+        for word in reversed(split_string_by_words(segment)):
+            word_latin = cyrillic_to_latin_text(word)
+
+            if closest_substring(word_latin, "izvestilac") is not None \
+                    or closest_substring(word_latin, "dr") is not None:
+                attendee_names_list.append(f"{word} {join_string_list(temporary_list, ' ', reverse=True)}")
+                temporary_list = []
+                break
+
+            elif word[0].isupper():
+                temporary_list.append(word)
+
+            else:
+                if len(temporary_list) > 0:
+                    attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
+                    temporary_list = []
+                break
+
+    if len(temporary_list) > 0:
+        attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
+    return attendee_names_list
+
+def join_string_list(string_list: list[str], delimiter: str, reverse: bool = False):
+    if not reverse:
+        return delimiter.join(string_list)
+
+    return delimiter.join(reversed(string_list))
+
 def closest_longest_substring(str1, str2):
     longest_substring = ""
 
@@ -116,47 +173,14 @@ def closest_longest_substring(str1, str2):
 
     return longest_substring
 
-"""def find_longest_closest_substring(str1, str2):
-    longest_substring = ""
-    closest_substring = ""
-    longest_length = 0
-    closest_score = 0
-
-    for i in range(len(str1)):
-        for j in range(i + 1, len(str1) + 1):
-            substring = str1[i:j]
-
-            if substring in str2:
-                substring_length = len(substring)
-                substring_score = fuzz.ratio(substring, str2)
-
-                if substring_length > longest_length:
-                    longest_substring = substring
-                    longest_length = substring_length
-
-                if substring_score > closest_score:
-                    closest_substring = substring
-                    closest_score = substring_score
-
-    return longest_substring, closest_substring"""
-
-def has_only_letters(string: str) -> bool:
+def only_letters(string: str) -> bool:
     return all(letter.isalpha() for letter in string)
 
 def capitalize_every_word(string: str) -> str:
     return " ".join([word.lower().capitalize() for word in split_string_by_words(string)])
 
-def split_string_by_words(string: str, translate: bool = True, return_list: bool = True) -> str | list[str]:
-    string_split = re.sub(r"(?<![A-Za-z])[\W_]|(?<=bw\.)\W", " ", string).split()
-
-    if translate:
-        string_split = [cyrillic_to_latin_text(word) for word in string_split]
-
-    if return_list:
-        return string_split
-
-    return " ".join(string_split)
-    # return [word for word in re.split(r"\s+|\n+|\t+", string) if word]
+def split_string_by_words(string: str, translate: bool = False) -> str | list[str]:
+    return [cyrillic_to_latin_text(word) for word in string.split()] if translate else string.split()
 
 """def is_any_close_match(text: str, similar_words: str | list[str]) -> bool:
     text_split = text.lower().replace("\n", " ").split(" ")
