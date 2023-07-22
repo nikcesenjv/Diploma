@@ -4,4 +4,5 @@
 # Datoteka parlamint_objects_management/__init__.py
 
 from .parlamint_attendee_management import *
+from .parlamint_document_management import create_parlamint_document
 from .parlamint_objects_management import *

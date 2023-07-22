@@ -12,13 +12,13 @@
             "tag": "head",
             "type": "info",
             "similar words": [
-                "broj"
+                "godina",
+                "knjiga"
             ]
         },
         {
             "tag": "head",
             "type": "meeting",
-
             "similar words": [
                 "redovni",
                 "sastanak",
@@ -31,6 +31,7 @@
             "role": "chair",
             "similar words": [
                 "pretsedavao",
+                "pretsedavali",
                 "pretsednik"
             ]
         },
@@ -71,13 +72,6 @@
         },
         {
             "tag": "note",
-            "type": "agenda",
-            "similar words": [
-                "dnevni"
-            ]
-        },
-        {
-            "tag": "note",
             "type": "witnesses",
             "role": "regular",
             "similar words": [
@@ -85,17 +79,44 @@
             ]
         },
         {
+            "tag": "note",
+            "type": "agenda",
+            "similar words": [
+                "dnevni"
+            ],
+            "additional elements": [
+                {
+                    "tag": "note",
+                    "type": "witnesses",
+                    "role": "regular",
+                    "similar words": [
+                        "govornici"
+                    ]
+                }
+            ]
+        },
+        {
             "tag": "speakers",
             "type": null,
             "similar words": [
-                "otvaram"
+                "otvorim",
+                "otvaram",
+                "gospodo"
             ]
         },
         {
             "tag": "note",
             "type": "time",
             "similar words": [
+                "zaključena",
                 "časova"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "attachement",
+            "similar words": [
+                "prilozi"
             ]
         }
     ]

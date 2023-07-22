@@ -4,7 +4,8 @@
 # Datoteka find_objects_task.py
 
 from src.logging import log
-from src.management.find_management import find_by_file, find_by_inner_folder, find_by_main_folder, parse_find_params
+from src.management.find_management import find_by_file, find_by_inner_folder, find_by_main_folder, \
+    find_by_parlamint_document, parse_find_params
 
 def find_objects_task(data: list[object], params: list[str]) -> list[object]:
     object_type, parsed_params = parse_find_params(params)
@@ -27,3 +28,5 @@ def execute_task(data: list[object], type_of_object: str, params: dict) -> list[
             return find_by_inner_folder(data, params)
         case "main":
             return find_by_main_folder(data, params)
+        case "parlamint":
+            return find_by_parlamint_document(data, params)

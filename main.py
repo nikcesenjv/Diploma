@@ -14,7 +14,8 @@ from src.management.shelve_management import *
 from src.management.path_management import parse_path
 from src.management.xml_management import create_parlamint_xml_document
 
-from src.objects.docx_objects import DocxDocument
+from src.objects.general_objects import MainFolder, InnerFolder, File
+from src.objects.parlamint_objects import ParlamintDocument, ParlamintAttendee
 
 # EXECUTE METHODS
 def execute_arg_cer(params: list[str]) -> float:
@@ -23,7 +24,8 @@ def execute_arg_cer(params: list[str]) -> float:
     except FileNotFoundError:
         log("ERROR", "file_parsing.directory.error")
 
-def execute_arg_find(params: list[str]) -> list[object]:
+def execute_arg_find(params: list[str]) \
+        -> list[MainFolder | InnerFolder | File | ParlamintDocument | ParlamintAttendee]:
     try:
         return find_objects_task(open_shelve(params[0]), params)
     except IndexError:
@@ -44,7 +46,7 @@ def execute_arg_parse() -> None:
 
 def execute_arg_parse_parlamint() -> None:
     try:
-        parse_parlamint_objects_task(open_shelve("main"))
+        parse_parlamint_objects_task(open_shelve("file"), open_shelve("attendees"))
     except FileNotFoundError:
         log("ERROR", "file_parsing.no_file.error")
 
@@ -71,7 +73,7 @@ def main() -> None:
     parser.add_argument("-p", "--parse", nargs="*", help="parse files for shelving [serialization]")
     # parser.add_argument("-pp", "--parse_parlamint", nargs="*")
     # parser.add_argument("-wp", "--write_parlamint", nargs="*")
-    parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
+    # parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
 
     args = parser.parse_args()
 
@@ -108,9 +110,12 @@ if __name__ == "__main__":
     # file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])
     # file = execute_arg_find(["file", "name", "8_XXV_SKJ_redni_15.4.1932"])
     file = execute_arg_find(["file", "name", "9_XXVI_SKJ_redni_15.4.1932"])
+    # file = execute_arg_find(["file", "name", "5_XXIV_NSKJ_redni_23.2.1937"])
+    print(file[0])
 
     parlamint_document, attendees = parse_parlamint_objects_task([file[0]], [])
-    create_parlamint_xml_document(parlamint_document, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test3.xml")
+    create_parlamint_xml_document(parlamint_document,
+                                  "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test3.xml")
 
     """xml = docx.print_xml()
     save_xml_file(xml, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test.xml")"""

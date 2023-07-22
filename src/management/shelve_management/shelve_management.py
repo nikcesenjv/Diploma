@@ -6,12 +6,13 @@
 import shelve
 
 from src.objects.general_objects import File, InnerFolder, MainFolder
-from src.objects.parlamint_objects import ParlamintDocument
+from src.objects.parlamint_objects import ParlamintAttendee, ParlamintDocument
 
 def open_shelve(type_of_object: str):
     with shelve.open("objectsDB") as db:
         return db[type_of_object]
 
-def shelve_objects(object_list: list[File | InnerFolder | MainFolder | ParlamintDocument], type_of_object: str) -> None:
+def shelve_objects(object_list: list[File | InnerFolder | MainFolder | ParlamintAttendee | ParlamintDocument],
+                   type_of_object: str) -> None:
     with shelve.open("objectsDB") as db:
         db[type_of_object] = object_list

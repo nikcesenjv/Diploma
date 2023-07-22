@@ -127,7 +127,7 @@ class File(Structure):
 
     @property
     def year(self) -> str:
-        return self._date.split(".")[-1]
+        return int(self._date.split(".")[-1])
 
     @property
     def document_id(self) -> str:

@@ -35,7 +35,7 @@ def parse_string(string: str) -> str:
 
         return False"""
 
-def is_close_match_list(string: str, string_list: list[str], threshold: int = 75, word_min_length: int = 3) -> bool:
+def is_close_match_list(string: str, string_list: list[str], threshold: int = 80, word_min_length: int = 3) -> bool:
     for word in [word for word in split_string_by_words(only_normal_characters(string)) if len(word) > word_min_length]:
         best_match, similarity = process.extractOne(word, string_list)
         if len(best_match) > word_min_length and similarity >= threshold:
@@ -43,7 +43,8 @@ def is_close_match_list(string: str, string_list: list[str], threshold: int = 75
     return False
 
 def is_close_match_string(string_one: str, string_two: str, threshold: int = 75) -> bool:
-    return fuzz.ratio(only_normal_characters(string_one), only_normal_characters(string_two)) >= threshold
+    x = fuzz.ratio(only_normal_characters(string_one), only_normal_characters(string_two))
+    return x >= threshold
 
 def is_close_match_attendee(string_one: str, string_two: str, threshold: int = 75) -> bool:
     string_list, string_two = split_string_by_words(only_normal_characters(string_one)), \
@@ -94,7 +95,7 @@ def remove_close_matches(string: str, string_list: list[str]) -> str:
 
     return string
 
-def closest_substring(first_string: str, second_string: str, treshold: int = 75) -> str:
+def closest_substring(first_string: str, second_string: str, treshold: int = 80) -> str:
     longest_match, max_similarity_ratio = "", 0
     first_string, second_string = only_normal_characters(first_string), \
         only_normal_characters(second_string)
@@ -121,10 +122,8 @@ def has_similar_string(substring, longer_string, threshold=75):
             return True
     return False
 
-def extract_attendees_from_string(string: str) -> list[str]:
-    attendee_names_list, temporary_list = [], []
-
-    for segment in string.strip(".").split(", "):
+def extract_attendees_from_string(paragraphs: list[str]) -> list[str]:
+    """for segment in string.strip(".").split(", "):
         if ":" in segment:
             segment = segment.split(": ")[1]
 
@@ -141,10 +140,43 @@ def extract_attendees_from_string(string: str) -> list[str]:
                 temporary_list.append(word)
 
             else:
-                if len(temporary_list) > 0:
+                if len(temporary_list) > 1:
                     attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
                     temporary_list = []
                 break
+
+    if len(temporary_list) > 0:
+        attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
+    return attendee_names_list"""
+
+    attendee_names_list, temporary_list = [], []
+    paragraphs = [paragraph.replace(".", "").replace(";", ",") for paragraph in paragraphs if len(paragraph.split(" ")) > 1]
+
+    for paragraph in paragraphs:
+        paragraph = " ".join([word for word in paragraph.split(" ") if ":" not in word])
+
+        for segment in paragraph.split(", "):
+            segment_latin = cyrillic_to_latin_text(segment)
+
+            for word in reversed(segment_latin.split(" ")):
+                if closest_substring(word, "izvestilac") is not None \
+                        or closest_substring(word, "dr") is not None:
+                    attendee_names_list.append(f"{word} {join_string_list(temporary_list, ' ', reverse=True)}")
+                    temporary_list = []
+                    break
+
+                elif word[0].isupper():
+                    temporary_list.append(word)
+
+                else:
+                    if len(temporary_list) > 0:
+                        attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
+                        temporary_list = []
+                    break
+
+            if len(temporary_list) > 0:
+                attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
+                temporary_list = []
 
     if len(temporary_list) > 0:
         attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
@@ -181,6 +213,9 @@ def capitalize_every_word(string: str) -> str:
 
 def split_string_by_words(string: str, translate: bool = False) -> str | list[str]:
     return [cyrillic_to_latin_text(word) for word in string.split()] if translate else string.split()
+
+def split_string_by_char(string: str, char: str) -> str:
+    return string.split(char)
 
 """def is_any_close_match(text: str, similar_words: str | list[str]) -> bool:
     text_split = text.lower().replace("\n", " ").split(" ")

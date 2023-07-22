@@ -36,7 +36,7 @@ def find_by_date(files: list[File], date: str) -> list[File]:
     return [file for file in files if file.date == date]
 
 def find_by_year(files: list[File], year: str) -> list[File]:
-    return [file for file in files if file.year == year]
+    return [file for file in files if file.year == int(year)]
 
 def find_by_pages(files: list[File], pages: str) -> list[File]:
-    return [file for file in files if file.pages == pages]
+    return [file for file in files if file.pages == int(pages)]
