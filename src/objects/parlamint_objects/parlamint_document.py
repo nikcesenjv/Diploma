@@ -14,14 +14,14 @@ from .parlamint_speaker_list import ParlamintSpeakerList
 
 from src.management.path_management import parse_path
 
-from src.objects.general_objects import File
+from src.objects.general_objects import Document
 
 class ParlamintDocument:
-    def __init__(self, file: File):
-        self._file: File = file
+    def __init__(self, document: Document):
+        self._document: Document = document
 
-        self._docx_document: Document = Document(parse_path("path.documents", file.word_path))
-        self._document_id = f"ParlaMint-SR_{self.file.document_id}"
+        self._docx_document: Document = Document(parse_path("path.documents", document.word_path))
+        self._document_id = f"ParlaMint-SR_{self.document.document_id}"
 
         self._attendees: list[ParlamintAttendee] = []
         self._elements: list[ParlamintHead | ParlamintNote | ParlamintSpeakerList] = []
@@ -35,12 +35,12 @@ class ParlamintDocument:
 
     # GETTERS & SETTERS
     @property
-    def file(self) -> File:
-        return self._file
+    def document(self) -> Document:
+        return self._document
 
-    @file.setter
-    def file(self, new_file: File) -> None:
-        self._file = new_file
+    @document.setter
+    def document(self, new_document: Document) -> None:
+        self._document = new_document
 
     @property
     def docx_document(self) -> Document:

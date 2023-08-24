@@ -20,11 +20,11 @@ def execute_task(parlamint_documents: list[ParlamintDocument]) -> None:
 
         base_path = parse_path("full_path.documents", "xml")
 
-        main_folder_path = parse_path(base_path, split_path[0])
-        create_new_folder(main_folder_path)
+        book_path = parse_path(base_path, split_path[0])
+        create_new_folder(book_path)
 
-        inner_folder_path = parse_path(main_folder_path, split_path[1])
-        create_new_folder(inner_folder_path)
+        folder_path = parse_path(book_path, split_path[1])
+        create_new_folder(folder_path)
 
         create_parlamint_xml_document(parlamint_document, "x")
 

@@ -12,11 +12,11 @@ from src.management.parlamint_objects_management import find_attendee, is_attend
 from src.management.text_management import parse_string, is_close_match_list, is_close_match_string, \
     extract_attendees_from_string
 
-from src.objects.general_objects import File
+from src.objects.general_objects import Document
 from src.objects.parlamint_objects import ParlamintDocument, ParlamintAttendee, ParlamintHead, \
     ParlamintNote, ParlamintSpeaker, ParlamintSpeakerList
 
-def create_parlamint_document(file: File, all_attendees_list: list[ParlamintAttendee]) -> ParlamintDocument:
+def create_parlamint_document(file: Document, all_attendees_list: list[ParlamintAttendee]) -> ParlamintDocument:
     parlamint_document = ParlamintDocument(file)
     paragraph_list = [parse_string(paragraph.text) for paragraph in parlamint_document.docx_document.paragraphs
                       if len(paragraph.text) > 0]

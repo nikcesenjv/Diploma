@@ -10,7 +10,7 @@ from docx import Document
 
 from .docx_paragraph import DocxParagraph
 
-from src.objects.general_objects import File
+from src.objects.general_objects import Document
 
 from src.management.path_management import parse_path
 
@@ -18,19 +18,19 @@ class DocxDocument:
 
     root_path = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/documents/"
 
-    def __init__(self, file: File):
-        self._file: File = file
+    def __init__(self, file: Document):
+        self._file: Document = file
 
         self._paragraphs: list[DocxParagraph] = []
         self._text: str = None
 
     # GETTERS & SETTERS
     @property
-    def file(self) -> File:
+    def file(self) -> Document:
         return self._file
 
     @file.setter
-    def file(self, new_file: File) -> None:
+    def file(self, new_file: Document) -> None:
         self._file = new_file
 
     @property

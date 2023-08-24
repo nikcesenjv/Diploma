@@ -5,16 +5,16 @@
 
 from .translations import MEETINGS
 
-from src.objects.general_objects import File
+from src.objects.general_objects import Document
 
-def parlamint_main_title_sl(file: File) -> str:
+def parlamint_main_title_sl(file: Document) -> str:
     return f"Parlamentarni korpus ParlaMint, {file.meeting} {file.num_arab} [ParlaMint]"
 
-def parlamint_main_title_en(file: File) -> str:
+def parlamint_main_title_en(file: Document) -> str:
     return f"Parliamentary corpus ParlaMint, {MEETINGS[file.meeting]} {file.num_arab} [ParlaMint]"
 
-def parlamint_sub_title_sl(file: File) -> str:
+def parlamint_sub_title_sl(file: Document) -> str:
     return f"Zapisi sej {file.assembly}, indeks {file.index}, {file.date}"
 
-def parlaming_sub_title_en(file: File) -> str:
+def parlaming_sub_title_en(file: Document) -> str:
     return f"Minutes of the {file.assembly}, index {file.index}, {file.date}"

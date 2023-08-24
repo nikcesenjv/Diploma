@@ -1,7 +1,7 @@
 # Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
 # Nik Česenj Vodovnik, 04180450 - Upravna informatika
 # Študijsko leto 2022/2023
-# Datoteka file.py
+# Datoteka document.py
 
 from PyPDF2 import PdfReader
 
@@ -9,7 +9,7 @@ from .structure import Structure
 
 from src.management.numerals_management import convert_numerals
 
-class File(Structure):
+class Document(Structure):
     def __init__(self, name, path):
         super().__init__(name, path)
 
@@ -20,7 +20,7 @@ class File(Structure):
 
     # PRINT OBJECT
     def __str__(self) -> str:
-        info = f"Ime datoteke:       {self.name}\n" \
+        info = f"Ime dokumenta:      {self.name}\n" \
                f"Indeks:             {self.index}\n" \
                f"Št sestanka [rim.]: {self.parse_num()}\n" \
                f"Organizacija:       {self.assembly}\n" \
@@ -127,7 +127,7 @@ class File(Structure):
 
     @property
     def year(self) -> str:
-        return int(self._date.split(".")[-1])
+        return self._date.split(".")[-1]
 
     @property
     def document_id(self) -> str:

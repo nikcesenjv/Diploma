@@ -7,7 +7,7 @@
             "assembly": "ZNPSHS",
             "book": null,
             "year": "1919",
-            "folder name": "1_1919_ZNPSHS",
+            "book name": "1_1919_ZNPSHS",
             "folders": [
                 {
                     "5-40_redni": [
@@ -58,7 +58,7 @@
             "assembly": "NSSHS",
             "book": "I",
             "year": "1921",
-            "folder name": "2_1921_NSSHS",
+            "book name": "2_1921_NSSHS",
             "folders": [
                 {
                     "1-2_predhodni": [
@@ -132,7 +132,7 @@
             "assembly": "NSSHS",
             "book": "II",
             "year": "1921-1922",
-            "folder name": "3_1921-1922_NSSHS",
+            "book name": "3_1921-1922_NSSHS",
             "folders": [
                 {
                     "31-82_seja": [
@@ -199,7 +199,7 @@
             "assembly": "NPKJ",
             "book": "I",
             "year": "1932",
-            "folder name": "4_1932_NPKJ",
+            "book name": "4_1932_NPKJ",
             "folders": [
                 {
                     "1-5_redni": [
@@ -219,7 +219,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1932",
-            "folder name": "5_1932_SKJ",
+            "book name": "5_1932_SKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -254,7 +254,7 @@
             "assembly": "SKJ",
             "book": "II",
             "year": "1933",
-            "folder name": "6_1933_SKJ",
+            "book name": "6_1933_SKJ",
             "folders": [
                 {
                     "16-27_redni": [
@@ -281,7 +281,7 @@
             "assembly": "SKJ",
             "book": "III",
             "year": "1933",
-            "folder name": "7_1933_SKJ",
+            "book name": "7_1933_SKJ",
             "folders": [
                 {
                     "28-34_redni": [
@@ -306,7 +306,7 @@
             "assembly": "SKJ",
             "book": "IV",
             "year": "1933",
-            "folder name": "8_1933_SKJ",
+            "book name": "8_1933_SKJ",
             "folders": [
                 {
                     "35-43_redni": [
@@ -330,7 +330,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1933-1934",
-            "folder name": "9_1933-1934_SKJ",
+            "book name": "9_1933-1934_SKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -363,7 +363,7 @@
             "assembly": "SKJ",
             "book": "II",
             "year": "1934",
-            "folder name": "10_1934_SKJ",
+            "book name": "10_1934_SKJ",
             "folders": [
                 {
                     "14-20_redni": [
@@ -391,7 +391,7 @@
             "assembly": "SKJ",
             "book": "III",
             "year": "1934",
-            "folder name": "11_1934_SKJ",
+            "book name": "11_1934_SKJ",
             "folders": [
                 {
                     "21-29_redni": [
@@ -415,7 +415,7 @@
             "assembly": "SKJ",
             "book": null,
             "year": "1934-1935",
-            "folder name": "12_1934-1935_SKJ",
+            "book name": "12_1934-1935_SKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -459,7 +459,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1935-1936",
-            "folder name": "13_1935-1936_SKJ",
+            "book name": "13_1935-1936_SKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -494,7 +494,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1937",
-            "folder name": "14_1937_SKJ",
+            "book name": "14_1937_SKJ",
             "folders": [
                 {
                     "14_redni": [
@@ -510,7 +510,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1936-1937",
-            "folder name": "15_1936-1937_SKJ",
+            "book name": "15_1936-1937_SKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -555,7 +555,7 @@
             "assembly": "SKJ",
             "book": "II",
             "year": "1937",
-            "folder name": "16_1937_SKJ",
+            "book name": "16_1937_SKJ",
             "folders": [
                 {
                     "16-27_redni": [
@@ -582,7 +582,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1937-1938",
-            "folder name": "17_1937-1938_SKJ",
+            "book name": "17_1937-1938_SKJ",
             "folders": [
                 {
                     "0_predhodni": [
@@ -622,7 +622,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1932",
-            "folder name": "18_1932_SKJ",
+            "book name": "18_1932_SKJ",
             "folders": [
                 {
                     "1-4_predhodni": [
@@ -662,7 +662,7 @@
             "assembly": "SKJ",
             "book": "II",
             "year": "1932",
-            "folder name": "19_1932_SKJ",
+            "book name": "19_1932_SKJ",
             "folders": [
                 {
                     "18-40_redni": [
@@ -700,7 +700,7 @@
             "assembly": "SKJ",
             "book": "I",
             "year": "1939",
-            "folder name": "20_1939_SKJ",
+            "book name": "20_1939_SKJ",
             "folders": [
                 {
                     "0_predhodni": [
@@ -727,7 +727,7 @@
             "assembly": "NSKJ",
             "book": "II",
             "year": "1932-1933",
-            "folder name": "21_1932-1933_NSKJ",
+            "book name": "21_1932-1933_NSKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -784,7 +784,7 @@
             "assembly": "NSKJ",
             "book": "V",
             "year": "1933",
-            "folder name": "22_1933_NSKJ",
+            "book name": "22_1933_NSKJ",
             "folders": [
                 {
                     "38-58_redni": [
@@ -823,7 +823,7 @@
             "assembly": "NSKJ",
             "book": "I",
             "year": "1933-1934",
-            "folder name": "23_1933-1934_NSKJ",
+            "book name": "23_1933-1934_NSKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -877,7 +877,7 @@
             "assembly": "NSKJ",
             "book": "III",
             "year": "1934",
-            "folder name": "24_1934_NSKJ",
+            "book name": "24_1934_NSKJ",
             "folders": [
                 {
                     "35-49_redni": [
@@ -907,7 +907,7 @@
             "assembly": "NSKJ",
             "book": "I",
             "year": "1934-1935",
-            "folder name": "25_1934-1935_NSKJ",
+            "book name": "25_1934-1935_NSKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -936,7 +936,7 @@
             "assembly": "NSKJ",
             "book": "II",
             "year": "1935",
-            "folder name": "26_1935_NSKJ",
+            "book name": "26_1935_NSKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -983,7 +983,7 @@
             "assembly": "NSKJ",
             "book": "III",
             "year": "1936",
-            "folder name": "27_1936_NSKJ",
+            "book name": "27_1936_NSKJ",
             "folders": [
                 {
                     "4-27_redni": [
@@ -1022,7 +1022,7 @@
             "assembly": "NSKJ",
             "book": "I",
             "year": "1936-1937",
-            "folder name": "28_1936-1937_NSKJ",
+            "book name": "28_1936-1937_NSKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -1066,7 +1066,7 @@
             "assembly": "NSKJ",
             "book": "II",
             "year": "1937",
-            "folder name": "29_1937_NSKJ",
+            "book name": "29_1937_NSKJ",
             "folders": [
                 {
                     "20-38_redni": [
@@ -1100,7 +1100,7 @@
             "assembly": "NSKJ",
             "book": "III-IV",
             "year": "1937",
-            "folder name": "30_1937_NSKJ",
+            "book name": "30_1937_NSKJ",
             "folders": [
                 {
                     "39-63_redni": [
@@ -1140,7 +1140,7 @@
             "assembly": "NSKJ",
             "book": "I",
             "year": "1937-1938",
-            "folder name": "31_1937-1938_NSKJ",
+            "book name": "31_1937-1938_NSKJ",
             "folders": [
                 {
                     "1_predhodni": [
@@ -1166,7 +1166,7 @@
             "assembly": "NSKJ",
             "book": "II",
             "year": "1938",
-            "folder name": "32_1938_NSKJ",
+            "book name": "32_1938_NSKJ",
             "folders": [
                 {
                     "7-19_redni": [
@@ -1194,7 +1194,7 @@
             "assembly": "NSKJ",
             "book": "III-IV",
             "year": "1938",
-            "folder name": "33_1938_NSKJ",
+            "book name": "33_1938_NSKJ",
             "folders": [
                 {
                     "20-37_redni": [
@@ -1227,7 +1227,7 @@
             "assembly": "NSKJ",
             "book": "I-III",
             "year": "1931-1932",
-            "folder name": "34_1931-1932_NSKJ",
+            "book name": "34_1931-1932_NSKJ",
             "folders": [
                 {
                     "1-4_predhodni": [
@@ -1272,7 +1272,7 @@
             "assembly": "NSKJ",
             "book": "IV-VI",
             "year": "1932",
-            "folder name": "35_1932_NSKJ",
+            "book name": "35_1932_NSKJ",
             "folders": [
                 {
                     "23-56_redni": [
@@ -1321,7 +1321,7 @@
             "assembly": "NSKJ",
             "book": "I",
             "year": "1939",
-            "folder name": "36_1939_NSKJ",
+            "book name": "36_1939_NSKJ",
             "folders": [
                 {
                     "1-5_predhodni": [

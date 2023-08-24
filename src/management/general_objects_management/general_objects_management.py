@@ -5,16 +5,15 @@
 
 from src.management.path_management import parse_path
 
-from src.objects.general_objects import File, InnerFolder, MainFolder
+from src.objects.general_objects import Document, Folder, Book
 
-def create_file(name: str, outter_folder: InnerFolder, path: str) -> File:
-    file = File(name, f"{outter_folder.path}/{name}")
-    file.pages = file.get_num_of_pages(parse_path(path, f"{file.pdf_path}"))
-    file.outter_folder = outter_folder
-    return file
+def create_book(name: str) -> Book:
+    return Book(name, name)
 
-def create_inner_folder(name: str, outter_path: MainFolder) -> InnerFolder:
-    return InnerFolder(name, f"{outter_path}/{name}")
+def create_document(name: str, path: str) -> Document:
+    document = Document(name, f"{path}/{name}")
+    document.pages = document.get_num_of_pages(parse_path("full_path.documents", f"{document.pdf_path}"))
+    return document
 
-def create_main_folder(name: str) -> MainFolder:
-    return MainFolder(name, name)
+def create_folder(name: str, path: str) -> Folder:
+    return Folder(name, f"{path}/{name}")

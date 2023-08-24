@@ -8,8 +8,8 @@
         "file_parsing.start": "   Začetek urejanja JSON datoteke '%s'",
         "file_parsing.success": "   JSON datoteka '%s' je bila uspešno urejena",
 
-        "file_parsing.main_folder.success": "   Ustvarjena glavna mapa '%s'",
-        "file_parsing.inner_folder.success": "   Ustvarjena notranja mapa '%s'",
+        "file_parsing.book.success": "   Ustvarjena glavna mapa '%s'",
+        "file_parsing.folder.success": "   Ustvarjena notranja mapa '%s'",
         "file_parsing.file_success": "   Ustvarjena datoteka '%s'",
 
         "find_objects.start": "   Začetek iskanja map/datotek",

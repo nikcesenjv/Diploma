@@ -14,18 +14,18 @@ from src.management.shelve_management import *
 from src.management.path_management import parse_path
 from src.management.xml_management import create_parlamint_xml_document
 
-from src.objects.general_objects import MainFolder, InnerFolder, File
+from src.objects.general_objects import Book, Folder, Document
 from src.objects.parlamint_objects import ParlamintDocument, ParlamintAttendee
 
 # EXECUTE METHODS
-def execute_arg_cer(params: list[str]) -> float:
+def execute_arg_cer(params: list[str]) -> dict:
     try:
         return retrieve_cer_task(params)
     except FileNotFoundError:
         log("ERROR", "file_parsing.directory.error")
 
 def execute_arg_find(params: list[str]) \
-        -> list[MainFolder | InnerFolder | File | ParlamintDocument | ParlamintAttendee]:
+        -> list[Book | Folder | Document | ParlamintDocument | ParlamintAttendee]:
     try:
         return find_objects_task(open_shelve(params[0]), params)
     except IndexError:
@@ -40,13 +40,13 @@ def execute_arg_language(lang: str) -> None:
 
 def execute_arg_parse() -> None:
     try:
-        parse_objects_task(parse_path("full_path.project", "path.documents.json"))
+        parse_objects_task()
     except FileNotFoundError:
         log("ERROR", "file_parsing.no_file.error")
 
 def execute_arg_parse_parlamint() -> None:
     try:
-        parse_parlamint_objects_task(open_shelve("file"), open_shelve("attendees"))
+        parse_parlamint_objects_task(open_shelve("document"), open_shelve("attendees"))
     except FileNotFoundError:
         log("ERROR", "file_parsing.no_file.error")
 
@@ -106,16 +106,27 @@ if __name__ == "__main__":
     main()
     log("INFO", "main_program.end")
 
+    x = execute_arg_cer(["/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/test_files_cer/new_ocr",
+                         "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/test_files_cer/corrected"])
+
+    for file, avg in x.items():
+        print(file, avg)
+
     # file = execute_arg_find(["file", "year", "1919"])
     # file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])
     # file = execute_arg_find(["file", "name", "8_XXV_SKJ_redni_15.4.1932"])
-    file = execute_arg_find(["file", "name", "9_XXVI_SKJ_redni_15.4.1932"])
+    # file = execute_arg_find(["file", "name", "9_XXVI_SKJ_redni_15.4.1932"])
     # file = execute_arg_find(["file", "name", "5_XXIV_NSKJ_redni_23.2.1937"])
-    print(file[0])
+    # print(file[0])
 
-    parlamint_document, attendees = parse_parlamint_objects_task([file[0]], [])
+    """file = execute_arg_find(["document", "year", "1919"])
+
+    for f in file:
+        print(f)"""
+
+    """parlamint_document, attendees = parse_parlamint_objects_task([file[0]], [])
     create_parlamint_xml_document(parlamint_document,
-                                  "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test3.xml")
+                                  "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test3.xml")"""
 
     """xml = docx.print_xml()
     save_xml_file(xml, "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/test.xml")"""

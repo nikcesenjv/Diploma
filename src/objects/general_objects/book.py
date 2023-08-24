@@ -1,18 +1,18 @@
 # Digitalizacija beležk SHS in Kraljevine Jugoslavije - Diplomsko delo
 # Nik Česenj Vodovnik, 04180450 - Upravna informatika
 # Študijsko leto 2022/2023
-# Datoteka main_folder.py
+# Datoteka book.py
 
-from .inner_folder import InnerFolder
+from .folder import Folder
 from .structure import Structure
 
-class MainFolder(Structure):
+class Book(Structure):
     def __init__(self, name, path):
         super().__init__(name, path)
 
         self._index, self._year, self._assembly = self.parse_name()
 
-        self._folders: list[InnerFolder] = []
+        self._folders: list[Folder] = []
 
     # PRINT OBJECT
     def __str__(self):
@@ -55,15 +55,15 @@ class MainFolder(Structure):
         self._assembly = new_assembly
 
     @property
-    def folders(self) -> list[InnerFolder]:
+    def folders(self) -> list[Folder]:
         return self._folders
 
     @folders.setter
-    def folders(self, new_list: list[InnerFolder]) -> None:
+    def folders(self, new_list: list[Folder]) -> None:
         self._folders = new_list
 
-    def add_folder(self, new_folder: InnerFolder) -> None:
+    def add_folder(self, new_folder: Folder) -> None:
         self._folders.append(new_folder)
 
-    def add_folders(self, new_folders: list[InnerFolder]) -> None:
+    def add_folders(self, new_folders: list[Folder]) -> None:
         self._folders += new_folders

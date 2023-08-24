@@ -12,7 +12,7 @@ from src.management.path_management import parse_path
 from docx import Document
 
 from src.objects.docx_objects import DocxDocument, DocxParagraph, DocxRow
-from src.objects.general_objects import File
+from src.objects.general_objects import Document
 
 def retrieve_namespace() -> dict[str, str]:
     return retrieve_json_value(parse_path("full_path.project", "path.docx_properties"), "NAMESPACE")
@@ -20,7 +20,7 @@ def retrieve_namespace() -> dict[str, str]:
 def create_docx_paragrahs(document_paragraph: str):
     ...
 
-def create_docx_object(file: File):
+def create_docx_object(file: Document):
     docx_document = DocxDocument(file)
 
     document = Document(parse_path("full_path.project", "lib/documents", file.word_path))
