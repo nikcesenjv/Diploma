@@ -9,7 +9,7 @@ from .parlamint_objects_management import create_parlamint_note, create_parlamin
 from src.management.json_management import parse_json
 from src.management.path_management import parse_path
 from src.management.parlamint_objects_management import find_attendee, is_attendee, create_parlamint_attendee
-from src.management.text_management import parse_string, is_close_match_list, is_close_match_string, \
+from src.management.text_management import parse_string, is_close_match_list, is_close_match_string, is_close_match_test, is_close_match_test_two, \
     extract_attendees_from_string
 
 from src.objects.general_objects import Document
@@ -51,11 +51,17 @@ def parse_parlamint_properties(property_elements: dict[str, str | list], paragra
         elif i + 1 < len(property_elements):
             next_property_elements = property_elements[i + 1], None
 
+        max_paragraphs = None
+        if "max paragraphs" in property_element:
+            max_paragraphs = property_element["max paragraphs"]
+
         parlamint_element, paragraph_list = parse_parlamint_element(parlamint_element, paragraph_list,
-                                                                    next_property_elements, parlamint_attendee_list)
+                                                                    next_property_elements, parlamint_attendee_list,
+                                                                    max_paragraphs)
 
         if "role" in property_element:
             parlamint_attendee_list = parse_parlamint_attendees(parlamint_attendee_list, all_attendees_list,
+                                                                property_element["role"],
                                                                 parlamint_element.paragraphs)
 
         if "additional elements" in property_element:
@@ -82,6 +88,7 @@ def parse_additional_properties(property_element, parlamint_element, parlamint_a
 
         if "role" in additional_property:
             parlamint_attendee_list = parse_parlamint_attendees(parlamint_attendee_list, all_attendees_list,
+                                                                additional_property["role"],
                                                                 additional_property_element.paragraphs)
 
         additional_properties_list.append(additional_property_element)
@@ -91,13 +98,13 @@ def parse_additional_properties(property_element, parlamint_element, parlamint_a
 def parse_parlamint_element(parlamint_element: ParlamintHead | ParlamintNote | ParlamintSpeakerList,
                             paragraph_list: list[str],
                             next_property_elements: tuple[dict[str, str | list] | None, dict[str, str | list]] | None,
-                            parlamint_attendee_list: list[ParlamintAttendee]) \
+                            parlamint_attendee_list: list[ParlamintAttendee], max_paragraphs: int) \
         -> tuple[ParlamintHead | ParlamintNote | ParlamintSpeakerList, list[str]]:
 
     if type(parlamint_element) == ParlamintSpeakerList:
-        parlamint_element.parlamint_speakers, paragraphs = parse_parlamint_speakers(paragraph_list,
-                                                                                    parlamint_attendee_list,
-                                                                                    next_property_elements)
+        parlamint_element.parlamint_speakers, paragraph_list = parse_parlamint_speakers(paragraph_list,
+                                                                                        parlamint_attendee_list,
+                                                                                        next_property_elements)
         return parlamint_element, paragraph_list
 
     for i, paragraph in enumerate(paragraph_list):
@@ -107,6 +114,9 @@ def parse_parlamint_element(parlamint_element: ParlamintHead | ParlamintNote | P
                 return parlamint_element, paragraph_list[i:]
 
             parlamint_element.add_paragraph(paragraph)
+
+            if max_paragraphs is not None and len(parlamint_element.paragraphs) == max_paragraphs:
+                return parlamint_element, paragraph_list[i:]
 
         except TypeError:
             if all(value is None for value in next_property_elements):
@@ -120,7 +130,7 @@ def parse_parlamint_element(parlamint_element: ParlamintHead | ParlamintNote | P
     return parlamint_element, []
 
 def parse_parlamint_attendees(parlamint_attendees_list: list[ParlamintAttendee],
-                              all_attendees_list: list[ParlamintAttendee], paragraph_list: list[str]) \
+                              all_attendees_list: list[ParlamintAttendee], role: str, paragraph_list: list[str]) \
         -> tuple[list[ParlamintAttendee]]:
 
     attendee_names = extract_attendees_from_string(paragraph_list)
@@ -129,10 +139,10 @@ def parse_parlamint_attendees(parlamint_attendees_list: list[ParlamintAttendee],
         if is_attendee(attendee_name, all_attendees_list):
             continue
 
-        if is_close_match_string(attendee_name, "izvestilac"):
-            attendee_type = "izvestilac"
+        if is_close_match_test_two(attendee_name, "izvestilac"):
+            attendee_type = "reporter"
         else:
-            attendee_type = "regular"
+            attendee_type = role
 
         parlamint_attendees_list.append(create_parlamint_attendee(attendee_name, attendee_type))
 
@@ -143,18 +153,30 @@ def parse_parlamint_speakers(paragraph_list: list[str], parlamint_attendees_list
 
     parlamint_speakers_list, current_speaker = [], None
 
-    for i, paragraph in enumerate(paragraph_list):
-        if is_close_match_list(paragraph, next_property_element[0]["similar words"]):
+    """for i, paragraph in enumerate(paragraph_list):
+        print(paragraph, i)
+        if is_close_match_list(paragraph, next_property_element[0]["similar words"], 90):
+            x = is_close_match_test(paragraph, next_property_element[0]["similar words"][0], 90)
             parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
             return parlamint_speakers_list, paragraph_list[i:]
 
-        if ":" in paragraph and ":" != paragraph[-1]:
-            speaker, text = paragraph.split(":", 1)
+        if is_close_match_test(paragraph, next_property_element[0]["similar words"][0], 90) is not None:
+            r = is_close_match_test(paragraph, next_property_element[0]["similar words"][0], 90)
+            parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
+            return parlamint_speakers_list, paragraph_list[i:]
+
+        if ":" in paragraph and ":" != paragraph[-1] or "'" in paragraph and "'" != paragraph[-1]:
+            try:
+                speaker, text = paragraph.split(":", 1)
+            except ValueError:
+                speaker, text = paragraph.split("'", 1)
 
             if len(speaker.split()) < 20:
                 current_attendee = find_attendee(speaker, parlamint_attendees_list)
 
                 if current_attendee is not None:
+                    # current_attendee = create_parlamint_attendee(speaker)
+
                     parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
 
                     parlamint_utterance = create_parlamint_utterance(current_attendee)
@@ -163,12 +185,90 @@ def parse_parlamint_speakers(paragraph_list: list[str], parlamint_attendees_list
                     current_speaker = create_parlamint_speaker(speaker, parlamint_utterance)
                     continue
 
-                if isinstance(current_speaker, ParlamintNote):
-                    current_speaker.add_paragraph(paragraph)
-                else:
-                    current_speaker.utterance.add_paragraph(paragraph)
+                try:
+                    if isinstance(current_speaker, ParlamintNote):
+                        current_speaker.add_paragraph(paragraph)
+                    else:
+                        current_speaker.utterance.add_paragraph(paragraph)
+                except AttributeError:
+                    current_attendee = create_parlamint_attendee(speaker)
+                    parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
 
-        elif is_close_match_list(paragraph, ["čita"], threshold=90):
+                    parlamint_utterance = create_parlamint_utterance(current_attendee)
+                    parlamint_utterance.add_paragraph(text)
+
+                    current_speaker = create_parlamint_speaker(speaker, parlamint_utterance)
+
+        # elif is_close_match_list(paragraph, ["čita"], threshold=90):
+        elif is_close_match_test(paragraph, "čita", threshold=80) is not None:
+            # x = is_close_match_test(paragraph, "čita", threshold=80)
+            parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
+
+            current_speaker = create_parlamint_note("reading")
+            current_speaker.add_paragraph(paragraph)
+
+        else:
+            if isinstance(current_speaker, ParlamintNote):
+                current_speaker.add_paragraph(paragraph)
+            else:
+                current_speaker.utterance.add_paragraph(paragraph)
+
+    parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
+    return parlamint_speakers_list, []"""
+
+    for i, paragraph in enumerate(paragraph_list):
+        print(paragraph, i)
+        if is_close_match_list(paragraph, next_property_element[0]["similar words"], 90):
+            x = is_close_match_test(paragraph, next_property_element[0]["similar words"][0], 90)
+            parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
+            return parlamint_speakers_list, paragraph_list[i:]
+
+        if is_close_match_test(paragraph, next_property_element[0]["similar words"][0], 90) is not None:
+            r = is_close_match_test(paragraph, next_property_element[0]["similar words"][0], 90)
+            parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
+            return parlamint_speakers_list, paragraph_list[i:]
+
+        if ":" in paragraph and ":" != paragraph[-1] or "'" in paragraph and "'" != paragraph[-1] or \
+                is_close_match_list(paragraph, ["otvaram"], 90):
+            try:
+                speaker, text = paragraph.split(":", 1)
+            except ValueError:
+                try:
+                    speaker, text = paragraph.split("'", 1)
+                except ValueError:
+                    speaker, text = paragraph.split("Otvaram", 1)
+
+            if len(speaker.split()) < 20:
+                current_attendee = find_attendee(speaker, parlamint_attendees_list)
+
+                if current_attendee is not None:
+                    # current_attendee = create_parlamint_attendee(speaker)
+
+                    parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
+
+                    parlamint_utterance = create_parlamint_utterance(current_attendee)
+                    parlamint_utterance.add_paragraph(text)
+
+                    current_speaker = create_parlamint_speaker(speaker, parlamint_utterance)
+                    continue
+
+                current_attendee = create_parlamint_attendee(speaker)
+                parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
+
+                parlamint_utterance = create_parlamint_utterance(current_attendee)
+                parlamint_utterance.add_paragraph(text)
+
+                current_speaker = create_parlamint_speaker(speaker, parlamint_utterance)
+                continue
+
+            if isinstance(current_speaker, ParlamintNote):
+                current_speaker.add_paragraph(paragraph)
+            else:
+                current_speaker.utterance.add_paragraph(paragraph)
+
+        # elif is_close_match_list(paragraph, ["čita"], threshold=90):
+        elif is_close_match_test(paragraph, "čita", threshold=80) is not None:
+            # x = is_close_match_test(paragraph, "čita", threshold=80)
             parlamint_speakers_list.append(current_speaker) if current_speaker is not None else None
 
             current_speaker = create_parlamint_note("reading")

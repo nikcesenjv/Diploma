@@ -5,7 +5,7 @@
 
 import xml.etree.ElementTree as ET
 
-from docx import Document
+from docx import Document as DocxDocument
 
 from .parlamint_attendee import ParlamintAttendee
 from .parlamint_head import ParlamintHead
@@ -20,7 +20,7 @@ class ParlamintDocument:
     def __init__(self, document: Document):
         self._document: Document = document
 
-        self._docx_document: Document = Document(parse_path("path.documents", document.word_path))
+        self._docx_document: DocxDocument = DocxDocument(parse_path("path.documents", document.word_path))
         self._document_id = f"ParlaMint-SR_{self.document.document_id}"
 
         self._attendees: list[ParlamintAttendee] = []
@@ -43,11 +43,11 @@ class ParlamintDocument:
         self._document = new_document
 
     @property
-    def docx_document(self) -> Document:
+    def docx_document(self) -> DocxDocument:
         return self._docx_document
 
     @docx_document.setter
-    def docx_document(self, new_docx_document: Document) -> None:
+    def docx_document(self, new_docx_document: DocxDocument) -> None:
         self._docx_document = new_docx_document
 
     @property

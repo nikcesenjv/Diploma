@@ -29,6 +29,8 @@ def check_attendee_name(string: str, attendee: ParlamintAttendee) -> ParlamintAt
 def create_parlamint_attendee(attendee_name: str, attendee_role: str = None) -> ParlamintAttendee:
     if attendee_role == "chair":
         return create_parlamint_attendee_chair(attendee_name)
+    elif attendee_role == "reporter":
+        return create_parlamint_attendee_reporter(attendee_name)
 
     return create_parlamint_attendee_regular(attendee_name)
 
@@ -37,7 +39,7 @@ def create_parlamint_attendee_chair(attendee_name: str, attendee_role: str = "ch
     return ParlamintAttendee(remove_close_matches(attendee_name, similar_words), attendee_role)
 
 def create_parlamint_attendee_regular(attendee_name: str, attendee_role: str = "regular") -> ParlamintAttendee:
-    similar_words = ["ministar"]
+    similar_words = ["ministar", "dr"]
     return ParlamintAttendee(remove_close_matches(attendee_name, similar_words), attendee_role)
 
 def create_parlamint_attendee_reporter(attendee_name: str, attendee_role: str = "reporter") -> ParlamintAttendee:

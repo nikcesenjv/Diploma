@@ -10,14 +10,6 @@
         },
         {
             "tag": "head",
-            "type": "info",
-            "similar words": [
-                "godina",
-                "knjiga"
-            ]
-        },
-        {
-            "tag": "head",
             "type": "meeting",
             "similar words": [
                 "redovni",
@@ -49,7 +41,8 @@
             "role": "regular",
             "similar words": [
                 "prisutan",
-                "prisutni"
+                "prisutni",
+                "prisutna"
             ],
             "preserve words": [
                 "izvestilac",
@@ -61,39 +54,6 @@
             "type": "time",
             "similar words": [
                 "početak"
-            ]
-        },
-        {
-            "tag": "note",
-            "type": "content",
-            "similar words": [
-                "sadržaj",
-                "s a d r ž a j"
-            ]
-        },
-        {
-            "tag": "note",
-            "type": "witnesses",
-            "role": "regular",
-            "similar words": [
-                "govornici"
-            ]
-        },
-        {
-            "tag": "note",
-            "type": "agenda",
-            "similar words": [
-                "dnevni"
-            ],
-            "additional elements": [
-                {
-                    "tag": "note",
-                    "type": "witnesses",
-                    "role": "regular",
-                    "similar words": [
-                        "govornici"
-                    ]
-                }
             ]
         },
         {
@@ -116,7 +76,7 @@
             "tag": "note",
             "type": "attachement",
             "similar words": [
-                "prilozi"
+                "memorandum"
             ]
         }
     ]

@@ -35,16 +35,43 @@ def parse_string(string: str) -> str:
 
         return False"""
 
-def is_close_match_list(string: str, string_list: list[str], threshold: int = 80, word_min_length: int = 3) -> bool:
-    for word in [word for word in split_string_by_words(only_normal_characters(string)) if len(word) > word_min_length]:
-        best_match, similarity = process.extractOne(word, string_list)
-        if len(best_match) > word_min_length and similarity >= threshold:
+def is_close_match_list(string: str, string_list: list[str], threshold: int = 90, word_min_length: int = 5,
+                        min_distance: int = 5) -> bool:
+    for i, word in enumerate([word for word in split_string_by_words(only_normal_characters(string)) if len(word) > word_min_length]):
+        best_match, similarity = process.extractOne(word, string_list, scorer=fuzz.ratio)
+        if len(best_match) > word_min_length and similarity >= threshold and i <= min_distance:
             return True
+
+    """best_match, similarity = process.extractOne(find_split_word(string), string_list, scorer=fuzz.ratio)
+    if len(best_match) > word_min_length and similarity >= threshold:
+        return True"""
+
     return False
 
 def is_close_match_string(string_one: str, string_two: str, threshold: int = 75) -> bool:
     x = fuzz.ratio(only_normal_characters(string_one), only_normal_characters(string_two))
     return x >= threshold
+
+def find_split_word(string):
+    words = string.split()
+    short_words = [word for word in words if len(word) <= 2]
+    joined_short_words = "".join(short_words)
+    return joined_short_words
+
+def is_close_match_test(string_one: str, string_two: str, threshold: int = 80, min_distance: int = 5) -> str:
+    similar_word, similarity = process.extractOne(string_two, string_one.split(" "), scorer=fuzz.ratio)
+    if similarity >= threshold:
+        x = string_one.split(" ")
+        for i, t in enumerate(x):
+            if similar_word == t and i <= min_distance:
+                return similar_word
+    return None
+
+def is_close_match_test_two(string_one: str, string_two: str, threshold: int = 80) -> bool:
+    similar_word, similarity = process.extractOne(string_two, string_one.split(" "), scorer=fuzz.ratio)
+    if similarity >= threshold:
+        return True
+    return False
 
 def is_close_match_attendee(string_one: str, string_two: str, threshold: int = 75) -> bool:
     string_list, string_two = split_string_by_words(only_normal_characters(string_one)), \
@@ -160,7 +187,9 @@ def extract_attendees_from_string(paragraphs: list[str]) -> list[str]:
 
             for word in reversed(segment_latin.split(" ")):
                 if closest_substring(word, "izvestilac") is not None \
-                        or closest_substring(word, "dr") is not None:
+                        or closest_substring(word, "dr") is not None\
+                        or closest_substring(word, "pretsednik") is not None\
+                        or closest_substring(word, "pretsedavao") is not None:
                     attendee_names_list.append(f"{word} {join_string_list(temporary_list, ' ', reverse=True)}")
                     temporary_list = []
                     break
@@ -169,16 +198,16 @@ def extract_attendees_from_string(paragraphs: list[str]) -> list[str]:
                     temporary_list.append(word)
 
                 else:
-                    if len(temporary_list) > 0:
+                    if len(temporary_list) > 1:
                         attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
-                        temporary_list = []
+                    temporary_list = []
                     break
 
-            if len(temporary_list) > 0:
+            if len(temporary_list) > 1:
                 attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
-                temporary_list = []
+            temporary_list = []
 
-    if len(temporary_list) > 0:
+    if len(temporary_list) > 1:
         attendee_names_list.append(join_string_list(temporary_list, " ", reverse=True))
     return attendee_names_list
 

@@ -1,0 +1,60 @@
+{
+    "properties": [
+        {
+            "tag": "head",
+            "type": "generalInfo",
+            "similar words": [
+                "sednica",
+                "odbora"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "leading",
+            "role": "chair",
+            "similar words": [
+                "pretsedavao",
+                "pretsedavali",
+                "pretsednik",
+                "predsednik"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "present",
+            "role": "regular",
+            "similar words": [
+                "prisutan",
+                "prisutni"
+            ],
+            "preserve words": [
+                "izvestilac",
+                "dr."
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "time",
+            "similar words": [
+                "početak"
+            ]
+        },
+        {
+            "tag": "speakers",
+            "type": null,
+            "similar words": [
+                "otvorim",
+                "otvaram",
+                "gospodo"
+            ]
+        },
+        {
+            "tag": "note",
+            "type": "time",
+            "max paragraphs": 1,
+            "similar words": [
+                "zaključena"
+            ]
+        }
+    ]
+}

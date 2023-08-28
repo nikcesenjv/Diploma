@@ -1,4 +1,7 @@
-23.07.2023 21:39:30 [INFO] -------------PROGRAM SE ZAGANJA-------------
-23.07.2023 21:39:30 [INFO] -------------PROGRAM SE ZAPIRA-------------
+28.08.2023 19:07:09 [INFO] -------------PROGRAM SE ZAGANJA-------------
+28.08.2023 19:07:09 [INFO] -------------PROGRAM SE ZAPIRA-------------
 
-23.07.2023 21:39:30 [INFO]    Začetek pridobivanja podatkov o napaki CER
+28.08.2023 19:07:09 [INFO]    Začetek iskanja map/datotek
+28.08.2023 19:07:09 [INFO]    Najdenih je bilo 1 ustreznih map/datotek
+28.08.2023 19:07:09 [INFO] None
+28.08.2023 19:07:09 [WARNING] Applied processor reduces input query to empty string, all comparisons will have score 0. [Query: '§.']

@@ -18,7 +18,7 @@ from src.objects.general_objects import Book, Folder, Document
 from src.objects.parlamint_objects import ParlamintDocument, ParlamintAttendee
 
 # EXECUTE METHODS
-def execute_arg_cer(params: list[str]) -> dict:
+def execute_arg_cer(params: list[str]) -> dict[str, float]:
     try:
         return retrieve_cer_task(params)
     except FileNotFoundError:
@@ -71,6 +71,7 @@ def main() -> None:
     parser.add_argument("-l", "--lang", type=str, help="change language of logs")
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files for shelving [serialization]")
+    parser.add_argument("-pp", "--parlamint", nargs="*", help="parse files for parlamint")
     # parser.add_argument("-pp", "--parse_parlamint", nargs="*")
     # parser.add_argument("-wp", "--write_parlamint", nargs="*")
     # parser.add_argument("-r", "--random", nargs="+", help="get text for randomly chosen files")
@@ -106,11 +107,28 @@ if __name__ == "__main__":
     main()
     log("INFO", "main_program.end")
 
-    x = execute_arg_cer(["/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/test_files_cer/new_ocr",
+    """x = execute_arg_cer(["/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/test_files_cer/new_ocr",
                          "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/test_files_cer/corrected"])
 
     for file, avg in x.items():
-        print(file, avg)
+        print(file, avg)"""
+
+    # file = execute_arg_find(["document", "name", "1_XXI_SKJ_redni_18.6.1934"]) check
+    # file = execute_arg_find(["document", "name", "3_III_NSKJ_redni_11.12.1936"]) check
+    # file = execute_arg_find(["document", "name", "4_XLII_NSKJ_redni_19.3.1937"]) check
+    # file = execute_arg_find(["document", "name", "7_XXIV_SKJ_redni_14.4.1932"]) check
+    # file = execute_arg_find(["document", "name", "11_X_SKJ_redni_24.3.1936"]) check
+    # file = execute_arg_find(["document", "name", "12_XI.I_SKJ_redni_25.3.1936"]) check
+    # file = execute_arg_find(["document", "name", "22_LII_NSSHS_seja_10.3.1922"]) check
+    # file = execute_arg_find(["document", "name", "25_XLVII_NSKJ_redni_11.6.1932"]) check
+    file = execute_arg_find(["document", "name", "34_XXXVIII_ZNPSHS_redni_18.6.1919"])
+
+    print(file[0])
+
+    parlamint_document, attendees = parse_parlamint_objects_task([file[0]], [])
+    """create_parlamint_xml_document(parlamint_document,
+                                  f"/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/{parlamint_document.document.name}.xml")"""
+    create_parlamint_xml_document(parlamint_document, f"{parlamint_document.document.name}.xml")
 
     # file = execute_arg_find(["file", "year", "1919"])
     # file = execute_arg_find(["file", "name", "7_XXIV_SKJ_redni_14.4.1932"])

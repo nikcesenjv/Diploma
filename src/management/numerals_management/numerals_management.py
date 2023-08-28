@@ -15,6 +15,15 @@ def to_arab(num):
     if num == "N":
         return 0
 
+    if "." in num:
+        num = num.split(".")
+        "_".join([str(convert(n)) for n in num])
+        return num
+
+    return convert(num)
+
+
+def convert(num):
     num_ar = 0
     for i in range(len(num)):
         if i > 0 and NUMERALS[num[i]] > NUMERALS[num[i - 1]]:
