@@ -28,18 +28,11 @@ def execute_arg_cer(params: list[str]) -> dict[str, float]:
 def execute_arg_find(params: list[str]) \
         -> list[Book | Folder | Document | ParlamintDocument | ParlamintAttendee]:
     try:
-        # return find_objects_task(open_shelve(params[0]), params)
         return find_objects_task(open_pickle(params[0]), params)
 
     except IndexError:
-        log("ERROR", "find_objects.index.error")
+        log("ERROR", "find_objects.index.error", None)
         return []
-
-def execute_arg_language(lang: str) -> None:
-    supported_languages = ["sl", "en"]
-    if lang in supported_languages:
-        change_json_value(parse_path("full_path.project", "path.basic_info.json"), "language", lang)
-        log("INFO", "change_language")
 
 def execute_arg_parse() -> None:
     try:
@@ -72,7 +65,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
 
     parser.add_argument("-c", "--cer", nargs="+", help="get character error rate based on directories")
-    parser.add_argument("-l", "--lang", type=str, help="change language of logs")
+    # parser.add_argument("-l", "--lang", type=str, help="change language of logs")
     parser.add_argument("-f", "--find", nargs="+", help="search for parsed object")
     parser.add_argument("-p", "--parse", nargs="*", help="parse files for shelving [serialization]")
     parser.add_argument("-pp", "--parlamint", nargs="*", help="parse files for parlamint")
@@ -81,9 +74,6 @@ def main() -> None:
 
     if args.cer:
         print(f"Average: {execute_arg_cer(args.cer)}%")
-
-    if args.lang:
-        execute_arg_language(args.lang)
 
     if args.find:
         try:
@@ -104,9 +94,9 @@ def main() -> None:
     tree.write(target_path, encoding="UTF-8", xml_declaration=True)"""
 
 if __name__ == "__main__":
-    # log("INFO", "main_program.start")
+    log("INFO", "main_program.start", None)
     main()
-    # log("INFO", "main_program.end")
+    log("INFO", "main_program.end", None)
 
     # execute_arg_parse()
 

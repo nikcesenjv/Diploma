@@ -5,10 +5,8 @@
 
 from src.management.json_management import parse_json
 
-DIRECTORIES = "lib/resources/json/paths.json"
-
 def retrieve_path(path_param):
     try:
-        return parse_json(DIRECTORIES)[path_param]
+        return parse_json("lib/resources/json/paths.json")[path_param]
     except KeyError:
         return path_param

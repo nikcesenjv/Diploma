@@ -4,24 +4,12 @@
 # Datoteka retrieve_message.py
 
 from src.management.json_management import parse_json
-from src.management.path_management import parse_path
 
-def retrieve_message(level: str, name: str, args: tuple[str]):
-    messages_path = check_language()
-    for message_name, message_content in parse_json(messages_path)[level].items():
-        if message_name == name:
-            return format_message(message_content, args)
+def retrieve_message(level: str, message_title: str, arg: str) -> str:
+    message_properties = "lib/resources/json/program_messages_en.json"
+    for message_name, message_content in parse_json(message_properties)[level].items():
+        if message_name == message_title:
+            return format_message(message_content, arg)
 
-def check_language() -> str:
-    # messages_path = parse_path("full_path.project", "path.program_messages_sl")
-    messages_path = "lib/resources/json/program_messages_sl.json"
-
-    # if parse_json(parse_path("full_path.project", "path.basic_info.json"))["basic info"]["language"] == "sl":
-
-    if parse_json("lib/resources/json/basic_info.json")["basic info"]["language"] == "sl":
-        return messages_path
-    else:
-        return messages_path.replace("_sl.json", "_en.json")
-
-def format_message(message: str, args: tuple[str]) -> str:
-    return message % args if len(args) > 0 else message
+def format_message(message: str, arg: str) -> str:
+    return message % arg if arg is not None else message
