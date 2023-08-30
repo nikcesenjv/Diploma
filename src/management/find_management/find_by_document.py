@@ -10,7 +10,7 @@ from src.logging import log
 from src.management.numerals_management import convert_numerals
 from src.objects.general_objects import Document
 
-def find_by_document(document_list: list[Document], params: dict) -> list[Document]:
+def find_by_document(document_list: list[Document], params: dict[str, str]) -> list[Document]:
     for attribute, value in params.items():
         try:
             func = globals()[METHOD_BASE + attribute]

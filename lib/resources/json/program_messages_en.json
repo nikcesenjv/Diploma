@@ -14,7 +14,7 @@
         "file_parsing.parlamint_success": "   Parlamint document '%s' created",
 
         "find_objects.start": "   Searching of objects",
-        "find_objects.success": "   %s eligible objects have been found",
+        "find_objects.success": "   Eligible objects have been found: %s",
 
         "main_program.start": "-------------PROGRAM SE ZAGANJA-------------",
         "main_program.end": "-------------PROGRAM SE ZAPIRA-------------\n",
@@ -28,17 +28,17 @@
     "ERROR": {
         "file_parsing.directory.error": "  Wrong directory",
         "file_parsing.file_type.error": "  Wrong type of document",
-        "file_parsing.no_file.error": "  Datoteka ni bila najdena",
-        "file_parsing.key.error": "  Napačna JSON datoteka",
+        "file_parsing.no_file.error": "  No document was found",
+        "file_parsing.key.error": "  Wrong JSON file",
 
-        "find_objects.index.error": "  Podana je bila neustrezna kolicina parametrov",
-        "find_objects.parameter.error": "  Napacna oblika objekta za iskanje",
+        "find_objects.index.error": "  Wrong number of parameters was added",
+        "find_objects.parameter.error": "  '%s' is not a type of object for searching",
 
-        "pickle.error": "  Objekti niso bili shranjeni v datoteko '%s'"
+        "pickle.error": "  Error pickling objects into '%s'"
     },
 
     "WARNING": {
-        "find_objects.key.error": "Parameter '%s' je bil izpuscen",
-        "find_objects.none": "Najdena ni bila nobena ustrezna mapa/datoteka"
+        "find_objects.key.error": "Parameter '%s' was skipped",
+        "find_objects.none": "No eligible objects were found"
     }
 }

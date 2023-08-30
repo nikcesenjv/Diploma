@@ -7,16 +7,14 @@ import logging
 
 from .retrieve_message import retrieve_message
 
-LOGGING_PATH = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/updates.log"
-
 logging.basicConfig(filename="updates.log", level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s",
                     datefmt="%d.%m.%Y %H:%M:%S", filemode="w")
 
-def log(level: str, message_title: str, *params: list[str]) -> None:
+def log(level: str, message_title: str, arg) -> None:
     match level:
         case "INFO":
-            logging.info(retrieve_message(level, message_title, params))
+            logging.info(retrieve_message(level, message_title, arg))
         case "ERROR":
-            logging.error(retrieve_message(level, message_title, params))
+            logging.error(retrieve_message(level, message_title, arg))
         case "WARNING":
-            logging.warning(retrieve_message(level, message_title, params))
+            logging.warning(retrieve_message(level, message_title, arg))
