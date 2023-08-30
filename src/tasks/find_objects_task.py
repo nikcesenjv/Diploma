@@ -11,10 +11,10 @@ def find_objects_task(data: list[object], params: list[str]) -> list[object]:
     object_type, parsed_params = parse_find_params(params)
     candidates = execute_task(data, object_type, parsed_params)
 
-    if candidates:
+    """if candidates:
         log("INFO", "find_objects.success", len(candidates))
     else:
-        log("WARNING", "find_objects.none")
+        log("WARNING", "find_objects.none")"""
 
     return candidates
 

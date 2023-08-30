@@ -12,7 +12,7 @@ def create_book(name: str) -> Book:
 
 def create_document(name: str, path: str) -> Document:
     document = Document(name, f"{path}/{name}")
-    document.pages = document.get_num_of_pages(parse_path("full_path.documents", f"{document.pdf_path}"))
+    # document.pages = document.get_num_of_pages(parse_path("full_path.documents", f"{document.pdf_path}"))
     return document
 
 def create_folder(name: str, path: str) -> Folder:

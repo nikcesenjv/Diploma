@@ -6,7 +6,9 @@
 import json
 
 def parse_json(path):
-    return json.load(open(path))
+    # return json.load(open(path))
+    file = open(path, encoding="utf-16")
+    return json.load(file)
 
 def write_json(path, data):
     with open(path, "w") as f:

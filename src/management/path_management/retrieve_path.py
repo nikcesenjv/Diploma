@@ -5,7 +5,7 @@
 
 from src.management.json_management import parse_json
 
-DIRECTORIES = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/lib/resources/json_resources/paths.json"
+DIRECTORIES = "lib/resources/json/paths.json"
 
 def retrieve_path(path_param):
     try:
