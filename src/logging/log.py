@@ -9,11 +9,8 @@ from .retrieve_message import retrieve_message
 
 LOGGING_PATH = "/Users/nikcesenjvodovnik/Documents/Programiranje/Diploma/updates.log"
 
-logging.basicConfig(filename=LOGGING_PATH,
-                    level=logging.INFO,
-                    format="%(asctime)s [%(levelname)s] %(message)s",
-                    datefmt="%d.%m.%Y %H:%M:%S",
-                    filemode="w")
+logging.basicConfig(filename="updates.log", level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s",
+                    datefmt="%d.%m.%Y %H:%M:%S", filemode="w")
 
 def log(level: str, message_title: str, *params: list[str]) -> None:
     match level:

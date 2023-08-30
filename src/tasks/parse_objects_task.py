@@ -9,6 +9,7 @@ from src.management.path_management import replace_path_part
 from src.management.general_objects_management import *
 from src.management.json_management import parse_json
 from src.management.shelve_management import shelve_objects
+from src.management.pickle_management import pickle_objects
 
 def parse_objects_task() -> None:
     # log("INFO", PARSING_START, path.split("/")[-1])
@@ -19,7 +20,8 @@ def execute_task() -> None:
     # log("INFO", PARSING_PROGRESS)
 
     all_documents_list, all_folders_list, all_books_list = [], [], []
-    data = parse_json(parse_path("full_path.project", "path.documents.json"))
+    # data = parse_json(parse_path("full_path.project", "path.documents.json"))
+    data = parse_json("lib/resources/json/documents_info.json")
 
     for book in data["documents"]:
         current_book = create_book(book["book name"])
@@ -39,9 +41,13 @@ def execute_task() -> None:
 
         all_books_list.append(current_book)
 
-    shelve_objects(all_documents_list, "document")
-    shelve_objects(all_folders_list, "folder")
-    shelve_objects(all_books_list, "book")
+    # shelve_objects(all_documents_list, "document")
+    # shelve_objects(all_folders_list, "folder")
+    # shelve_objects(all_books_list, "book")
+
+    pickle_objects("document", all_documents_list)
+    pickle_objects("folder", all_folders_list)
+    pickle_objects("book", all_books_list)
 
     """all_files, all_inner_folders, all_main_folders = [], [], []
     data = parse_json(path_json)
