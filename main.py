@@ -9,10 +9,7 @@ from src.logging import log
 
 from src.tasks import *
 
-from src.management.json_management import change_json_value
-from src.management.shelve_management import *
 from src.management.pickle_management import open_pickle
-from src.management.path_management import parse_path
 from src.management.xml_management import create_parlamint_xml_document
 
 from src.objects.general_objects import Book, Folder, Document
@@ -23,7 +20,7 @@ def execute_arg_cer(params: list[str]) -> dict[str, float]:
     try:
         return retrieve_cer_task(params)
     except FileNotFoundError:
-        log("ERROR", "file_parsing.directory.error")
+        log("ERROR", "file_parsing.directory.error", None)
 
 def execute_arg_find(params: list[str]) \
         -> list[Book | Folder | Document | ParlamintDocument | ParlamintAttendee]:
@@ -38,14 +35,17 @@ def execute_arg_parse() -> None:
     try:
         parse_objects_task()
     except FileNotFoundError:
-        # log("ERROR", "file_parsing.no_file.error")
-        ...
+        log("ERROR", "file_parsing.no_file.error", None)
 
 def execute_arg_parse_parlamint() -> None:
-    try:
+    """try:
         parse_parlamint_objects_task(open_shelve("document"), open_shelve("attendees"))
     except FileNotFoundError:
-        log("ERROR", "file_parsing.no_file.error")
+        log("ERROR", "file_parsing.no_file.error")"""
+    try:
+        parse_parlamint_objects_task(open_pickle("parlamint"), open_pickle("attendee"))
+    except FileNotFoundError:
+        log("ERROR", "file_parsing.no_file.error", None)
 
 """def execute_arg_random(params):
     target_path, json_file = parse_directory(PROJECT, DIRECTORY_LIB, params[0]), \
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     for file, avg in x.items():
         print(file, avg)"""
 
-    # execute_arg_parse()
+    execute_arg_parse()
 
     # file = execute_arg_find(["document", "name", "1_XXI_SKJ_redni_18.6.1934"]) check
     # file = execute_arg_find(["document", "name", "3_III_NSKJ_redni_11.12.1936"]) check
@@ -118,18 +118,22 @@ if __name__ == "__main__":
     # file = execute_arg_find(["document", "name", "25_XLVII_NSKJ_redni_11.6.1932"]) check
     # file = execute_arg_find(["document", "name", "34_XXXVIII_ZNPSHS_redni_18.6.1919"])
 
-    random_files = ["1_XXI_SKJ_redni_18.6.1934",
-                    "3_III_NSKJ_redni_11.12.1936",
-                    "4_XLII_NSKJ_redni_19.3.1937",
-                    "7_XXIV_SKJ_redni_14.4.1932",
-                    "11_X_SKJ_redni_24.3.1936",
-                    "12_XI.I_SKJ_redni_25.3.1936",
-                    "22_LII_NSSHS_seja_10.3.1922",
-                    "25_XLVII_NSKJ_redni_11.6.1932",
-                    "34_XXXVIII_ZNPSHS_redni_18.6.1919"]
+    random_files_list = ["1_XXI_SKJ_redni_18.6.1934",
+                         "3_III_NSKJ_redni_11.12.1936",
+                         "4_XLII_NSKJ_redni_19.3.1937",
+                         "7_XXIV_SKJ_redni_14.4.1932",
+                         "11_X_SKJ_redni_24.3.1936",
+                         "12_XI.I_SKJ_redni_25.3.1936",
+                         "22_LII_NSSHS_seja_10.3.1922",
+                         "25_XLVII_NSKJ_redni_11.6.1932",
+                         "34_XXXVIII_ZNPSHS_redni_18.6.1919"]
 
-    file = execute_arg_find(["document", "name", random_files[-1]])
-    print(file[0])
+    for random_file in random_files_list:
+        file = execute_arg_find(["document", "name", random_file])
+        print(file[0])
+
+    """file = execute_arg_find(["document", "name", random_files[-1]])
+    print(file[0])"""
 
     # parlamint_document, attendees = parse_parlamint_objects_task(file, [])
     """create_parlamint_xml_document(parlamint_document,

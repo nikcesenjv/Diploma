@@ -8,7 +8,6 @@ from src.logging import log
 from src.management.path_management import replace_path_part
 from src.management.general_objects_management import *
 from src.management.json_management import parse_json
-from src.management.shelve_management import shelve_objects
 from src.management.pickle_management import pickle_objects
 
 def parse_objects_task() -> None:
@@ -40,10 +39,6 @@ def execute_task() -> None:
                 current_book.add_folder(current_folder)
 
         all_books_list.append(current_book)
-
-    # shelve_objects(all_documents_list, "document")
-    # shelve_objects(all_folders_list, "folder")
-    # shelve_objects(all_books_list, "book")
 
     pickle_objects("document", all_documents_list)
     pickle_objects("folder", all_folders_list)

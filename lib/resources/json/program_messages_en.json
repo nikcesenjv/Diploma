@@ -13,7 +13,7 @@
         "file_parsing.file_success": "   Document '%s' created",
         "file_parsing.parlamint_success": "   Parlamint document '%s' created",
 
-        "find_objects.start": "   Searching of objects",
+        "find_objects.start": "   Searching for objects",
         "find_objects.success": "   Eligible objects have been found: %s",
 
         "main_program.start": "-------------PROGRAM SE ZAGANJA-------------",

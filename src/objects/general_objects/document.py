@@ -34,9 +34,9 @@ class Document(Structure):
         return info + f"Št strani:          {self.pages}\n"
 
     # PARSE METHODS
-    def parse_name(self) -> tuple[int, str, str, str, str]:
+    def parse_name(self) -> tuple[str, str, str, str, str]:
         parsed = self.name.split("_")
-        return int(parsed[0]), parsed[1], parsed[2], parsed[3], parsed[4]
+        return parsed[0], parsed[1], parsed[2], parsed[3], parsed[4]
 
     def parse_num(self) -> str:
         parsed_num = self._num.split(".")
@@ -46,13 +46,13 @@ class Document(Structure):
 
             match parsed_num[1]:
                 case "I":
-                    second_part = "prvi"
+                    second_part = "1"
                 case "II":
-                    second_part = "drugi"
+                    second_part = "2"
                 case "III":
-                    second_part = "tretji"
+                    second_part = "3"
 
-            return f"{parsed_num[0]}, {second_part} del"
+            return f"{parsed_num[0]}_{second_part}"
 
         return self._num
 
